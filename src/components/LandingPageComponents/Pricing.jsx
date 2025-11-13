@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle2 } from "../../helpers/icons";
+import { ICONS } from "../../assets/icons";
 
 const plans = [
   {
@@ -89,7 +89,7 @@ const Pricing = () => {
             <ul className="mt-6 flex flex-1 flex-col gap-2 text-sm text-gray-700">
               {plan.features.map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#07315E]" />
+                  <ICONS.CheckCircle2 className="mt-0.5 h-4 w-4 text-[#07315E]" />
                   <span>{feature}</span>
                 </li>
               ))}

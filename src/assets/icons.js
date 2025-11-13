@@ -20,10 +20,11 @@ import {
   Headset,
   Rocket,
   CloudCog,
+  Navigation,
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
-export {
+export const ICONS = {
   Menu,
   X,
   ChevronDown,
@@ -36,6 +37,7 @@ export {
   Layers,
   PlugZap,
   Share2,
+  Navigation,
   ShieldCheck,
   CheckCircle2,
   ArrowRight,

@@ -1,41 +1,41 @@
 import React from "react";
-import { Wrench, PlugZap, Headset, Rocket, CloudCog, ShieldCheck } from "../../helpers/icons";
+import { ICONS } from "../../assets/icons.js";
 
 const services = [
   {
     title: "Implementation & Onboarding",
     description: "White-glove setup, data import, and workflow tailoring so you go live fast.",
-    Icon: Wrench,
+    Icon: ICONS.Wrench,
     href: "/services/implementation-onboarding",
   },
   {
     title: "Integrations",
     description: "We connect payments, accounting, GPS, SMS, and partner systems via secure APIs.",
-    Icon: PlugZap,
+    Icon: ICONS.PlugZap,
     href: "/services/integrations",
   },
   {
     title: "Training & Support",
     description: "Hands-on team training plus multi-channel support when you need it most.",
-    Icon: Headset,
+    Icon: ICONS.Headset,
     href: "/services/training-support",
   },
   {
     title: "Performance Optimization",
     description: "Regular reviews of acceptance, ETAs, and utilization with actionable guidance.",
-    Icon: Rocket,
+    Icon: ICONS.Rocket,
     href: "/services/performance-optimization",
   },
   {
     title: "Cloud Hosting",
     description: "Secure, scalable hosting with monitoring, backups, and proactive maintenance.",
-    Icon: CloudCog,
+    Icon: ICONS.CloudCog,
     href: "/services/cloud-hosting",
   },
   {
     title: "Compliance & Security",
     description: "Role-based access, audit trails, and best practices to protect fleet and data.",
-    Icon: ShieldCheck,
+    Icon: ICONS.ShieldCheck,
     href: "/services/compliance-security",
   },
 ];

@@ -1,61 +1,45 @@
 import React from "react";
-import {
-  Route,
-  CalendarCheck,
-  Smartphone,
-  Car,
-  Receipt,
-  BarChart3,
-  ArrowRight,
-} from "../../helpers/icons";
+import { ICONS } from "../../assets/icons";
+
 
 const products = [
   {
     title: "Dispatch Software",
     description:
       "Automate driver allocation and manage bookings efficiently with our intelligent dispatch system.",
-    icon: "Route",
+    icon: ICONS.Route,
   },
   {
     title: "Booking Software",
     description:
       "Centralise all bookings in one platform, making it easy to manage and track customer requests.",
-    icon: "CalendarCheck",
+    icon: ICONS.CalendarCheck,
   },
   {
     title: "Passenger App",
     description:
       "Offer a seamless booking experience for passengers with our user-friendly mobile app.",
-    icon: "Smartphone",
+    icon: ICONS.Smartphone,
   },
   {
     title: "Driver App",
     description:
       "Equip your drivers with a dedicated app for real-time updates, navigation, and job management.",
-    icon: "Car",
+    icon: ICONS.Car,
   },
   {
     title: "Billing & Invoicing",
     description:
       "Simplify your financial processes with integrated billing and invoicing features.",
-    icon: "Receipt",
+    icon: ICONS.Receipt,
   },
   {
     title: "Reporting & Analytics",
     description:
       "Gain insights into your fleet's performance with comprehensive reporting and analytics tools.",
-    icon: "BarChart3",
+    icon: ICONS.BarChart3,
   },
 ];
-
-const iconMap = {
-  Route: Route,
-  CalendarCheck: CalendarCheck,
-  Smartphone: Smartphone,
-  Car: Car,
-  Receipt: Receipt,
-  BarChart3: BarChart3,
-};
 
 const productLinks = {
   "Dispatch Software": "/products/dispatch-software",
@@ -82,7 +66,6 @@ const Products = () => {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {products.map((f, i) => {
-          const Icon = iconMap[f.icon] || Route;
           const href = productLinks[f.title] || "/products";
           return (
             <div
@@ -91,7 +74,7 @@ const Products = () => {
             >
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#07315E]/20 bg-[#07315E]/5 text-[#07315E] shadow-sm transition-colors group-hover:border-[#07315E]/30 group-hover:bg-[#07315E]/10">
-                  <Icon className="h-6 w-6" />
+                  <f.icon className="h-6 w-6" />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900">{f.title}</h3>
               </div>
@@ -103,10 +86,10 @@ const Products = () => {
                   aria-label={`Learn more about ${f.title}`}
                 >
                   Learn more
-                  <ArrowRight className="h-4 w-4" />
+                  <ICONS.ArrowRight className="h-4 w-4" />
                 </a>
               </div>
-            </div>
+          </div>
           );
         })}
       </div>

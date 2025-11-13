@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { navbarItems } from "../../helpers/navBarItems";
-import { Menu, X, ChevronDown } from "../../helpers/icons";
+import { ICONS } from "../../assets/icons";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -60,7 +60,7 @@ const Navbar = () => {
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 transition-colors hover:text-white"
                 >
                   <span>{item.name}</span>
-                  <ChevronDown className="h-4 w-4 text-white/70 transition-transform duration-200 ease-out group-hover:rotate-180" />
+                  <ICONS.ChevronDown className="h-4 w-4 text-white/70 transition-transform duration-200 ease-out group-hover:rotate-180" />
                 </a>
               ) : (
                 <a
@@ -96,7 +96,7 @@ const Navbar = () => {
             className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/20 bg-white/10 text-white md:hidden"
             onClick={() => setMenuOpen((v) => !v)}
           >
-            {menuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {menuOpen ? <X className="h-6 w-6" /> : <ICONS.Menu className="h-6 w-6" />}
           </button>
         </div>
       </nav>
@@ -122,7 +122,7 @@ const Navbar = () => {
                   className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-white/15 bg-white/10 hover:bg-white/20"
                   onClick={() => setMenuOpen(false)}
                 >
-                  <X className="h-5 w-5" />
+                  <ICONS.X className="h-5 w-5" />
                 </button>
               </div>
 
@@ -134,7 +134,7 @@ const Navbar = () => {
                       <details className="group">
                         <summary className="flex cursor-pointer list-none items-center justify-between rounded-lg px-3 py-3 text-base font-medium hover:bg-white/10">
                           <span>{item.name}</span>
-                          <ChevronDown className="h-5 w-5 text-white/80 transition-transform duration-200 ease-in-out group-open:rotate-180" />
+                          <ICONS.ChevronDown className="h-5 w-5 text-white/80 transition-transform duration-200 ease-in-out group-open:rotate-180" />
                         </summary>
                         <div className="pb-2 pl-2">
                           {item.subItems.map((sub, i) => (
