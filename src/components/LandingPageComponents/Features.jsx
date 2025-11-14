@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { ICONS } from "../../assets/icons";
 import { IMAGES } from "../../assets/Images";
 
@@ -66,6 +66,37 @@ const FeatureCard = ({ feature, stat }) => (
     </div>
   </div>
 );
+
+const StraightArrow = ({ className = "", style }) => (
+  <div className={`pointer-events-none ${className}`} style={style}>
+    <img
+      src={IMAGES.uparrow}
+      alt=""
+      aria-hidden="true"
+      draggable={false}
+      className="select-none drop-shadow-md w-10 sm:w-12"
+    />
+  </div>
+);
+
+const CurvedArrow = ({ className = "", flipX = false, flipY = false, style }) => {
+  const imageTransforms = [];
+  if (flipX) imageTransforms.push("scaleX(-1)");
+  if (flipY) imageTransforms.push("scaleY(-1)");
+
+  return (
+    <div className={`pointer-events-none ${className}`} style={style}>
+      <img
+        src={IMAGES.curvearrow}
+        alt=""
+        aria-hidden="true"
+        draggable={false}
+        className="select-none drop-shadow-md w-10 sm:w-14 lg:w-18"
+        style={imageTransforms.length ? { transform: imageTransforms.join(" ") } : undefined}
+      />
+    </div>
+  );
+};
 
 const Features = () => {
   return (
@@ -136,18 +167,42 @@ const Features = () => {
     //   </div>
     // </section>
     <div className="flex items-center md:pt-20 2xl:pt-0 h-screen justify-center">
-      <div className="relative">
+      <div className="relative flex h-[320px] w-[320px] items-center justify-center sm:h-[360px] sm:w-[360px] lg:h-[420px] lg:w-[420px]">
         <img
           src={IMAGES.featuresmercedes}
-          alt="mercedes car"
-          className="relative z-10"
-          height={400}
-          width={400}
+          alt="Luxury dispatch vehicle"
+          className="relative z-10 h-full w-full object-contain"
+        />
+
+        {/* Connector Arrows */}
+        <StraightArrow
+          className="absolute hidden lg:block z-20"
+          style={{ top: "-40px", left: "50%", transform: "translateX(-50%)" }}
+        />
+        <CurvedArrow
+          className="absolute hidden lg:block z-20"
+          flipX
+          style={{ top: "16%", left: "-12%", transform: "rotate(-28deg)", transformOrigin: "95% 60%" }}
+        />
+        <CurvedArrow
+          className="absolute hidden lg:block z-20"
+          style={{ top: "16%", right: "-12%", transform: "rotate(28deg)", transformOrigin: "5% 60%" }}
+        />
+        <CurvedArrow
+          className="absolute hidden lg:block z-20"
+          flipX
+          flipY
+          style={{ bottom: "10%", left: "-12%", transform: "translate(-25%, 12%) rotate(28deg)", transformOrigin: "95% 55%" }}
+        />
+        <CurvedArrow
+          className="absolute hidden lg:block z-20"
+          flipY
+          style={{ bottom: "10%", right: "-12%", transform: "translate(25%, 12%) rotate(-28deg)", transformOrigin: "5% 55%" }}
         />
 
         {/* Top Center - Real-time Fleet Management */}
-        <div className="absolute -top-56 left-1/2 -translate-x-1/2 w-80 group">
-          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">
+          <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
                 <ICONS.Navigation className="h-6 w-6 text-white" />
@@ -171,8 +226,8 @@ const Features = () => {
         </div>
 
         {/* Top Left - Complete Solutions */}
-        <div className="absolute -top-20 -left-96 w-80 group">
-          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div className="absolute -left-96 -top-20 w-80 group">
+          <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
                 <ICONS.Layers className="h-6 w-6 text-gray-900" />
@@ -196,8 +251,8 @@ const Features = () => {
         </div>
 
         {/* Top Right - QuickBooks Integration */}
-        <div className="absolute -top-20 -right-96 w-80 group">
-          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div className="absolute -right-96 -top-20 w-80 group">
+          <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
                 <ICONS.PlugZap className="h-6 w-6 text-white" />
@@ -220,8 +275,8 @@ const Features = () => {
         </div>
 
         {/* Bottom Left - Share Platform */}
-        <div className="absolute -bottom-20 -left-96 w-80 group">
-          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div className="absolute -left-96 -bottom-20 w-80 group">
+          <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
                 <ICONS.Share2 className="h-6 w-6 text-gray-900" />
@@ -244,8 +299,8 @@ const Features = () => {
         </div>
 
         {/* Bottom Right - Enterprise-grade Reliability */}
-        <div className="absolute -bottom-20 -right-96 w-80 group">
-          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+        <div className="absolute -right-96 -bottom-20 w-80 group">
+          <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
             <div className="flex items-start gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
                 <ICONS.ShieldCheck className="h-6 w-6 text-white" />
