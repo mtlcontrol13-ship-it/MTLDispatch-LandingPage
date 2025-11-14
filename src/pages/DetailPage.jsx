@@ -1,24 +1,7 @@
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
+import { ICONS } from "../assets/icons";
 import { getDetailContent } from "../helpers/detailContent";
-
-const CheckIcon = () => (
-  <svg
-    className="h-5 w-5 text-[#0A4A85]"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    <path
-      d="M16.667 5.833L8.75 13.75 5 10"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
 
 const DetailPage = ({ category }) => {
   const { slug } = useParams();
@@ -118,7 +101,7 @@ const DetailPage = ({ category }) => {
               <ul className="mt-5 space-y-3 text-sm text-gray-700">
                 {deepDive.bullets.map((point) => (
                   <li key={point} className="flex items-start gap-3">
-                    <CheckIcon />
+                    <ICONS.CircleCheck className="mt-0.5 h-5 w-5 text-[#0A4A85]" />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -135,7 +118,7 @@ const DetailPage = ({ category }) => {
             <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
               {checklist.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <CheckIcon />
+                  <ICONS.CircleCheck className="mt-0.5 h-5 w-5 text-[#0A4A85]" />
                   <span>{item}</span>
                 </li>
               ))}
