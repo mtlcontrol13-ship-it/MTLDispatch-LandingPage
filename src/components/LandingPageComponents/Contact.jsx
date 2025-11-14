@@ -41,27 +41,9 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 px-4 sm:px-6 lg:px-16">
-      {/* Header Section */}
-      <div className="border-b border-slate-200">
-        <div className="px-6 py-8 lg:px-16">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3 mb-2">
-            <div className="h-8 w-1" style={{ backgroundColor: "#D43E51" }} />
-            <h1
-              className="text-3xl sm:text-4xl font-bold"
-              style={{ color: "#07315D" }}
-            >
-              MTLDispatch
-            </h1>
-          </div>
-          <p className="text-sm text-slate-500 mt-1 sm:mt-0 sm:ml-11">
-            Professional Dispatch Management System
-          </p>
-        </div>
-      </div>
-
+    <div className="min-h-screen bg-slate-50 text-slate-900">
       {/* Main Content */}
-      <div className="px-4 sm:px-6 py-12 lg:px-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 py-12">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Info */}
           <div>
