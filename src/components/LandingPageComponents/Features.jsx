@@ -135,138 +135,140 @@ const Features = () => {
     //     </div>
     //   </div>
     // </section>
- <div className="flex items-center md:pt-20 2xl:pt-0 h-screen justify-center">
-  <div className="relative">
-    <img
-      src={IMAGES.featuresmercedes}
-      alt="mercedes car"
-      className="relative z-10"
-      height={400}
-      width={400}
-    />
-    
-    {/* Top Center - Real-time Fleet Management */}
-    <div className="absolute -top-56 left-1/2 -translate-x-1/2 w-80 group">
-      <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-            <ICONS.Navigation className="h-6 w-6 text-white" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 mb-2">
-              <h3 className="text-lg font-bold text-gray-900 flex-1">
-                Real-time Fleet Management
-              </h3>
-              <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                +40%
-              </span>
+    <div className="flex items-center md:pt-20 2xl:pt-0 h-screen justify-center">
+      <div className="relative">
+        <img
+          src={IMAGES.featuresmercedes}
+          alt="mercedes car"
+          className="relative z-10"
+          height={400}
+          width={400}
+        />
+
+        {/* Top Center - Real-time Fleet Management */}
+        <div className="absolute -top-56 left-1/2 -translate-x-1/2 w-80 group">
+          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                <ICONS.Navigation className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                    Real-time Fleet Management
+                  </h3>
+                  <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                    +40%
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-snug">
+                  Track drivers, manage bookings, and optimize routes in
+                  real-time.
+                </p>
+              </div>
             </div>
-            <p className="text-sm text-gray-600 leading-snug">
-              Track drivers, manage bookings, and optimize routes in real-time.
-            </p>
+          </div>
+        </div>
+
+        {/* Top Left - Complete Solutions */}
+        <div className="absolute -top-20 -left-96 w-80 group">
+          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
+                <ICONS.Layers className="h-6 w-6 text-gray-900" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                    Complete Solutions
+                  </h3>
+                  <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                    -30%
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-snug">
+                  All-in-one suite covering dispatch, apps, billing, and
+                  reporting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Top Right - QuickBooks Integration */}
+        <div className="absolute -top-20 -right-96 w-80 group">
+          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                <ICONS.PlugZap className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                    QuickBooks Integration
+                  </h3>
+                  <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                    -60%
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-snug">
+                  Sync invoices, payments, and accounts automatically.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Left - Share Platform */}
+        <div className="absolute -bottom-20 -left-96 w-80 group">
+          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
+                <ICONS.Share2 className="h-6 w-6 text-gray-900" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                    Share Platform
+                  </h3>
+                  <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                    +20%
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-snug">
+                  Connect partner fleets to share jobs and expand coverage.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Right - Enterprise-grade Reliability */}
+        <div className="absolute -bottom-20 -right-96 w-80 group">
+          <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-start gap-4">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                <ICONS.ShieldCheck className="h-6 w-6 text-white" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-start gap-2 mb-2">
+                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                    Enterprise-grade Reliability
+                  </h3>
+                  <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                    99.9%
+                  </span>
+                </div>
+                <p className="text-sm text-gray-600 leading-snug">
+                  Secure, reliable cloud hosting with high uptime and
+                  protection.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    {/* Top Left - Complete Solutions */}
-    <div className="absolute -top-20 -left-96 w-80 group">
-      <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
-            <ICONS.Layers className="h-6 w-6 text-gray-900" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 mb-2">
-              <h3 className="text-lg font-bold text-gray-900 flex-1">
-                Complete Solutions
-              </h3>
-              <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                -30%
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 leading-snug">
-              All-in-one suite covering dispatch, apps, billing, and reporting.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Top Right - QuickBooks Integration */}
-    <div className="absolute -top-20 -right-96 w-80 group">
-      <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-            <ICONS.PlugZap className="h-6 w-6 text-white" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 mb-2">
-              <h3 className="text-lg font-bold text-gray-900 flex-1">
-                QuickBooks Integration
-              </h3>
-              <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                -60%
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 leading-snug">
-              Sync invoices, payments, and accounts automatically.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom Left - Share Platform */}
-    <div className="absolute -bottom-20 -left-96 w-80 group">
-      <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
-            <ICONS.Share2 className="h-6 w-6 text-gray-900" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 mb-2">
-              <h3 className="text-lg font-bold text-gray-900 flex-1">
-                Share Platform
-              </h3>
-              <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                +20%
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 leading-snug">
-              Connect partner fleets to share jobs and expand coverage.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom Right - Enterprise-grade Reliability */}
-    <div className="absolute -bottom-20 -right-96 w-80 group">
-      <div className="relative p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-gray-200 shadow-lg transition-all duration-300 hover:shadow-xl">
-        <div className="flex items-start gap-4">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-            <ICONS.ShieldCheck className="h-6 w-6 text-white" />
-          </div>
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-2 mb-2">
-              <h3 className="text-lg font-bold text-gray-900 flex-1">
-                Enterprise-grade Reliability
-              </h3>
-              <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                99.9%
-              </span>
-            </div>
-            <p className="text-sm text-gray-600 leading-snug">
-              Secure, reliable cloud hosting with high uptime and protection.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
   );
 };
 
