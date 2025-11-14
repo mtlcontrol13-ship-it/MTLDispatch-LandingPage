@@ -74,7 +74,7 @@ const StraightArrow = ({ className = "", style }) => (
       alt=""
       aria-hidden="true"
       draggable={false}
-      className="select-none drop-shadow-md w-10 sm:w-12"
+      className="select-none drop-shadow-md w-28 sm:w-32 lg:w-36"
     />
   </div>
 );
@@ -177,7 +177,7 @@ const Features = () => {
         {/* Connector Arrows */}
         <StraightArrow
           className="absolute hidden lg:block z-20"
-          style={{ top: "-40px", left: "50%", transform: "translateX(-50%)" }}
+          style={{ top: "-30px", left: "50%", transform: "translateX(-50%)" }}
         />
         <CurvedArrow
           className="absolute hidden lg:block z-20"
