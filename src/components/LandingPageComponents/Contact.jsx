@@ -41,29 +41,32 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-slate-50 text-slate-900 px-4 sm:px-6 lg:px-16">
       {/* Header Section */}
-      <div className="border-b border-slate-200 bg-white">
+      <div className="border-b border-slate-200">
         <div className="px-6 py-8 lg:px-16">
-          <div className="flex items-center gap-3 mb-2">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3 mb-2">
             <div className="h-8 w-1" style={{ backgroundColor: "#D43E51" }} />
-            <h1 className="text-4xl font-bold" style={{ color: "#07315D" }}>
+            <h1
+              className="text-3xl sm:text-4xl font-bold"
+              style={{ color: "#07315D" }}
+            >
               MTLDispatch
             </h1>
           </div>
-          <p className="text-sm text-slate-500 ml-11">
+          <p className="text-sm text-slate-500 mt-1 sm:mt-0 sm:ml-11">
             Professional Dispatch Management System
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="px-6 py-16 lg:px-16">
-        <div className="grid lg:grid-cols-2 gap-16">
+      <div className="px-4 sm:px-6 py-12 lg:px-16">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left Column - Info */}
           <div>
             <h2
-              className="text-3xl font-bold mb-4"
+              className="text-2xl sm:text-3xl font-bold mb-4"
               style={{ color: "#07315D" }}
             >
               Get in Touch
@@ -76,7 +79,7 @@ const Contact = () => {
 
             <div className="space-y-8">
               {/* Contact Info Cards */}
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
                 <div
                   className="h-12 w-12 rounded-lg flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: "rgba(212,62,81,0.1)" }}
@@ -92,7 +95,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
                 <div
                   className="h-12 w-12 rounded-lg flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: "rgba(212,62,81,0.1)" }}
@@ -106,7 +109,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:gap-4">
                 <div
                   className="h-12 w-12 rounded-lg flex items-center justify-center flex-shrink-0"
                   style={{ backgroundColor: "rgba(212,62,81,0.1)" }}
@@ -164,7 +167,7 @@ const Contact = () => {
           {/* Right Column - Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="name"
@@ -202,7 +205,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="email"
