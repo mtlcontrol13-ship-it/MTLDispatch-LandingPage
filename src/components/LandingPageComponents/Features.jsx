@@ -167,11 +167,11 @@ const Features = () => {
     //   </div>
     // </section>
     <div className="flex items-center md:pt-20 2xl:pt-0 h-screen justify-center">
-      <div className="relative flex h-[320px] w-[320px] items-center justify-center sm:h-[360px] sm:w-[360px] lg:h-[420px] lg:w-[420px]">
+      <div className="relative flex h-[260px] w-[260px] items-center justify-center sm:h-[320px] sm:w-[320px] lg:h-[380px] lg:w-[380px]">
         <img
           src={IMAGES.featuresmercedes}
           alt="Luxury dispatch vehicle"
-          className="relative z-10 h-full w-full object-contain"
+          className="relative z-10 h-[85%] w-[85%] object-contain sm:h-[80%] sm:w-[80%]"
         />
 
         {/* Connector Arrows */}
