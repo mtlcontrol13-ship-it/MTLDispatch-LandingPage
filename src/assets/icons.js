@@ -21,6 +21,7 @@ import {
   Rocket,
   CloudCog,
   Navigation,
+  CircleCheck,
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
@@ -45,4 +46,5 @@ export const ICONS = {
   Headset,
   Rocket,
   CloudCog,
+  CircleCheck,
 };
