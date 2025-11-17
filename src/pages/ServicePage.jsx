@@ -76,19 +76,10 @@ const ServicePage = () => {
           <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" />
         </div>
         <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
-          <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/60">
-              Our Services
-            </p>
-            <h1 className="text-3xl font-bold leading-tight md:text-4xl">
-              Provide us with reliable services
-            </h1>
-            <p className="text-base text-white/75 md:text-lg">
-              A complete suite of professional services to launch, integrate, and
-              optimize your chauffeur operations with confidence.
-            </p>
-          </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
+          <h1 className="text-3xl font-bold text-white md:text-4xl">
+            Services
+          </h1>
+          <div className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
             <span>Implementation</span>
             <span className="opacity-50">&bull;</span>
             <span>Integrations</span>
@@ -101,6 +92,15 @@ const ServicePage = () => {
 
       {/* Service Grid */}
       <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl font-semibold leading-tight text-slate-900 md:text-3xl">
+            Provide us with reliable services
+          </h2>
+          <p className="mt-3 text-sm text-slate-600 md:text-base">
+            A complete suite of professional services to launch, integrate, and
+            optimize your chauffeur operations with confidence.
+          </p>
+        </div>
         <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-2xl">
           <div className="grid gap-6 md:grid-cols-3">
             {services.map(({ title, description, Icon, href }) => (
