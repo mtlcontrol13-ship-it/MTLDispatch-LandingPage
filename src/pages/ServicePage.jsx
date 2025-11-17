@@ -107,18 +107,18 @@ const ServicePage = () => {
               <a
                 key={title}
                 href={href}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:border-[#07315E]/30 hover:shadow-lg"
+                className="group rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-[#D43E51]"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#07315E]/10 text-[#07315E] shadow-sm transition group-hover:border group-hover:border-[#07315E]/40 group-hover:bg-[#07315E]/15">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#07315E]/10 text-[#07315E] shadow-sm transition-all duration-300 group-hover:bg-white/20 group-hover:text-white">
                   <Icon className="h-6 w-6" />
                 </div>
-                <h3 className="mt-4 text-lg font-semibold text-slate-900">
+                <h3 className="mt-4 text-lg font-semibold text-slate-900 transition-all duration-300 group-hover:text-white">
                   {title}
                 </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
+                <p className="mt-3 text-sm leading-6 text-slate-600 transition-all duration-300 group-hover:text-white/90">
                   {description}
                 </p>
-                <span className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-[#07315E]/20 bg-white px-4 py-2 text-sm font-semibold text-[#07315E] opacity-0 transition group-hover:opacity-100">
+                <span className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-white/50 bg-white/90 px-4 py-2 text-sm font-semibold text-[#07315E] opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:text-[#D43E51]">
                   Learn more
                   <ICONS.ArrowRight className="h-4 w-4" />
                 </span>
