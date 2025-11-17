@@ -101,7 +101,7 @@ const ServicePage = () => {
             optimize your chauffeur operations with confidence.
           </p>
         </div>
-        <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-2xl">
+        <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-lg">
           <div className="grid gap-6 md:grid-cols-3">
             {services.map(({ title, description, Icon, href }) => (
               <a
@@ -130,6 +130,14 @@ const ServicePage = () => {
 
       {/* Contact / CTA cards */}
       <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl font-semibold text-slate-900">
+            Need help choosing the right plan?
+          </h2>
+          <p className="mt-2 text-sm text-slate-600">
+            Connect with our teams for demos, support, or best-practice guides.
+          </p>
+        </div>
         <div className="rounded-3xl bg-white p-8 shadow-lg">
           <div className="grid gap-6 lg:grid-cols-3">
             {contactCards.map(({ title, description, cta, href }) => (
