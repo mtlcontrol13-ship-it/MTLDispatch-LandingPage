@@ -125,7 +125,10 @@ const Footer = () => {
         <hr className="mt-12 mb-8 border-white/10" />
 
         <div className="flex flex-wrap gap-4 text-sm text-slate-400">
-          <ul className="flex flex-wrap gap-4">
+          <p>
+            &copy; {new Date().getFullYear()} MTLDispatch. All rights reserved.
+          </p>
+          <ul className="flex flex-wrap gap-4 md:ml-auto">
             <li>
               <a
                 href="/terms"
@@ -151,9 +154,6 @@ const Footer = () => {
               </a>
             </li>
           </ul>
-          <p className="md:ml-auto">
-            &copy; {new Date().getFullYear()} MTLDispatch. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>
