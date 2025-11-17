@@ -23,9 +23,32 @@ const services = [
     Icon: ICONS.Headset,
     href: "/services/training-support",
   },
+  {
+    title: "Performance Optimization",
+    description:
+      "Regular reviews of acceptance, ETAs, and utilization with actionable guidance.",
+    Icon: ICONS.Rocket,
+    href: "/services/performance-optimization",
+  },
+  {
+    title: "Cloud Hosting",
+    description:
+      "Secure, scalable hosting with monitoring, backups, and proactive maintenance.",
+    Icon: ICONS.CloudCog,
+    href: "/services/cloud-hosting",
+  },
+  {
+    title: "Compliance & Security",
+    description:
+      "Role-based access, audit trails, and best practices to protect fleet and data.",
+    Icon: ICONS.ShieldCheck,
+    href: "/services/compliance-security",
+  },
 ];
 
 const Services = () => {
+  const featuredServices = services.slice(0, 3);
+
   return (
     <section
       id="services"
@@ -39,41 +62,20 @@ const Services = () => {
         </p>
       </div>
 
-      <ul className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-        {services.map(({ title, description, Icon, href }) => (
-          <li
+      <div className="mt-10 grid gap-6 md:grid-cols-3">
+        {featuredServices.map(({ title, description, Icon }) => (
+          <div
             key={title}
-            className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            className="rounded-2xl border border-gray-200 bg-white p-8 text-center shadow-sm"
           >
-            <a
-              href={href}
-              className="flex items-start gap-4"
-              aria-label={`Learn more about ${title}`}
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#07315E]/20 bg-[#07315E]/5 text-[#07315E] shadow-sm group-hover:border-[#07315E]/40 group-hover:bg-[#07315E]/10">
-                <Icon className="h-6 w-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#07315E]">
-                    {title}
-                  </h3>
-                  <span className="text-xs text-[#07315E] opacity-0 transition group-hover:opacity-100">
-                    →
-                  </span>
-                </div>
-                <p className="mt-2 text-sm leading-6 text-gray-600">
-                  {description}
-                </p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#07315E] opacity-0 transition group-hover:opacity-100">
-                  Learn more
-                  <span aria-hidden="true">→</span>
-                </span>
-              </div>
-            </a>
-          </li>
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border border-[#07315E]/20 bg-[#07315E]/5 text-[#07315E] shadow-sm">
+              <Icon className="h-6 w-6" />
+            </div>
+            <h3 className="mt-4 text-lg font-semibold text-gray-900">{title}</h3>
+            <p className="mt-2 text-sm leading-6 text-gray-600">{description}</p>
+          </div>
         ))}
-      </ul>
+      </div>
 
       <div className="mt-10 flex justify-center">
         <a
@@ -83,7 +85,6 @@ const Services = () => {
           View all services
         </a>
       </div>
-
     </section>
   );
 };
