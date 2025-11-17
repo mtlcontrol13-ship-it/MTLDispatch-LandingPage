@@ -1,5 +1,4 @@
 import About from "../components/LandingPageComponents/About";
-import Contact from "../components/LandingPageComponents/Contact";
 import Features from "../components/LandingPageComponents/Features";
 import Hero from "../components/LandingPageComponents/Hero";
 import Pricing from "../components/LandingPageComponents/Pricing";
@@ -15,7 +14,6 @@ const Home = () => {
       <Features />
       <Pricing />
       <Services />
-      <Contact />
     </div>
   );
 };
