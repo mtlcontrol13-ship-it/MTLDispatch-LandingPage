@@ -71,11 +71,11 @@ const ServicePage = () => {
   return (
     <div className="bg-slate-50 text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-[#052447] to-[#07315E] pb-28 pt-16 text-white">
+      <section className="relative overflow-hidden bg-linear-to-b from-[#052447] to-[#07315E] pb-28 pt-16 text-white">
         <div className="pointer-events-none absolute inset-0">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" />
+          <div className="h-full w-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]" />
         </div>
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 mb-10 px-6 text-center">
           <h1 className="text-3xl font-bold text-white md:text-4xl">
             Services
           </h1>
@@ -91,7 +91,7 @@ const ServicePage = () => {
       </section>
 
       {/* Service Grid */}
-      <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6">
+      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-6">
         <div className="mb-8 text-center">
           <h2 className="text-2xl font-semibold leading-tight text-slate-900 md:text-3xl">
             Provide us with reliable services
