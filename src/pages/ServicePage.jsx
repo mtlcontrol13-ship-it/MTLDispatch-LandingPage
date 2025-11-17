@@ -12,7 +12,7 @@ const services = [
   {
     title: "Integrations",
     description:
-      "We connect payments, accounting, GPS, SMS, and partner systems via secure APIs.",
+      "Connect payments, accounting, GPS, SMS, and partner systems via secure APIs.",
     Icon: ICONS.PlugZap,
     href: "/services/integrations",
   },
@@ -40,73 +40,141 @@ const services = [
   {
     title: "Compliance & Security",
     description:
-      "Role-based access, audit trails, and best practices to protect fleet and data.",
+      "Role-based access, audit trails, and best practices to protect your data.",
     Icon: ICONS.ShieldCheck,
     href: "/services/compliance-security",
   },
 ];
 
+const contactCards = [
+  {
+    title: "Talk to Sales",
+    description: "Book a discovery call with our solution experts.",
+    cta: "Schedule call",
+    href: "/contact",
+  },
+  {
+    title: "Support Center",
+    description: "Submit tickets, track updates, or chat with support.",
+    cta: "Visit portal",
+    href: "/contact",
+  },
+  {
+    title: "Success Resources",
+    description: "Download playbooks, onboarding kits, and best practices.",
+    cta: "Browse docs",
+    href: "/contact",
+  },
+];
+
 const ServicePage = () => {
   return (
-    <section className="w-full py-20 pr-6 md:pr-10 lg:pr-14 xl:pr-16 pl-6 md:pl-12 lg:pl-20 xl:pl-28 2xl:pl-36">
-      <div className="max-w-5xl space-y-4">
-        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
-          Services
-        </h1>
-        <p className="max-w-3xl text-base leading-relaxed text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-          sunt quisquam consequatur itaque mollitia nihil blanditiis possimus
-          dolorem, tempore nostrum labore at rerum cupiditate eum suscipit
-          recusandae tempora earum esse!
-        </p>
-      </div>
+    <div className="bg-slate-50 text-slate-900">
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#052447] to-[#07315E] pb-28 pt-16 text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="h-full w-full bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.12),_transparent_55%)]" />
+        </div>
+        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 px-6 text-center">
+          <div className="space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/60">
+              Our Services
+            </p>
+            <h1 className="text-3xl font-bold leading-tight md:text-4xl">
+              Provide us with reliable services
+            </h1>
+            <p className="text-base text-white/75 md:text-lg">
+              A complete suite of professional services to launch, integrate, and
+              optimize your chauffeur operations with confidence.
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
+            <span>Implementation</span>
+            <span className="opacity-50">&bull;</span>
+            <span>Integrations</span>
+            <span className="opacity-50">&bull;</span>
+            <span>Success Programs</span>
+          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 h-24 rounded-t-[40%] bg-slate-50" />
+      </section>
 
-      <ul className="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2">
-        {services.map(({ title, description, Icon, href }) => (
-          <li
-            key={title}
-            className="group rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-          >
-            <a
-              href={href}
-              className="flex items-start gap-4"
-              aria-label={`Learn more about ${title}`}
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#07315E]/20 bg-[#07315E]/5 text-[#07315E] shadow-sm group-hover:border-[#07315E]/40 group-hover:bg-[#07315E]/10">
-                <Icon className="h-6 w-6" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="text-lg font-semibold text-gray-900 group-hover:text-[#07315E]">
-                    {title}
-                  </h3>
-                  <span className="text-xs text-[#07315E] opacity-0 transition group-hover:opacity-100">
-                    →
-                  </span>
+      {/* Service Grid */}
+      <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6">
+        <div className="rounded-3xl border border-white/70 bg-white p-8 shadow-2xl">
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.map(({ title, description, Icon, href }) => (
+              <a
+                key={title}
+                href={href}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:border-transparent hover:bg-gradient-to-br from-[#07315E] to-[#C73547]"
+              >
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#07315E]/10 text-[#07315E] shadow-sm transition group-hover:bg-white/20 group-hover:text-white">
+                  <Icon className="h-6 w-6" />
                 </div>
-                <p className="mt-2 text-sm leading-6 text-gray-600">
+                <h3 className="mt-4 text-lg font-semibold text-slate-900 transition group-hover:text-white">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600 transition group-hover:text-white/90">
                   {description}
                 </p>
-                <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-[#07315E] opacity-0 transition group-hover:opacity-100">
+                <span className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-transparent bg-white/90 px-4 py-2 text-sm font-semibold text-[#07315E] opacity-0 transition group-hover:opacity-100">
                   Learn more
-                  <span aria-hidden="true">→</span>
+                  <ICONS.ArrowRight className="h-4 w-4" />
                 </span>
-              </div>
-            </a>
-          </li>
-        ))}
-      </ul>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-      <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-center">
-        <a
-          href="/contact"
-          className="inline-flex items-center justify-center rounded-lg bg-[#07315E] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#052447] focus:outline-none focus:ring-2 focus:ring-[#07315E]/40"
-        >
-          Talk to Services Team
-        </a>
-        <span className="text-sm text-gray-500">Response within one business day</span>
-      </div>
-    </section>
+      {/* Contact / CTA cards */}
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div className="rounded-3xl bg-white p-8 shadow-lg">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {contactCards.map(({ title, description, cta, href }) => (
+              <div
+                key={title}
+                className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+              >
+                <h3 className="text-lg font-semibold text-slate-900">
+                  {title}
+                </h3>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  {description}
+                </p>
+                <a
+                  href={href}
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#07315E]"
+                >
+                  {cta}
+                  <ICONS.ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12 rounded-3xl bg-[#052447] px-6 py-10 text-center text-white">
+          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-white/60">
+            Need a custom service?
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold md:text-3xl">
+            Let's tailor a solution for your fleet
+          </h2>
+          <p className="mt-4 text-white/80">
+            Share your requirements and we'll design the onboarding, automations,
+            and integrations to match your workflow.
+          </p>
+          <a
+            href="/contact"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#052447]"
+          >
+            Talk to our team
+          </a>
+        </div>
+      </section>
+    </div>
   );
 };
 
