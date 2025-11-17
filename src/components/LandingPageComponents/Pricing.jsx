@@ -52,7 +52,7 @@ const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="pt-10 pb-20 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl scroll-mt-24"
+      className="pt-25 pb-20 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl scroll-mt-24"
     >
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-2xl md:text-3xl font-bold">Flexible Pricing</h2>

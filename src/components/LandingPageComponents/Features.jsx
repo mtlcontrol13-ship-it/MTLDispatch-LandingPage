@@ -108,13 +108,8 @@ const Features = () => {
     >
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.4em] text-[#C73547]">
-            Operational Intelligence
-          </p>
-          <h2 className="mt-3 text-3xl font-bold text-gray-900 sm:text-4xl">
-            Smart tools for fast-moving chauffeur teams
-          </h2>
-          <p className="mt-4 text-base text-gray-600">
+          <h2 className="text-2xl md:text-3xl font-bold">Key Features</h2>
+          <p className="mt-2 text-gray-600">
             Highlight the dispatch workflows that keep your fleet efficient—from
             live driver visibility to automated billing.
           </p>
@@ -136,7 +131,7 @@ const Features = () => {
         </div>
 
         {/* Desktop radial layout */}
-        <div className="relative hidden min-h-[620px] items-center justify-center pt-16 lg:flex">
+        <div className="relative hidden min-h-[620px] items-center justify-center pt-68 lg:flex">
           <div className="relative flex h-[320px] w-[320px] items-center justify-center xl:h-[360px] xl:w-[360px] 2xl:h-[400px] 2xl:w-[400px]">
             <img
               src={IMAGES.featuresmercedes}
