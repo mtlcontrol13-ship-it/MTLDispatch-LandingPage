@@ -64,7 +64,7 @@ const Footer = () => {
                   <img
                     src={IMAGES.facebook}
                     alt="Facebook"
-                    className="h-8 w-8"
+                    className="h-8 w-8 filter brightness-0 invert"
                   />
                 </a>
               </li>
@@ -75,7 +75,11 @@ const Footer = () => {
                   rel="noreferrer"
                   className="transition hover:opacity-80"
                 >
-                  <img src={IMAGES.x} alt="X" className="h-8 w-8" />
+                  <img
+                    src={IMAGES.x}
+                    alt="X"
+                    className="h-8 w-8 filter brightness-0 invert"
+                  />
                 </a>
               </li>
               <li>
@@ -88,18 +92,8 @@ const Footer = () => {
                   <img
                     src={IMAGES.instagram}
                     alt="Instagram"
-                    className="h-8 w-8"
+                    className="h-8 w-8 filter brightness-0 invert"
                   />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white transition hover:bg-white/20"
-                >
-                  in
                 </a>
               </li>
             </ul>
