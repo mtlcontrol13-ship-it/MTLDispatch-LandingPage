@@ -53,7 +53,7 @@ const Footer = () => {
               bookings, manage drivers, and deliver white-glove experiences from
               a single dispatch command center.
             </p>
-            <ul className="mt-8 flex space-x-5">
+            <ul className="mt-8 flex space-x-4">
               <li>
                 <a
                   href="https://facebook.com"
@@ -64,7 +64,7 @@ const Footer = () => {
                   <img
                     src={IMAGES.facebook}
                     alt="Facebook"
-                    className="h-8 w-8 filter brightness-0 invert"
+                    className="h-6 w-6 filter brightness-0 invert"
                   />
                 </a>
               </li>
@@ -78,7 +78,7 @@ const Footer = () => {
                   <img
                     src={IMAGES.x}
                     alt="X"
-                    className="h-8 w-8 filter brightness-0 invert"
+                    className="h-6 w-6 filter brightness-0 invert"
                   />
                 </a>
               </li>
@@ -92,7 +92,7 @@ const Footer = () => {
                   <img
                     src={IMAGES.instagram}
                     alt="Instagram"
-                    className="h-8 w-8 filter brightness-0 invert"
+                    className="h-6 w-6 filter brightness-0 invert"
                   />
                 </a>
               </li>
