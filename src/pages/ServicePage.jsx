@@ -1,5 +1,5 @@
 import React from "react";
-import { ICONS } from "../../assets/icons.js";
+import { ICONS } from "../assets/icons";
 
 const services = [
   {
@@ -23,19 +23,41 @@ const services = [
     Icon: ICONS.Headset,
     href: "/services/training-support",
   },
+  {
+    title: "Performance Optimization",
+    description:
+      "Regular reviews of acceptance, ETAs, and utilization with actionable guidance.",
+    Icon: ICONS.Rocket,
+    href: "/services/performance-optimization",
+  },
+  {
+    title: "Cloud Hosting",
+    description:
+      "Secure, scalable hosting with monitoring, backups, and proactive maintenance.",
+    Icon: ICONS.CloudCog,
+    href: "/services/cloud-hosting",
+  },
+  {
+    title: "Compliance & Security",
+    description:
+      "Role-based access, audit trails, and best practices to protect fleet and data.",
+    Icon: ICONS.ShieldCheck,
+    href: "/services/compliance-security",
+  },
 ];
 
-const Services = () => {
+const ServicePage = () => {
   return (
-    <section
-      id="services"
-      className="pt-10 pb-20 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl scroll-mt-24"
-    >
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-2xl md:text-3xl font-bold">Expert Services</h2>
-        <p className="mt-2 text-gray-600">
-          Partner with our implementation, integrations, and success teams to
-          launch smoothly and keep operations running at peak performance.
+    <section className="w-full py-20 pr-6 md:pr-10 lg:pr-14 xl:pr-16 pl-6 md:pl-12 lg:pl-20 xl:pl-28 2xl:pl-36">
+      <div className="max-w-5xl space-y-4">
+        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">
+          Services
+        </h1>
+        <p className="max-w-3xl text-base leading-relaxed text-gray-600">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          sunt quisquam consequatur itaque mollitia nihil blanditiis possimus
+          dolorem, tempore nostrum labore at rerum cupiditate eum suscipit
+          recusandae tempora earum esse!
         </p>
       </div>
 
@@ -75,17 +97,17 @@ const Services = () => {
         ))}
       </ul>
 
-      <div className="mt-10 flex justify-center">
+      <div className="mt-12 flex flex-wrap items-center justify-center gap-4 text-center">
         <a
-          href="/services"
-          className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:-translate-y-0.5 hover:border-[#07315E]/40 hover:bg-[#07315E]/5"
+          href="/contact"
+          className="inline-flex items-center justify-center rounded-lg bg-[#07315E] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#052447] focus:outline-none focus:ring-2 focus:ring-[#07315E]/40"
         >
-          View all services
+          Talk to Services Team
         </a>
+        <span className="text-sm text-gray-500">Response within one business day</span>
       </div>
-
     </section>
   );
 };
 
-export default Services;
+export default ServicePage;

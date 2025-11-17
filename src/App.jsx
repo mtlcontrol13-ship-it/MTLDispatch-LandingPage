@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 
 import DetailPage from "./pages/DetailPage";
 import Contact from "./components/LandingPageComponents/Contact";
+import ServicePage from "./pages/ServicePage";
 
 function App() {
   return (
@@ -12,12 +13,19 @@ function App() {
         <Route index element={<Home />} />
 
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<ServicePage />} />
 
         {/* Services */}
-        <Route path="services/:slug" element={<DetailPage category="services" />} />
+        <Route
+          path="services/:slug"
+          element={<DetailPage category="services" />}
+        />
 
         {/* Products */}
-        <Route path="products/:slug" element={<DetailPage category="products" />} />
+        <Route
+          path="products/:slug"
+          element={<DetailPage category="products" />}
+        />
       </Route>
     </Routes>
   );
