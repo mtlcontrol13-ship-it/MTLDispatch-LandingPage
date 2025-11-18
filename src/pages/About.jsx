@@ -1,6 +1,8 @@
 import React from "react";
 import { ICONS } from "../assets/icons";
 import PageHero from "../components/common/PageHero";
+import Hero from "../components/about/Hero";
+import CTA from "../components/about/CTA";
 
 const focusAreas = [
   {
@@ -23,7 +25,7 @@ const focusAreas = [
   },
 ];
 
-const AboutPage = () => {
+const About = () => {
   return (
     <div className="bg-white text-slate-900">
       <PageHero
@@ -35,36 +37,7 @@ const AboutPage = () => {
         ]}
       />
 
-      <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6 py-12 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
-        <div className="mb-8 text-center">
-          <h2 className="text-2xl font-semibold leading-tight text-slate-900 md:text-3xl">
-            Built for modern chauffeur teams
-          </h2>
-          <p className="mt-3 text-sm text-slate-600 md:text-base">
-            A connected workspace that keeps dispatch, drivers, and finance
-            aligned on every ride, payout, and guest touchpoint.
-          </p>
-        </div>
-        <div className="space-y-5 text-lg leading-relaxed text-slate-700">
-          <p>
-            <strong className="font-semibold text-slate-900">
-              MTLDispatch
-            </strong>{" "}
-            began as an internal project built by chauffeurs who needed one
-            command center for quotes, bookings, fleet health, and invoicing.
-            Instead of juggling spreadsheets and inboxes, we created a platform
-            that keeps every ride, payout, and customer promise visible.
-          </p>
-          <p>
-            Today we partner with boutique operators and enterprise fleets
-            across North America and Europe, helping them automate dispatch,
-            streamline billing, and monitor guest satisfaction in real time.
-            Your riders get consistent hospitality while your internal teams
-            gain the data needed to grow profitably.
-          </p>
-        </div>
-      </section>
-
+    <Hero />
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
           <div className="grid gap-6 md:grid-cols-3">
@@ -85,7 +58,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
       <section className="mx-auto max-w-5xl px-6 py-16 text-center md:px-12 lg:px-16 xl:px-20 2xl:px-0">
         <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-500">
           Ready to meet?
@@ -113,8 +85,9 @@ const AboutPage = () => {
           </a>
         </div>
       </section>
+            <CTA />
     </div>
   );
 };
 
-export default AboutPage;
+export default About;

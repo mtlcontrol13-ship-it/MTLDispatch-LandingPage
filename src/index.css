@@ -4,6 +4,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --primary-red-color: #C73547;
+  --primary-yellow-color: #FFC800;
+}
 @keyframes mobileSlideDown {
   from {
     opacity: 0;
