@@ -1,5 +1,6 @@
 import React from "react";
 import { ICONS } from "../assets/icons";
+import PageHero from "../components/common/PageHero";
 
 const services = [
   {
@@ -71,24 +72,10 @@ const ServicePage = () => {
   return (
     <div className="bg-slate-50 text-slate-900">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-linear-to-b from-[#052447] to-[#07315E] pb-28 pt-16 text-white">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="h-full w-full bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_55%)]" />
-        </div>
-        <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-6 mb-10 px-6 text-center">
-          <h1 className="text-3xl font-bold text-white md:text-4xl">
-            Services
-          </h1>
-          <div className="mb-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/70">
-            <span>Implementation</span>
-            <span className="opacity-50">&bull;</span>
-            <span>Integrations</span>
-            <span className="opacity-50">&bull;</span>
-            <span>Success Programs</span>
-          </div>
-        </div>
-        <div className="absolute inset-x-0 bottom-0 h-24 rounded-t-[40%] bg-slate-50" />
-      </section>
+      <PageHero
+        title="Services"
+        highlights={["Implementation", "Integrations", "Success Programs"]}
+      />
 
       {/* Service Grid */}
       <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-6">
