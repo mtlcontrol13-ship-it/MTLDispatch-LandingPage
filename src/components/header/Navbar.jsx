@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Brand */}
         <a href="/" className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-md bg-gradient-to-br from-[#07315E] to-[#C73547]" />
-          <span className="text-xl font-bold tracking-tight">MTL Landing Page</span>
+          <span className="text-xl font-bold tracking-tight">MTLDispatch</span>
         </a>
 
         {/* Desktop Nav */}
