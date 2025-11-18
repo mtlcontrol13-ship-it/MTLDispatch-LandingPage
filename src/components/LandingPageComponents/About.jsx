@@ -8,22 +8,23 @@ const About = () => {
       id="about"
       className="bg-white py-16 md:py-24 relative overflow-hidden"
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="grid grid-cols-12 gap-8 items-center">
+      <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
+        <div className="grid grid-cols-12 gap-y-12 gap-x-8 items-center">
           <div className="col-span-12 md:col-span-6 relative">
-            <div className="relative z-10">
+            <div className="relative z-10 max-w-lg mx-auto flex justify-center">
               <img
                 src={IMAGES.aboutmercedes}
                 alt="Luxury chauffeur service vehicle - Professional fleet management"
+                className="w-full h-auto object-contain drop-shadow-2xl"
               />
             </div>
 
             {/* Decorative Bubble */}
-            <div className="absolute md:left-8 xl:left-16 2xl:left-10  left-10 bottom-1 md:-bottom-16 xl:-bottom-7 2xl:-bottom-7 w-72  xl:w-100 h-32 2xl:w-108 md:h-64  z-0 bg-[#FFC800]  rounded-full transform scale-y-[0.2] scale-x-110" />
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-1 sm:-bottom-4 md:-bottom-16 xl:-bottom-7 2xl:-bottom-7 w-48 sm:w-60 md:w-72 xl:w-100 2xl:w-108 h-24 sm:h-28 md:h-64 z-0 bg-[#FFC800] rounded-full transform scale-y-[0.2] scale-x-110" />
           </div>
 
           {/* Text Content Section */}
-          <div className="col-span-12 md:col-span-6 space-y-6">
+          <div className="col-span-12 md:col-span-6 space-y-6 mt-10 md:mt-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               About <span style={{ color: "#C73547" }}>MTLDispatch</span>
             </h2>
