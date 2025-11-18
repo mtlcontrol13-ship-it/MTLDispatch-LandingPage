@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { IMAGES } from "../../assets/Images";
 import { ICONS } from "../../assets/icons";
 
@@ -55,13 +56,16 @@ const About = () => {
               </p>
 
               <div className="pt-4 flex justify-start">
-                <button className=" group relative inline-flex items-center rounded-full border-2 border-[#C73547] px-6 py-2 text-sm font-semibold text-black bg-white shadow-md cursor-pointer transition-all duration-200 focus:outline-none">
+                <Link
+                  to="/about"
+                  className="group relative inline-flex items-center rounded-full border-2 border-[#C73547] px-6 py-2 text-sm font-semibold text-black bg-white shadow-md cursor-pointer transition-all duration-200 focus:outline-none"
+                >
                   <span className="pr-6">Learn More</span>
 
                   <span className="absolute right-1.5 flex h-7 w-7 items-center justify-center rounded-full border border-[#C73547] bg-white transition-all duration-200 group-hover:bg-[#C73547] group-hover:border-white group-hover:translate-x-0.5 ">
                     <ICONS.ArrowRight className="h-3.5 w-3.5 text-[#C73547] group-hover:rotate-360 transition-transform transition-colors duration-400  group-hover:text-white" />
                   </span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
