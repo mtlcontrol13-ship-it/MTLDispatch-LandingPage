@@ -1,48 +1,16 @@
 import React from "react";
 import { IMAGES } from "../../assets/Images";
-
-const footerNav = [
-  {
-    title: "Solutions",
-    links: [
-      { label: "Dispatch Management", href: "/#features" },
-      { label: "Driver Coordination", href: "/#services" },
-      { label: "Customer Communication", href: "/#products" },
-      { label: "Performance Analytics", href: "/#pricing" },
-      { label: "Executive Dashboard", href: "/#about" },
-      { label: "Integrations", href: "/#contact" },
-    ],
-  },
-  {
-    title: "Platform",
-    links: [
-      { label: "Chauffeur App", href: "/#products" },
-      { label: "Client Widget", href: "/#features" },
-      { label: "Vehicle Tracking", href: "/#services" },
-      { label: "Zone Control", href: "/#features" },
-      { label: "Billing Suite", href: "/#pricing" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About", href: "/#about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Blog", href: "/blog" },
-      { label: "Media Kit", href: "/media" },
-    ],
-  },
-];
+import { footerNav } from "../../helpers/data";
 
 const Footer = () => {
   return (
-    <footer className="tracking-wide bg-gradient-to-br from-slate-950 via-slate-900 to-[#6f2142] px-6 sm:px-10 pt-16 pb-8 text-slate-300">
-      <div className="mx-auto max-w-7xl">
+    <footer className="tracking-wide bg-black px-6 sm:px-10 pt-16 pb-8 text-slate-300">
+      <div className="mx-auto 2xl:max-w-7xl xl:max-w-280">
         <div className="grid gap-12 min-[1200px]:grid-cols-3 xl:gap-16">
           <div className="max-w-md">
             <a href="/">
               <div className="flex items-center gap-2">
-                <div className="h-10 w-10 rounded-md bg-gradient-to-br from-[#07315E] to-[#D43E51]" />
+                <div className="h-10 w-10 rounded-md bg-linear-to-br from-[#07315E] to-[#D43E51]" />
                 <span className="text-xl font-semibold text-white">
                   MTLDispatch
                 </span>

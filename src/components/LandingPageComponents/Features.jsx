@@ -162,10 +162,9 @@ const Features = () => {
             <CurvedArrow
               className="absolute z-20"
               flipY
-              style={{ bottom: "10%", right: "-12%", transform: "translate(25%, 12%) rotate(-28deg)", transformOrigin: "5% 55%" }}
+              style={{ bottom: "10%", right: "-9%", transform: "translate(25%, 12%) rotate(-28deg)", transformOrigin: "5% 55%" }}
             />
 
-            {/* Top Center - Real-time Fleet Management */}
             <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">
               <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
                 <div className="flex items-start gap-4">

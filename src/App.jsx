@@ -4,7 +4,9 @@ import Home from "./pages/Home";
 import DetailPage from "./pages/DetailPage";
 import Contact from "./components/LandingPageComponents/Contact";
 import ServicePage from "./pages/ServicePage";
+import About from "./pages/About";
 import AboutPage from "./pages/AboutPage";
+import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <Route path="/" element={<LandingPageLayout />}>
         <Route index element={<Home />} />
 
+        {/* Register Routes */}
         <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicePage />} />
+        <Route path="/pricing" element={<PricingPage />} />
 
         {/* Services */}
         <Route
