@@ -35,7 +35,16 @@ const AboutPage = () => {
         ]}
       />
 
-      <section className="mx-auto max-w-5xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
+      <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6 py-12 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
+        <div className="mb-8 text-center">
+          <h2 className="text-2xl font-semibold leading-tight text-slate-900 md:text-3xl">
+            Built for modern chauffeur teams
+          </h2>
+          <p className="mt-3 text-sm text-slate-600 md:text-base">
+            A connected workspace that keeps dispatch, drivers, and finance
+            aligned on every ride, payout, and guest touchpoint.
+          </p>
+        </div>
         <div className="space-y-5 text-lg leading-relaxed text-slate-700">
           <p>
             <strong className="font-semibold text-slate-900">
