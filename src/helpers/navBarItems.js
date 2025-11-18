@@ -57,7 +57,7 @@ export const navbarItems = [
   },
   {
     name: "Pricing",
-    link: "#pricing",
+    link: "/pricing",
   },
   {
     name: "About Us",
