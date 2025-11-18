@@ -10,7 +10,7 @@ const About = () => {
     >
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
         <div className="grid grid-cols-12 gap-y-12 gap-x-8 items-center">
-          <div className="col-span-12 md:col-span-6 relative">
+          <div className="col-span-12 md:col-span-6 relative hidden md:block">
             <div className="relative z-10 max-w-lg mx-auto flex justify-center">
               <img
                 src={IMAGES.aboutmercedes}
@@ -24,7 +24,7 @@ const About = () => {
           </div>
 
           {/* Text Content Section */}
-          <div className="col-span-12 md:col-span-6 space-y-6 mt-10 md:mt-0">
+          <div className="col-span-12 md:col-span-6 space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               About <span style={{ color: "#C73547" }}>MTLDispatch</span>
             </h2>
