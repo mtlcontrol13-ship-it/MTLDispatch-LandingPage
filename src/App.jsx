@@ -5,7 +5,6 @@ import DetailPage from "./pages/DetailPage";
 import Contact from "./components/LandingPageComponents/Contact";
 import ServicePage from "./pages/ServicePage";
 import About from "./pages/About";
-import AboutPage from "./pages/AboutPage";
 import PricingPage from "./pages/PricingPage";
 
 function App() {

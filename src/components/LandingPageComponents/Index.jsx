@@ -33,7 +33,7 @@ const Index = () => {
                 </span>
               </div>
               {activeTab === tab.id && (
-                <div className="absolute -bottom-8 left-0 right-0 h-1 bg-[#C73547] rounded-t-sm" />
+                <div className="absolute md:-bottom-8 -bottom-4 left-0 right-0 h-1 bg-[#C73547] rounded-t-sm" />
               )}
             </button>
           ))}
@@ -43,7 +43,7 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-tight">
+            <h2 className="text-xl md:text-3xl font-bold text-foreground leading-tight">
               {tabs[activeTab].heading}
             </h2>
             <div className="space-y-4">
@@ -57,7 +57,7 @@ const Index = () => {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-rose-100 rounded-3xl transform rotate-3" />
+            <div className="absolute inset-0 bg-linear-to-br from-pink-100 to-rose-100 rounded-3xl transform rotate-3" />
             <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
               <div className="flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-100">
                 <div className="flex gap-1.5">

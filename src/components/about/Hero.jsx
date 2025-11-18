@@ -3,15 +3,15 @@ import { IMAGES } from "../../assets/Images";
 
 const Hero = () => {
   return (
-    <div className="px-4 py-24">
+    <div className="px-4 md:py-24 py-12 ">
       {/* parent  */}
-      <div className="2xl:max-w-7xl xl:max-w-5xl flex items-center justify-evenly w-full mx-auto gap-12">
+      <div className="2xl:max-w-7xl xl:max-w-5xl flex md:flex-row flex-col items-center justify-evenly w-full mx-auto gap-12">
         {/* Images Section */}
-        <div className="flex relative w-full max-w-xl">
-          <div className="bg-(--primary-yellow-color) h-112 rounded-md w-64 absolute -top-8 -left-12 z-0" />
+        <div className="flex md:flex-row flex-col relative w-full max-w-xl">
+<div className="hidden md:block bg-(--primary-yellow-color) h-72 w-64 rounded-md absolute -top-8 -left-12 z-0" />
           
           {/* Main Dashboard Image */}
-          <div className="w-[420px] h-96 z-10 rounded-2xl overflow-hidden shadow-2xl">
+<div className="w-full md:w-[420px] h-72 md:h-96 z-10 rounded-2xl overflow-hidden shadow-2xl">
             <img 
               src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" 
               alt="Dashboard Analytics" 
@@ -19,16 +19,17 @@ const Hero = () => {
             />
           </div>
           
-          <div>
-            <img 
-              src={IMAGES.AboutShape} 
-              alt="about shape" 
-              className="absolute -top-12 left-2/5" 
-            />
-          </div>
+       <div className="hidden md:block">
+  <img
+    src={IMAGES.AboutShape}
+    alt="about shape"
+    className="absolute w-full -top-12 left-1/3"
+  />
+</div>
+
           
           {/* Secondary Tracking Image */}
-          <div className="w-64 h-80 absolute right-12 top-16 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+<div className="hidden md:block w-64 h-80 absolute right-4 md:right-12 top-24 md:top-16 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
             <img 
               src="https://images.unsplash.com/photo-1569025690938-a00729c9e1f9?w=600&q=80" 
               alt="Driver Tracking Map" 
