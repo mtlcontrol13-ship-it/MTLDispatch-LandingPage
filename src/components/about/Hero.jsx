@@ -82,7 +82,6 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Feature 2 */}
             <div className="flex items-start space-x-6">
               <div className="size-16 bg-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
                 <svg 
