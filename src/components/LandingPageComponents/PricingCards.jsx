@@ -3,7 +3,7 @@ import { ICONS } from "../../assets/icons";
 
 export const plans = [
   {
-    name: "Starter",
+    name: "Core",
     description: "Launch quickly with core dispatch, booking, and mobile apps.",
     price: "£99",
     period: "/mo",
@@ -17,7 +17,7 @@ export const plans = [
     href: "/pricing/starter",
   },
   {
-    name: "Growth",
+    name: "Plus",
     description: "Scale operations with automations, integrations, and analytics.",
     badge: "Most popular",
     price: "£249",
@@ -33,7 +33,7 @@ export const plans = [
     href: "/pricing/growth",
   },
   {
-    name: "Enterprise",
+    name: "Black",
     description: "Tailored platform, SLAs, and dedicated success for large fleets.",
     price: "Let's talk",
     period: "",
