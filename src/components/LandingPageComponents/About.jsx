@@ -24,12 +24,12 @@ const About = () => {
           </div>
 
           {/* Text Content Section */}
-          <div className="col-span-12 md:col-span-6 space-y-6">
+          <div className="col-span-12 md:col-span-6 space-y-6 px-2 sm:px-4 md:px-0">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
               About <span style={{ color: "#C73547" }}>MTLDispatch</span>
             </h2>
 
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 leading-relaxed max-w-2xl w-full">
               <p className="text-lg">
                 <strong className="font-semibold">MTLDispatch</strong> is a
                 comprehensive SaaS platform designed specifically for chauffeur
@@ -54,8 +54,8 @@ const About = () => {
                 metrics.
               </p>
 
-              <div className="pt-4 ">
-                <button className=" group relative inline-flex items-center rounded-full border-2 border-[#C73547] px-6 py-2 text-sm font-semibold text-black  bg-white shadow-md cursor-pointer transition-all duration-200 focus:outline-none">
+              <div className="pt-4 flex justify-start">
+                <button className=" group relative inline-flex items-center rounded-full border-2 border-[#C73547] px-6 py-2 text-sm font-semibold text-black bg-white shadow-md cursor-pointer transition-all duration-200 focus:outline-none">
                   <span className="pr-6">Learn More</span>
 
                   <span className="absolute right-1.5 flex h-7 w-7 items-center justify-center rounded-full border border-[#C73547] bg-white transition-all duration-200 group-hover:bg-[#C73547] group-hover:border-white group-hover:translate-x-0.5 ">
