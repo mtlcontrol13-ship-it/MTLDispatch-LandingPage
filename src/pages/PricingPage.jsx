@@ -1,6 +1,6 @@
 import React from "react";
 import PageHero from "../components/common/PageHero";
-import PricingCards from "../components/LandingPageComponents/Pricing";
+import PricingCards from "../components/LandingPageComponents/PricingCards";
 
 const PricingPage = () => {
   return (
