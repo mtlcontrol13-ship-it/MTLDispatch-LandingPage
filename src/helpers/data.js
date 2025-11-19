@@ -77,8 +77,11 @@ export const footerNav = [
 export const plans = [
   {
     name: "Core",
-    description: "Launch quickly with core dispatch, booking, and mobile apps.",
-    price: "Â£99",
+    shortDescription:
+      "Launch quickly with core dispatch, booking, and mobile apps.",
+    description:
+      "Everything you need to go live fast: a streamlined dispatcher console, branded booking forms, and driver/passenger apps. Perfect for boutique fleets or teams standardizing processes before scaling. Includes baseline automation, simple invoicing, and responsive email support.",
+    price: "£99",
     period: "/mo",
     features: [
       "Web + phone bookings",
@@ -86,20 +89,47 @@ export const plans = [
       "Basic invoicing",
       "Email support",
     ],
+    detailFeatures: [
+      "Unlimited bookings across web and phone",
+      "Driver & passenger mobile apps with push alerts",
+      "Zones, fares, and vehicle classes configuration",
+      "Basic invoicing with export to CSV",
+      "Custom booking forms and client branding",
+      "Analytics snapshot with daily summaries",
+      "Email + in-app help center",
+      "User roles for dispatchers and admins",
+      "Audit logs for key booking changes",
+      "Access to community training library",
+    ],
     cta: "Start Free Trial",
     href: "/pricing/starter",
   },
   {
     name: "Plus",
-    description: "Scale operations with automations, integrations, and analytics.",
+    shortDescription:
+      "Scale operations with automations, integrations, and analytics.",
+    description:
+      "Designed for scaling fleets that need automation and deeper insights. Unlock auto-assign rules, QuickBooks sync, premium support, and advanced analytics dashboards that surface driver utilization, margins, and SLA adherence. Includes everything from Core plus priority rollout guidance.",
     badge: "Most popular",
-    price: "Â£249",
+    price: "£249",
     period: "/mo",
     features: [
-      "Everything in Starter",
+      "Everything in Core",
       "Auto-assign rules",
       "QuickBooks sync",
       "Priority support",
+    ],
+    detailFeatures: [
+      "Advanced auto-assign rules with proximity + performance scoring",
+      "QuickBooks Online + Xero integrations",
+      "Priority response SLAs (2h) and dedicated CSM",
+      "Custom dashboard widgets + exportable reports",
+      "API access for partner networks",
+      "SMS + WhatsApp customer messaging",
+      "Driver performance analytics + heatmaps",
+      "Multi-market dispatch controls",
+      "SFTP data drops + webhook notifications",
+      "Live training for new dispatcher hires",
     ],
     highlighted: true,
     cta: "Request Free Demo",
@@ -107,7 +137,10 @@ export const plans = [
   },
   {
     name: "Black",
-    description: "Tailored platform, SLAs, and dedicated success for large fleets.",
+    shortDescription:
+      "Tailored platform, SLAs, and dedicated success for large fleets.",
+    description:
+      "Enterprise-grade program with bespoke workflows, uptime SLAs, and 24/7 white-glove support. Includes custom development hours, dedicated success architect, and governance tooling to connect multiple brands or geographies under one reporting structure. Perfect for global or franchise fleets.",
     price: "Let's talk",
     period: "",
     features: [
@@ -116,7 +149,20 @@ export const plans = [
       "Dedicated success manager",
       "24/7 support",
     ],
+    detailFeatures: [
+      "Dedicated success architect + quarterly roadmap planning",
+      "24/7 hotline with 30-min critical response SLA",
+      "Custom module development + private APIs",
+      "Unlimited fleets, brands, and geographies",
+      "SOC2-ready governance + audit trails",
+      "Single sign-on (Okta, Azure AD) and SCIM user sync",
+      "Lifecycle reporting with executive scorecards",
+      "Tailored integrations (payments, telematics, CRM)",
+      "Onsite training + rollout playbooks",
+      "Joint marketing + co-sell opportunities",
+    ],
     cta: "Contact Sales",
     href: "/pricing/enterprise",
   },
 ];
+

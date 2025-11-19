@@ -31,7 +31,9 @@ const PricingCards = ({ limit = plans.length, layout = "vertical" }) => {
 
           <div className={`${isHorizontal ? "flex flex-1 flex-col md:flex-row md:gap-8" : ""}`}>
             <div className={`${isHorizontal ? "md:w-1/3" : ""}`}>
-              <p className="mt-2 text-sm text-gray-600">{plan.description}</p>
+              <p className="mt-2 text-sm text-gray-600">
+                {isHorizontal ? plan.description : plan.shortDescription || plan.description}
+              </p>
 
               <div className="mt-6 flex items-baseline gap-1">
                 <span className="text-3xl font-bold text-gray-900">{plan.price}</span>
@@ -40,7 +42,7 @@ const PricingCards = ({ limit = plans.length, layout = "vertical" }) => {
             </div>
 
             <ul className={`mt-6 flex flex-1 flex-col gap-2 text-sm text-gray-700 ${isHorizontal ? "md:mt-0" : ""}`}>
-              {plan.features.map((feature, idx) => (
+              {(isHorizontal ? plan.detailFeatures || plan.features : plan.features).map((feature, idx) => (
                 <li key={idx} className="flex items-start gap-2">
                   <ICONS.CheckCircle2 className="mt-0.5 h-4 w-4 text-[#07315E]" />
                   <span>{feature}</span>
