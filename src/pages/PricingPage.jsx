@@ -21,7 +21,7 @@ const PricingPage = () => {
           </p>
         </div>
 
-        <PricingCards />
+        <PricingCards layout="horizontal" />
       </section>
     </div>
   );
