@@ -1,57 +1,61 @@
 export const navbarItems = [
   {
     name: "Products",
-    link: "/products",
+    link: "/products/dispatch-software",
     subItems: [
       {
-        name: "Dispatch System",
-        link: "/products/dispatch-system",
+        name: "Dispatch Software",
+        link: "/products/dispatch-software",
       },
       {
-        name: "Web Booking Engine",
-        link: "/products/web-booking-engine",
+        name: "Booking Software",
+        link: "/products/booking-software",
       },
       {
-        name: "Customer Booking Dashboard",
-        link: "/products/customer-booking-dashboard",
+        name: "Passenger App",
+        link: "/products/passenger-app",
       },
       {
-        name: "Branded Driver App",
-        link: "/products/branded-driver-app",
+        name: "Driver App",
+        link: "/products/driver-app",
       },
       {
-        name: "Branded Passenger App",
-        link: "/products/branded-passenger-app",
+        name: "Billing & Invoicing",
+        link: "/products/billing-and-invoicing",
       },
       {
-        name: "Complete IT Solutions",
-        link: "/products/complete-it-solutions",
+        name: "Reporting & Analytics",
+        link: "/products/reporting-and-analytics",
       },
     ],
   },
   {
     name: "Features",
-    link: "/features",
+    link: "/services/implementation-onboarding",
     subItems: [
       {
-        name: "Complete Solutions",
-        link: "/features/complete-solutions",
+        name: "Implementation & Onboarding",
+        link: "/services/implementation-onboarding",
       },
       {
-        name: "QuickBooks Integration",
-        link: "/features/quickbooks-integration",
+        name: "Integrations",
+        link: "/services/integrations",
       },
       {
-        name: "Share Platform",
-        link: "/features/share-platform",
+        name: "Training & Support",
+        link: "/services/training-support",
       },
       {
-        name: "Invoice Management",
-        link: "/features/invoice-management",
+        name: "Performance Optimization",
+        link: "/services/performance-optimization",
       },
       {
-        name: "Expense Tracking",
-        link: "/features/expense-tracking",
+        name: "Cloud Hosting",
+        link: "/services/cloud-hosting",
+      },
+      {
+        name: "Compliance & Security",
+        link: "/services/compliance-security",
       },
     ],
   },
@@ -65,7 +69,7 @@ export const navbarItems = [
   },
   {
     name: "Services",
-    link: "/services"
+    link: "/services",
   },
   {
     name: "Contact Us",

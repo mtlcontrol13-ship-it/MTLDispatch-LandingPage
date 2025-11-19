@@ -1,52 +1,7 @@
 import React from "react";
 import { ICONS } from "../../assets/icons";
+import { plans } from "../../helpers/data";
 
-export const plans = [
-  {
-    name: "Core",
-    description: "Launch quickly with core dispatch, booking, and mobile apps.",
-    price: "£99",
-    period: "/mo",
-    features: [
-      "Web + phone bookings",
-      "Driver & passenger apps",
-      "Basic invoicing",
-      "Email support",
-    ],
-    cta: "Start Free Trial",
-    href: "/pricing/starter",
-  },
-  {
-    name: "Plus",
-    description: "Scale operations with automations, integrations, and analytics.",
-    badge: "Most popular",
-    price: "£249",
-    period: "/mo",
-    features: [
-      "Everything in Starter",
-      "Auto-assign rules",
-      "QuickBooks sync",
-      "Priority support",
-    ],
-    highlighted: true,
-    cta: "Request Free Demo",
-    href: "/pricing/growth",
-  },
-  {
-    name: "Black",
-    description: "Tailored platform, SLAs, and dedicated success for large fleets.",
-    price: "Let's talk",
-    period: "",
-    features: [
-      "Custom workflows",
-      "Unlimited zones & fleets",
-      "Dedicated success manager",
-      "24/7 support",
-    ],
-    cta: "Contact Sales",
-    href: "/pricing/enterprise",
-  },
-];
 
 const PricingCards = () => (
   <div className="grid gap-6 md:grid-cols-3">
