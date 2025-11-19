@@ -1,16 +1,13 @@
 import React from "react";
+import { IMAGES } from "../../assets/Images";
 
 const CTA = () => {
   return (
     <section
-      className="relative h-screen bg-fixed bg-center bg-cover"
-      style={{
-        backgroundImage: `url('https://via.placeholder.com/1920x1080?text=Chauffeur+Service+Dashboard')`,
-      }}
+      className="relative h-full p-12 bg-cover bg-center"
+      style={{ backgroundImage: `url(${IMAGES.CTA})` }}
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50"></div>
-
+      <div className="absolute inset-0 bg-black/40" />
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 text-center text-white max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-2xl font-bold mb-4">
@@ -20,8 +17,8 @@ const CTA = () => {
         <p className="text-md md:text-lg mb-6 leading-relaxed">
           Our platform gives your company the tools to manage bookings, drivers,
           invoices, and real-time tracking — all in one intuitive dashboard.
-          Streamline your operations, enhance your customer experience, and
-          grow your fleet with confidence.
+          Streamline your operations, enhance your customer experience, and grow
+          your fleet with confidence.
         </p>
 
         <div className="space-x-4">
