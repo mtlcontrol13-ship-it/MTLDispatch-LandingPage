@@ -61,9 +61,12 @@ const PricingCards = ({
                     : plan.shortDescription || plan.description}
                 </p>
 
-                <div className="mt-5 flex items-baseline gap-2">
+                <div className="mt-5 flex items-baseline gap-1">
                   <span className="text-3xl font-bold text-gray-900">
-                    {price}
+                    {typeof price === "string" &&
+                    price.toLowerCase().includes("talk")
+                      ? price
+                      : `$${price}`}
                   </span>
                   {period && (
                     <span className="text-sm text-gray-500">{period}</span>
