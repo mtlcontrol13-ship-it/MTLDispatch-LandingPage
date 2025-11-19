@@ -18,9 +18,9 @@ const Home = () => {
       <Features />
       <Index />
       <TrustedBy />   
-      <Pricing />
-      <MobileApp />
       <HomePricingPreview />
+      {/* <Pricing /> */}
+      <MobileApp />
       <Services />
     </div>
   );
