@@ -13,7 +13,7 @@ const HomePricingPreview = () => (
         your operations.
       </p>
     </div>
-    <div className="mt-10 rounded-3xl border border-slate-200 bg-white p-6 shadow-lg md:p-10">
+    <div className="mt-10">
       <PricingCards />
     </div>
     <div className="mt-8 text-center">
