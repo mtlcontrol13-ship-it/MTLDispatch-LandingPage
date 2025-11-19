@@ -73,6 +73,6 @@ export const navbarItems = [
   },
   {
     name: "Login",
-    link: "/login",
+    link: "https://mtldispatch.com/login",
   },
 ];
