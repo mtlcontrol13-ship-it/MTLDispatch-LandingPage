@@ -10,7 +10,7 @@ const PricingPage = () => {
       <PageHero title="Pricing" highlights={["Core", "Plus", "Black"]} />
 
       <main className="relative z-10">
-        <section className="mx-auto -mt-16 max-w-6xl rounded-3xl bg-white px-6 py-10 shadow-sm md:px-12 lg:px-16 xl:px-20 2xl:px-0">
+        <section className="mx-auto -mt-16 max-w-6xl px-6 py-10 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
           <div className="mb-8 text-center">
             <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
               Flexible plans for every fleet size
