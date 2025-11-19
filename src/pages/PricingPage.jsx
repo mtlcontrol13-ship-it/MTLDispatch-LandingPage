@@ -7,7 +7,7 @@ const PricingPage = () => {
     <div className="bg-white text-slate-900">
       <PageHero
         title="Pricing"
-        highlights={["Starter", "Growth", "Enterprise"]}
+        highlights={["Core", "Plus", "Black"]}
       />
 
       <section className="relative z-10 mx-auto -mt-16 max-w-6xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
