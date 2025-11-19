@@ -40,12 +40,18 @@ const PricingCards = ({
               }
               ${isHorizontal ? "gap-6" : "md:flex-1 md:min-w-[280px]"}`}
           >
+            {plan.highlighted && plan.badge && (
+              <div className="absolute -top-3 right-4 rounded-full bg-[#C73547] px-3 py-1 text-xs font-semibold text-white shadow-md">
+                {plan.badge}
+              </div>
+            )}
+
             {/* Header */}
             <header className="flex items-baseline justify-between gap-2">
               <h3 className="text-xl font-semibold text-gray-900">
                 {plan.name}
               </h3>
-              {plan.badge && !isHighlighted && (
+              {!plan.highlighted && plan.badge && (
                 <span className="rounded-full bg-[#C73547]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[#C73547]">
                   {plan.badge}
                 </span>
