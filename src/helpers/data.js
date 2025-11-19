@@ -1,45 +1,43 @@
 import { IMAGES } from "../assets/Images";
 
- export  const tabs = [
-    {
-      id: 0,
-      number: "01",
-      title: "Clean User Interface",
-      heading: "MTLDispatch Has A Clean User Interface.",
-      description: [
-        "Our intuitive dashboard design makes managing your chauffeur business effortless. With clean layouts and easy navigation, you can handle bookings, drivers, and customers efficiently.",
-        "Built specifically for chauffeur companies, every feature is designed to streamline your daily operations and reduce complexity."
-      ]
-    },
-    {
-      id: 1,
-      number: "02",
-      title: "Cloud Data Save Options",
-      heading: "Solid Has Cloud Data Save Options.",
-      description: [
-        "Your data is automatically backed up to secure cloud servers, ensuring you never lose important booking or customer information. Access your dispatch system from anywhere, anytime.",
-        "Real-time synchronization keeps all your devices updated, so your team always has the latest information at their fingertips."
-      ]
-    },
-    {
-      id: 2,
-      number: "03",
-      title: "Management And Collaboration",
-      heading: "Powerful Management And Collaboration.",
-      description: [
-        "Coordinate your entire team with built-in collaboration tools. Assign drivers, track vehicles, and manage multiple users with different permission levels.",
-        "Share booking information instantly with your drivers and keep everyone on the same page with real-time updates and notifications."
-      ]
-    }
-  ];
-
+export const tabs = [
+  {
+    id: 0,
+    number: "01",
+    title: "Clean User Interface",
+    heading: "MTLDispatch Has A Clean User Interface.",
+    description: [
+      "Our intuitive dashboard design makes managing your chauffeur business effortless. With clean layouts and easy navigation, you can handle bookings, drivers, and customers efficiently.",
+      "Built specifically for chauffeur companies, every feature is designed to streamline your daily operations and reduce complexity.",
+    ],
+  },
+  {
+    id: 1,
+    number: "02",
+    title: "Cloud Data Save Options",
+    heading: "Solid Has Cloud Data Save Options.",
+    description: [
+      "Your data is automatically backed up to secure cloud servers, ensuring you never lose important booking or customer information. Access your dispatch system from anywhere, anytime.",
+      "Real-time synchronization keeps all your devices updated, so your team always has the latest information at their fingertips.",
+    ],
+  },
+  {
+    id: 2,
+    number: "03",
+    title: "Management And Collaboration",
+    heading: "Powerful Management And Collaboration.",
+    description: [
+      "Coordinate your entire team with built-in collaboration tools. Assign drivers, track vehicles, and manage multiple users with different permission levels.",
+      "Share booking information instantly with your drivers and keep everyone on the same page with real-time updates and notifications.",
+    ],
+  },
+];
 
 export const cryptoCoins = [
-  { name: "Mega Transfers", icon: IMAGES.MegaTransfers  },
+  { name: "Mega Transfers", icon: IMAGES.MegaTransfers },
   { name: "Your IT Experts", icon: IMAGES.YourITExperts },
   { name: "Heathrow Airport Chauffered", icon: IMAGES.HAC },
-]
-
+];
 
 export const footerNav = [
   {
@@ -81,8 +79,17 @@ export const plans = [
       "Launch quickly with core dispatch, booking, and mobile apps.",
     description:
       "Everything you need to go live fast: a streamlined dispatcher console, branded booking forms, and driver/passenger apps. Perfect for boutique fleets or teams standardizing processes before scaling. Includes baseline automation, simple invoicing, and responsive email support.",
-    price: "�99",
+
+    // NEW
+    priceMonthly: "99",
+    periodMonthly: "/mo",
+    priceYearly: "84", // ~15% off per month
+    periodYearly: "/mo • billed yearly",
+
+    // legacy fallback (monthly)
+    price: "99",
     period: "/mo",
+
     features: [
       "Web + phone bookings",
       "Driver & passenger apps",
@@ -110,9 +117,18 @@ export const plans = [
       "Scale operations with automations, integrations, and analytics.",
     description:
       "Designed for scaling fleets that need automation and deeper insights. Unlock auto-assign rules, QuickBooks sync, premium support, and advanced analytics dashboards that surface driver utilization, margins, and SLA adherence. Includes everything from Core plus priority rollout guidance.",
-    badge: "Most popular",
-    price: "�249",
+
+    // NEW
+    priceMonthly: "249",
+    periodMonthly: "/mo",
+    priceYearly: "212",
+    periodYearly: "/mo • billed yearly",
+
+    // legacy fallback (monthly)
+    price: "249",
     period: "/mo",
+
+    badge: "Most popular",
     features: [
       "Everything in Core",
       "Auto-assign rules",
@@ -141,8 +157,17 @@ export const plans = [
       "Tailored platform, SLAs, and dedicated success for large fleets.",
     description:
       "Enterprise-grade program with bespoke workflows, uptime SLAs, and 24/7 white-glove support. Includes custom development hours, dedicated success architect, and governance tooling to connect multiple brands or geographies under one reporting structure. Perfect for global or franchise fleets.",
-    price: "Let's talk",
+
+    // Same label for both (enterprise talk-to-sales)
+    priceMonthly: "Let’s talk",
+    periodMonthly: "",
+    priceYearly: "Let’s talk",
+    periodYearly: "",
+
+    // legacy fallback
+    price: "Let’s talk",
     period: "",
+
     features: [
       "Custom workflows",
       "Unlimited zones & fleets",
@@ -165,4 +190,3 @@ export const plans = [
     href: "/pricing/enterprise",
   },
 ];
-

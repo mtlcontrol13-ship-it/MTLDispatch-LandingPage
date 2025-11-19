@@ -3,16 +3,14 @@ import PageHero from "../components/common/PageHero";
 import PricingCards from "../components/LandingPageComponents/PricingCards";
 
 const PricingPage = () => {
-  const [billing, setBilling] = useState("monthly"); // visual toggle only
+  const [billing, setBilling] = useState("monthly");
 
   return (
     <div className="bg-[#F4F7FB] text-slate-900">
       <PageHero title="Pricing" highlights={["Core", "Plus", "Black"]} />
 
       <main className="relative z-10">
-        {/* Main pricing section that overlaps the hero */}
         <section className="mx-auto -mt-16 max-w-6xl rounded-3xl bg-white px-6 py-10 shadow-sm md:px-12 lg:px-16 xl:px-20 2xl:px-0">
-          {/* Heading + description + billing toggle */}
           <div className="mb-8 text-center">
             <h2 className="text-2xl font-semibold text-slate-900 md:text-3xl">
               Flexible plans for every fleet size
@@ -22,7 +20,7 @@ const PricingPage = () => {
               markets, and automation. Every plan includes premium support.
             </p>
 
-            {/* Billing toggle */}
+            {/* Billing toggle – unchanged visually */}
             <div className="mt-5 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-xs md:text-sm">
               <button
                 type="button"
@@ -56,8 +54,8 @@ const PricingPage = () => {
             </p>
           </div>
 
-          {/* Your existing cards, horizontal + column content */}
-          <PricingCards layout="horizontal" />
+          {/* Here is the important part */}
+          <PricingCards layout="horizontal" billing={billing} />
         </section>
 
         {/* Comparison strip */}
