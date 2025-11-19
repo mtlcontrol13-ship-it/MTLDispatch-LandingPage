@@ -1,8 +1,11 @@
 export const IMAGES = {
+  // Mobile App 
+  DashboardBooking: "./dashboardbooking.webp",
+  GoogleIcon: "./googleIcon.webp",
+  AppleIcon: "./appleIcon.webp",
   YourITExperts: "./YIE.webp",
   MegaTransfers: "./MT.webp",
   HAC: "./HAC.webp",
-  PlayStore: "./playstore.webp",
   Apple: "./apple.webp",
   aboutmercedes: "./mercedesabout.webp",
   featuresmercedes: "./features.png",
@@ -14,5 +17,8 @@ export const IMAGES = {
   // About
   AboutShape: "./aboutshape.webp",
   Dashboard: "./dashboardmain.webp",
+  Aboutphone: "./trackingphone.webp",
+  // CTA 
+  CTA: "./CTA.webp",
   Aboutphone: "./trackingphone.webp",
 };
