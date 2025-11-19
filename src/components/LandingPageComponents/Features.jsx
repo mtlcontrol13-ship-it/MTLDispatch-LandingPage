@@ -79,7 +79,12 @@ const StraightArrow = ({ className = "", style }) => (
   </div>
 );
 
-const CurvedArrow = ({ className = "", flipX = false, flipY = false, style }) => {
+const CurvedArrow = ({
+  className = "",
+  flipX = false,
+  flipY = false,
+  style,
+}) => {
   const imageTransforms = [];
   if (flipX) imageTransforms.push("scaleX(-1)");
   if (flipY) imageTransforms.push("scaleY(-1)");
@@ -92,7 +97,11 @@ const CurvedArrow = ({ className = "", flipX = false, flipY = false, style }) =>
         aria-hidden="true"
         draggable={false}
         className="select-none drop-shadow-md w-10 sm:w-14 lg:w-18"
-        style={imageTransforms.length ? { transform: imageTransforms.join(" ") } : undefined}
+        style={
+          imageTransforms.length
+            ? { transform: imageTransforms.join(" ") }
+            : undefined
+        }
       />
     </div>
   );
@@ -142,27 +151,51 @@ const Features = () => {
             {/* Connector Arrows */}
             <StraightArrow
               className="absolute z-20"
-              style={{ top: "-30px", left: "50%", transform: "translateX(-50%)" }}
+              style={{
+                top: "-30px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
             />
             <CurvedArrow
               className="absolute z-20"
               flipX
-              style={{ top: "16%", left: "-12%", transform: "rotate(-28deg)", transformOrigin: "95% 60%" }}
+              style={{
+                top: "16%",
+                left: "-12%",
+                transform: "rotate(-28deg)",
+                transformOrigin: "95% 60%",
+              }}
             />
             <CurvedArrow
               className="absolute z-20"
-              style={{ top: "16%", right: "-12%", transform: "rotate(28deg)", transformOrigin: "5% 60%" }}
+              style={{
+                top: "16%",
+                right: "-12%",
+                transform: "rotate(28deg)",
+                transformOrigin: "5% 60%",
+              }}
             />
             <CurvedArrow
               className="absolute z-20"
               flipX
               flipY
-              style={{ bottom: "10%", left: "-12%", transform: "translate(-25%, 12%) rotate(28deg)", transformOrigin: "95% 55%" }}
+              style={{
+                bottom: "10%",
+                left: "-12%",
+                transform: "translate(-25%, 12%) rotate(28deg)",
+                transformOrigin: "95% 55%",
+              }}
             />
             <CurvedArrow
               className="absolute z-20"
               flipY
-              style={{ bottom: "10%", right: "-9%", transform: "translate(25%, 12%) rotate(-28deg)", transformOrigin: "5% 55%" }}
+              style={{
+                bottom: "10%",
+                right: "-9%",
+                transform: "translate(25%, 12%) rotate(-28deg)",
+                transformOrigin: "5% 55%",
+              }}
             />
 
             <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">

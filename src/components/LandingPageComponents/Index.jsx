@@ -17,18 +17,22 @@ const Index = () => {
               className="relative cursor-pointer transition-colors"
             >
               <div className="flex items-center gap-3">
-                <span className={`text-lg  border rounded-full border-gray-300 px-4 py-3 font-semibold ${
-                  activeTab === tab.id 
-                    ? "text-foreground" 
-                    : "text-muted-foreground"
-                }`}>
+                <span
+                  className={`text-lg  border rounded-full border-gray-300 px-4 py-3 font-semibold ${
+                    activeTab === tab.id
+                      ? "text-foreground"
+                      : "text-muted-foreground"
+                  }`}
+                >
                   {tab.number}
                 </span>
-                <span className={`text-base ${
-                  activeTab === tab.id 
-                    ? "text-foreground font-medium" 
-                    : "text-muted-foreground"
-                }`}>
+                <span
+                  className={`text-base ${
+                    activeTab === tab.id
+                      ? "text-foreground font-medium"
+                      : "text-muted-foreground"
+                  }`}
+                >
                   {tab.title}
                 </span>
               </div>
@@ -48,7 +52,10 @@ const Index = () => {
             </h2>
             <div className="space-y-4">
               {tabs[activeTab].description.map((para, idx) => (
-                <p key={idx} className="text-muted-foreground leading-relaxed text-base">
+                <p
+                  key={idx}
+                  className="text-muted-foreground leading-relaxed text-base"
+                >
                   {para}
                 </p>
               ))}
@@ -66,9 +73,9 @@ const Index = () => {
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                 </div>
               </div>
-              <img 
-                src={IMAGES.featuresmercedes} 
-                alt="MTLDispatch Dashboard Preview" 
+              <img
+                src={IMAGES.featuresmercedes}
+                alt="MTLDispatch Dashboard Preview"
                 className="w-full h-auto"
               />
             </div>

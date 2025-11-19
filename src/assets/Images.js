@@ -8,11 +8,11 @@ export const IMAGES = {
   featuresmercedes: "./features.png",
   uparrow: "./up-arrow.png",
   curvearrow: "./curve-arrow.png",
-  facebook: './facebook.svg',
-  x: './x.svg',
-  instagram: './instagram.svg',
-// About 
-AboutShape: "./aboutshape.webp",
-Dashboard: "./dashboardmain.webp",
-Aboutphone: "./trackingphone.webp",
+  facebook: "./facebook.svg",
+  x: "./x.svg",
+  instagram: "./instagram.svg",
+  // About
+  AboutShape: "./aboutshape.webp",
+  Dashboard: "./dashboardmain.webp",
+  Aboutphone: "./trackingphone.webp",
 };

@@ -51,5 +51,5 @@ export const ICONS = {
   CloudCog,
   CircleCheck,
   Heart,
-  Star
+  Star,
 };
