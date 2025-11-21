@@ -50,7 +50,7 @@ const StarRow = ({ rating }) => {
 
 const Reviews = () => {
   return (
-    <section className="pt-20 pb-16 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
+    <section className="pt-10 pb-16 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
       <div className="mx-auto max-w-3xl text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
           Customer Love
