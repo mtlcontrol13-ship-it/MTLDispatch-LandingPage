@@ -10,24 +10,27 @@ const stats = [
 const Stats = () => {
   return (
     <section className="w-full py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl p-10 shadow-md">
-        <h2 className="text-3xl font-bold text-gray-900">
-          Our Dispatch Performance
-        </h2>
-        <p className="text-gray-600 mt-2">
-          We provide professional dispatch services to streamline your
-          operations and maximize delivery efficiency.
-        </p>
+      <div className="max-w-6xl mx-auto bg-white rounded-3xl px-8 py-12 shadow-md">
+        <div className="grid gap-10 lg:gap-8 lg:grid-cols-5 items-center">
+          <div className="space-y-3 lg:col-span-2">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+              Our Stats
+            </h2>
+            <p className="text-gray-600">
+              We help you to unleash the power within your business
+            </p>
+          </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {stats.map((stat, index) => (
-            <div key={index}>
-              <p className="text-4xl font-extrabold text-blue-600">
-                {stat.value}
-              </p>
-              <p className="mt-2 text-gray-700">{stat.label}</p>
-            </div>
-          ))}
+          <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="space-y-2">
+                <p className="text-4xl font-extrabold text-indigo-600">
+                  {stat.value}
+                </p>
+                <p className="text-gray-700">{stat.label}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
