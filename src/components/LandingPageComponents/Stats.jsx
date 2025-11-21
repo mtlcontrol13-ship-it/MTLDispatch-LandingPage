@@ -1,15 +1,19 @@
 import React from "react";
+import CountUp from "react-countup";
+import { useInView } from "react-intersection-observer";
 
 const stats = [
-  { value: "260+", label: "Dispatch Experts" },
-  { value: "975+", label: "Active Clients" },
-  { value: "724+", label: "Deliveries Coordinated" },
-  { value: "89+", label: "Pending Dispatch Orders" },
+  { value: 260, label: "Dispatch Experts" },
+  { value: 975, label: "Active Clients" },
+  { value: 724, label: "Deliveries Coordinated" },
+  { value: 89, label: "Pending Dispatch Orders" },
 ];
 
 const Stats = () => {
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
   return (
-    <section className="w-full py-16 bg-gray-50">
+    <section ref={ref} className="w-full py-16 bg-gray-50">
       <div className="max-w-6xl mx-auto bg-white rounded-3xl px-8 py-12 shadow-md">
         <div className="grid gap-10 lg:gap-8 lg:grid-cols-5 items-center">
           <div className="space-y-3 lg:col-span-2">
@@ -25,7 +29,11 @@ const Stats = () => {
             {stats.map((stat, index) => (
               <div key={index} className="space-y-2">
                 <p className="text-4xl font-extrabold text-indigo-600">
-                  {stat.value}
+                  {inView ? (
+                    <CountUp end={stat.value} duration={1.6} suffix="+" />
+                  ) : (
+                    "0+"
+                  )}
                 </p>
                 <p className="text-gray-700">{stat.label}</p>
               </div>
