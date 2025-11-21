@@ -8,6 +8,7 @@ import HomePricingPreview from "../components/LandingPageComponents/HomePricingP
 import Products from "../components/LandingPageComponents/Products";
 import Services from "../components/LandingPageComponents/Services";
 import TrustedBy from "../components/LandingPageComponents/TrustedBy";
+import Reviews from "../components/LandingPageComponents/Reviews";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       {/* <Pricing /> */}
       <MobileApp />
       <Services />
+      <Reviews />
     </div>
   );
 };
