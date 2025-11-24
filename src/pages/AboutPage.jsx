@@ -37,9 +37,13 @@ const AboutPage = () => {
         ]}
       />
 
-      <Hero />
+      <section className="pt-2 pb-10 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
+        <div className="overflow-hidden">
+          <Hero />
+        </div>
+      </section>
       <section className="bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
+        <div className="mx-auto max-w-7xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
           <div className="grid gap-6 md:grid-cols-3">
             {focusAreas.map(({ title, description, icon: Icon }) => (
               <div
