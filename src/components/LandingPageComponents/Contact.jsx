@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { ICONS } from "../../assets/icons";
 import PageHero from "../common/PageHero";
 
 const Contact = () => {
@@ -48,12 +48,13 @@ const Contact = () => {
         title="Contact Us"
         highlights={["Reach Us Anytime", "Get in Touch", "We’re Here to Help"]}
       />
+
       {/* Contact Cards */}
       <div className="grid  grid-cols-1 md:grid-cols-3 p-5 lg:px-28 gap-4">
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
           <div className="flex items-start gap-4">
             <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-              <Mail className="h-6 w-6 text-blue-600" />
+              <ICONS.Mail className="h-6 w-6 text-blue-600" />
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Email Us</h3>
@@ -68,7 +69,7 @@ const Contact = () => {
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
           <div className="flex items-start gap-4">
             <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
-              <Phone className="h-6 w-6 text-green-600" />
+              <ICONS.Phone className="h-6 w-6 text-green-600" />
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
@@ -81,7 +82,7 @@ const Contact = () => {
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex items-start gap-4">
             <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-              <MapPin className="h-6 w-6 text-red-600" />
+              <ICONS.MapPin className="h-6 w-6 text-red-600" />
             </div>
             <div>
               <h3 className="font-semibold text-slate-900 mb-2">Visit Us</h3>
@@ -91,6 +92,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
       {/* Contact Cards & Form Section */}
       <div className="mx-auto max-w-6xl px-6  py-12">
         <div className="grid lg:grid-cols-2  gap-12 items-start">
@@ -151,6 +153,7 @@ const Contact = () => {
                 type="submit"
                 className="px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors"
               >
+                <ICONS.Send className="inline-block h-5 w-5 mr-2 -mt-1" />
                 Send Message
               </button>
             </form>

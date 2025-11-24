@@ -24,6 +24,10 @@ import {
   CircleCheck,
   Heart,
   Star,
+  Mail,
+  Phone,
+  MapPin,
+  Send
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
@@ -52,4 +56,8 @@ export const ICONS = {
   CircleCheck,
   Heart,
   Star,
+  Mail,
+  Phone,
+  MapPin,
+  Send
 };
