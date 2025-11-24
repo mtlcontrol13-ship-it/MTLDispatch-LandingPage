@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-slate-50 text-slate-900">
       {/* Hero Section */}
       <PageHero
         title="Contact Us"
