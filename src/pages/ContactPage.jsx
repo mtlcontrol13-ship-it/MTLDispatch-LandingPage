@@ -149,7 +149,7 @@ const ContactPage = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Name"
+                      placeholder="John Doe"
                       className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
                     />
                   </div>
@@ -161,7 +161,7 @@ const ContactPage = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      placeholder="Company"
+                      placeholder="Acme Corp"
                       className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
                     />
                   </div>
@@ -176,7 +176,7 @@ const ContactPage = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="Phone"
+                      placeholder="(123) 456-7890"
                       className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
                     />
                   </div>
@@ -188,7 +188,7 @@ const ContactPage = () => {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="Email"
+                      placeholder="john.doe@example.com"
                       className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
                     />
                   </div>
@@ -202,7 +202,7 @@ const ContactPage = () => {
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Subject"
+                    placeholder="Project Inquiry"
                     className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
                   />
                 </div>
@@ -215,7 +215,7 @@ const ContactPage = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Message"
+                    placeholder="Your message here..."
                     rows={4}
                     className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm resize-none focus:border-blue-500 focus:ring-blue-500 outline-none border"
                   />
@@ -223,8 +223,9 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="rounded-full bg-blue-600 py-2 px-8 text-md font-bold text-white transition-colors hover:bg-blue-700"
+                  className="rounded-full bg-blue-600 py-2 px-8 text-md font-bold text-white transition-colors hover:bg-blue-700 cursor-pointer"
                 >
+                  <ICONS.Send className="h-4 w-4 mr-2 inline-block" />
                   Send
                 </button>
               </form>
