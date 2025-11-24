@@ -223,7 +223,7 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-blue-600 py-4 text-sm font-bold text-white transition-colors hover:bg-blue-700"
+                  className="rounded-full bg-blue-600 py-2 px-8 text-md font-bold text-white transition-colors hover:bg-blue-700"
                 >
                   Send
                 </button>
