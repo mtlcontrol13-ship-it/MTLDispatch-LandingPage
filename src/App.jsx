@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPageLayout from "./layout/LandingPageLayout";
-import Home from "./pages/Home";
-import DetailPage from "./pages/DetailPage";
-import Contact from "./components/LandingPageComponents/Contact";
-import ServicePage from "./pages/ServicePage";
 import About from "./pages/About";
+import ContactPage from "./pages/ContactPage";
+import DetailPage from "./pages/DetailPage";
+import Home from "./pages/Home";
 import PricingPage from "./pages/PricingPage";
+import ServicePage from "./pages/ServicePage";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <Route index element={<Home />} />
 
         {/* Register Routes */}
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/pricing" element={<PricingPage />} />

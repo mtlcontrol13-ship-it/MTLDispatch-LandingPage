@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { ICONS } from "../../assets/icons";
-import PageHero from "../common/PageHero";
+import { ICONS } from "../assets/icons";
+import PageHero from "../components/common/PageHero";
 
-const Contact = () => {
+const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -249,4 +249,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;
