@@ -1,30 +1,8 @@
-import React from "react";
 import { ICONS } from "../assets/icons";
-import PageHero from "../components/common/PageHero";
-import Hero from "../components/about/Hero";
 import CTA from "../components/about/CTA";
+import Hero from "../components/about/Hero";
+import PageHero from "../components/common/PageHero";
 import Stats from "../components/LandingPageComponents/Stats";
-
-const focusAreas = [
-  {
-    title: "Operational Excellence",
-    description:
-      "Live fleet visibility, driver accountability, and real-time KPIs so your team can anticipate every guest need.",
-    icon: ICONS.BarChart3,
-  },
-  {
-    title: "People & Partnership",
-    description:
-      "White-glove onboarding, 24/7 support, and a success manager who understands chauffeur businesses.",
-    icon: ICONS.Headset,
-  },
-  {
-    title: "Future-Ready Stack",
-    description:
-      "Open APIs, partner integrations, and automation rules that scale from boutique fleets to global networks.",
-    icon: ICONS.PlugZap,
-  },
-];
 
 const AboutPage = () => {
   return (
