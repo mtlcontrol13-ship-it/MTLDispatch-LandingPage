@@ -50,8 +50,8 @@ const Contact = () => {
       />
 
       {/* Main Content Card */}
-      <section className="relative z-10 mx-auto -mt-20 max-w-6xl px-6 pb-20 pt-20">
-        <div className="rounded-3xl bg-white shadow-xl overflow-hidden">
+      <section className="pt-2 pb-10 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
+        <div className="rounded-3xl bg-white shadow-[0_0_50px_rgba(0,0,0,0.1)] overflow-hidden">
           <div className="grid lg:grid-cols-2">
             {/* Left Column: Contact Info */}
             <div className="bg-slate-50/50 p-8 lg:p-12">
