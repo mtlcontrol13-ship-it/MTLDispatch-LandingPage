@@ -52,7 +52,7 @@ const Contact = () => {
       <div className="grid  grid-cols-1 md:grid-cols-3 p-5 lg:px-28 gap-4">
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
           <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0">
+            <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
               <Mail className="h-6 w-6 text-blue-600" />
             </div>
             <div>
@@ -67,7 +67,7 @@ const Contact = () => {
 
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
           <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center flex-shrink-0">
+            <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
               <Phone className="h-6 w-6 text-green-600" />
             </div>
             <div>
@@ -80,7 +80,7 @@ const Contact = () => {
 
         <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
           <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center flex-shrink-0">
+            <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
               <MapPin className="h-6 w-6 text-red-600" />
             </div>
             <div>
