@@ -27,7 +27,11 @@ import {
   Mail,
   Phone,
   MapPin,
-  Send
+  Send,
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
@@ -59,5 +63,9 @@ export const ICONS = {
   Mail,
   Phone,
   MapPin,
-  Send
+  Send,
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube
 };

@@ -42,142 +42,209 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-slate-50">
       {/* Hero Section */}
       <PageHero
         title="Contact Us"
         highlights={["Reach Us Anytime", "Get in Touch", "We’re Here to Help"]}
       />
 
-      {/* Contact Cards */}
-      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-6">
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
-            <div className="flex items-start gap-4">
-              <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-                <ICONS.Mail className="h-6 w-6 text-blue-600" />
+      {/* Main Content Card */}
+      <section className="relative z-10 mx-auto -mt-20 max-w-6xl px-6 pb-20 pt-20">
+        <div className="rounded-3xl bg-white shadow-xl overflow-hidden">
+          <div className="grid lg:grid-cols-2">
+            {/* Left Column: Contact Info */}
+            <div className="bg-slate-50/50 p-8 lg:p-12">
+              <h2 className="text-2xl font-bold text-slate-900">
+                Get in touch
+              </h2>
+              <p className="mt-4 text-slate-600">
+                Have questions about our dispatch software? Our team is here to
+                help you streamline your operations.
+              </p>
+
+              <div className="mt-8 space-y-6">
+                {/* Head Office */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
+                    <ICONS.MapPin className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900">
+                      Head Office
+                    </h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      Montreal, Quebec
+                      <br />
+                      Canada
+                    </p>
+                  </div>
+                </div>
+
+                {/* Email Us */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
+                    <ICONS.Mail className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900">Email Us</h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      support@mtldispatch.com
+                      <br />
+                      sales@mtldispatch.com
+                    </p>
+                  </div>
+                </div>
+
+                {/* Call Us */}
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
+                    <ICONS.Phone className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-900">Call Us</h3>
+                    <p className="mt-1 text-sm text-slate-600">
+                      +1 (514) 123-4567
+                      <br />
+                      Mon-Fri, 9AM-6PM EST
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Email Us</h3>
-                <p className="text-slate-600 text-sm mb-1">
-                  support@mtldispatch.com
-                </p>
-                <p className="text-slate-600 text-sm">sales@mtldispatch.com</p>
+
+              {/* Social Media */}
+              <div className="mt-12">
+                <h3 className="font-semibold text-slate-900">
+                  Follow our social media
+                </h3>
+                <div className="mt-4 flex gap-4">
+                  <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white cursor-pointer hover:bg-blue-700 transition">
+                    <ICONS.Facebook className="h-5 w-5" />
+                  </div>
+                  <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white cursor-pointer hover:bg-blue-700 transition">
+                    <ICONS.Twitter className="h-5 w-5" />
+                  </div>
+                  <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white cursor-pointer hover:bg-blue-700 transition">
+                    <ICONS.Instagram className="h-5 w-5" />
+                  </div>
+                  <div className="h-10 w-10 rounded-full bg-blue-600 flex items-center justify-center text-white cursor-pointer hover:bg-blue-700 transition">
+                    <ICONS.Youtube className="h-5 w-5" />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
-            <div className="flex items-start gap-4">
-              <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
-                <ICONS.Phone className="h-6 w-6 text-green-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
-                <p className="text-slate-600 text-sm mb-1">+1 (514) 123-4567</p>
-                <p className="text-slate-500 text-xs">Mon-Fri, 9AM-6PM EST</p>
-              </div>
-            </div>
-          </div>
+            {/* Right Column: Form */}
+            <div className="p-8 lg:p-12 bg-white">
+              <h2 className="text-2xl font-bold text-slate-900">
+                Send us a message
+              </h2>
+              <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-700">
+                      Name
+                    </label>
+                    <input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Name"
+                      className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-700">
+                      Company
+                    </label>
+                    <input
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      placeholder="Company"
+                      className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                    />
+                  </div>
+                </div>
 
-          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-            <div className="flex items-start gap-4">
-              <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-                <ICONS.MapPin className="h-6 w-6 text-red-600" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-slate-900 mb-2">Visit Us</h3>
-                <p className="text-slate-600 text-sm mb-1">Montreal, Quebec</p>
-                <p className="text-slate-600 text-sm">Canada</p>
-              </div>
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-700">
+                      Phone
+                    </label>
+                    <input
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="Phone"
+                      className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-700">
+                      Email
+                    </label>
+                    <input
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Email"
+                      className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-700">
+                    Subject
+                  </label>
+                  <input
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    placeholder="Subject"
+                    className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <label className="text-sm font-medium text-slate-700">
+                    Message
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Message"
+                    rows={4}
+                    className="w-full rounded-lg border-slate-200 bg-slate-50 px-4 py-3 text-sm resize-none focus:border-blue-500 focus:ring-blue-500 outline-none border"
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-full bg-blue-600 py-4 text-sm font-bold text-white transition-colors hover:bg-blue-700"
+                >
+                  Send
+                </button>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Cards & Form Section */}
-      <div className="mx-auto max-w-6xl px-6  py-12">
-        <div className="grid lg:grid-cols-2  gap-12 items-start">
-          {/* Left Side - Form */}
-          <div className="order-2 bg-gray-100 py-3 px-4 rounded-lg lg:order-1">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  name="name"
-                  type="text"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Your name ..."
-                  required
-                  className="px-4 py-3 bg-slate-50 border-0 rounded-lg text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="Your phone ..."
-                  className="px-4 py-3 bg-slate-50 border-0 rounded-lg text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                <input
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Email address ..."
-                  required
-                  className="px-4 py-3 bg-slate-50 border-0 rounded-lg text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  name="subject"
-                  type="text"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Message subject ..."
-                  className="px-4 py-3 bg-slate-50 border-0 rounded-lg text-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-              </div>
-
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Write your message ..."
-                rows={8}
-                required
-                className="w-full px-4 py-3 bg-slate-50 border-0 rounded-lg text-sm placeholder:text-slate-400 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-
-              <button
-                type="submit"
-                className="px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-medium transition-colors"
-              >
-                <ICONS.Send className="inline-block h-5 w-5 mr-2 -mt-1" />
-                Send Message
-              </button>
-            </form>
-          </div>
-
-          {/* Right Side - Contact Cards & Map */}
-          <div className="order-1 lg:order-2 space-y-6">
-            {/* Map */}
-            <div className="rounded-xl overflow-hidden border border-slate-200 shadow-sm h-80">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179308.28155646105!2d-73.86826155!3d45.5588621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      {/* Map Section */}
+      <section className="h-96 w-full">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d179308.28155646105!2d-73.86826155!3d45.5588621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91a541c64b70d%3A0x654e3138211fefef!2sMontreal%2C%20QC%2C%20Canada!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </section>
     </div>
   );
 };
