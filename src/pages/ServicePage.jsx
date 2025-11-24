@@ -78,11 +78,11 @@ const ServicePage = () => {
       />
 
       {/* Service Grid */}
-      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-6">
+      <section className="pt-2 pb-10 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h2 className="text-2xl font-semibold leading-tight text-slate-900 md:text-3xl">
+          <h1 className="text-3xl font-semibold leading-tight text-slate-900 md:text-3xl">
             Provide us with reliable services
-          </h2>
+          </h1>
           <p className="mt-3 text-sm text-slate-600 md:text-base">
             A complete suite of professional services to launch, integrate, and
             optimize your chauffeur operations with confidence.
@@ -116,11 +116,11 @@ const ServicePage = () => {
       </section>
 
       {/* Contact / CTA cards */}
-      <section className="mx-auto max-w-6xl px-6 py-16">
+      <section className="pt-10 pb-10 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
         <div className="mb-8 text-center">
-          <h2 className="text-2xl font-semibold text-slate-900">
+          <h1 className="text-3xl font-semibold text-slate-900">
             Need help choosing the right plan?
-          </h2>
+          </h1>
           <p className="mt-2 text-sm text-slate-600">
             Connect with our teams for demos, support, or best-practice guides.
           </p>
