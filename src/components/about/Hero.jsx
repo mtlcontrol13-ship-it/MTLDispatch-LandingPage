@@ -19,7 +19,6 @@ const Hero = () => {
             />
           </div>
 
-    
           {/* Secondary Tracking Image */}
           {/* <div className="hidden md:block w-64 h-80 absolute right-4 md:right-12 top-24 md:top-16 rounded-2xl overflow-hidden shadow-xl border-4 border-white">
             <img
@@ -48,7 +47,7 @@ const Hero = () => {
           <div className="flex flex-col space-y-6 pt-4">
             {/* Feature 1 */}
             <div className="flex items-start space-x-6">
-              <div className="size-16 bg-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="size-16 bg-yellow-500 rounded-xl flex items-center justify-center shrink-0">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"
@@ -76,7 +75,7 @@ const Hero = () => {
             </div>
 
             <div className="flex items-start space-x-6">
-              <div className="size-16 bg-yellow-500 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="size-16 bg-yellow-500 rounded-xl flex items-center justify-center shrink-0">
                 <svg
                   className="w-8 h-8 text-white"
                   fill="none"

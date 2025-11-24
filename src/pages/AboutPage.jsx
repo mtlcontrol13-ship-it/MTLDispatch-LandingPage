@@ -27,7 +27,7 @@ const focusAreas = [
 
 const AboutPage = () => {
   return (
-    <div className="bg-white text-slate-900">
+    <div className="bg-slate-50 text-slate-900">
       <PageHero
         title="About"
         highlights={[
@@ -37,7 +37,7 @@ const AboutPage = () => {
         ]}
       />
 
-    <Hero />
+      <Hero />
       <section className="bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
           <div className="grid gap-6 md:grid-cols-3">
@@ -85,7 +85,7 @@ const AboutPage = () => {
           </a>
         </div>
       </section>
-            <CTA />
+      <CTA />
     </div>
   );
 };
