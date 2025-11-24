@@ -50,48 +50,50 @@ const Contact = () => {
       />
 
       {/* Contact Cards */}
-      <div className="grid  grid-cols-1 md:grid-cols-3 p-5 lg:px-28 gap-4">
-        <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
-          <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
-              <ICONS.Mail className="h-6 w-6 text-blue-600" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-slate-900 mb-2">Email Us</h3>
-              <p className="text-slate-600 text-sm mb-1">
-                support@mtldispatch.com
-              </p>
-              <p className="text-slate-600 text-sm">sales@mtldispatch.com</p>
+      <section className="relative z-10 mx-auto -mt-10 max-w-6xl px-6">
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
+                <ICONS.Mail className="h-6 w-6 text-blue-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900 mb-2">Email Us</h3>
+                <p className="text-slate-600 text-sm mb-1">
+                  support@mtldispatch.com
+                </p>
+                <p className="text-slate-600 text-sm">sales@mtldispatch.com</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
-          <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
-              <ICONS.Phone className="h-6 w-6 text-green-600" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
-              <p className="text-slate-600 text-sm mb-1">+1 (514) 123-4567</p>
-              <p className="text-slate-500 text-xs">Mon-Fri, 9AM-6PM EST</p>
+          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow md:col-span-1">
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-lg bg-green-50 flex items-center justify-center shrink-0">
+                <ICONS.Phone className="h-6 w-6 text-green-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900 mb-2">Call Us</h3>
+                <p className="text-slate-600 text-sm mb-1">+1 (514) 123-4567</p>
+                <p className="text-slate-500 text-xs">Mon-Fri, 9AM-6PM EST</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-          <div className="flex items-start gap-4">
-            <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
-              <ICONS.MapPin className="h-6 w-6 text-red-600" />
-            </div>
-            <div>
-              <h3 className="font-semibold text-slate-900 mb-2">Visit Us</h3>
-              <p className="text-slate-600 text-sm mb-1">Montreal, Quebec</p>
-              <p className="text-slate-600 text-sm">Canada</p>
+          <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+            <div className="flex items-start gap-4">
+              <div className="h-12 w-12 rounded-lg bg-red-50 flex items-center justify-center shrink-0">
+                <ICONS.MapPin className="h-6 w-6 text-red-600" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-900 mb-2">Visit Us</h3>
+                <p className="text-slate-600 text-sm mb-1">Montreal, Quebec</p>
+                <p className="text-slate-600 text-sm">Canada</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Contact Cards & Form Section */}
       <div className="mx-auto max-w-6xl px-6  py-12">
