@@ -9,7 +9,6 @@ import Products from "../components/LandingPageComponents/Products";
 import Services from "../components/LandingPageComponents/Services";
 import TrustedBy from "../components/LandingPageComponents/TrustedBy";
 import Reviews from "../components/LandingPageComponents/Reviews";
-import Stats from "../components/LandingPageComponents/Stats";
 
 const Home = () => {
   return (
@@ -25,7 +24,6 @@ const Home = () => {
       <MobileApp />
       <Services />
       <Reviews />
-      <Stats />
     </div>
   );
 };

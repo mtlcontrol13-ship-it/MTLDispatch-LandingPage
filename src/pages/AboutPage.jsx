@@ -3,6 +3,7 @@ import { ICONS } from "../assets/icons";
 import PageHero from "../components/common/PageHero";
 import Hero from "../components/about/Hero";
 import CTA from "../components/about/CTA";
+import Stats from "../components/LandingPageComponents/Stats";
 
 const focusAreas = [
   {
@@ -42,26 +43,7 @@ const AboutPage = () => {
           <Hero />
         </div>
       </section>
-      <section className="bg-slate-50">
-        <div className="mx-auto max-w-7xl px-6 py-14 md:px-12 lg:px-16 xl:px-20 2xl:px-0">
-          <div className="grid gap-6 md:grid-cols-3">
-            {focusAreas.map(({ title, description, icon: Icon }) => (
-              <div
-                key={title}
-                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#07315E]/10 text-[#07315E]">
-                  <Icon className="h-6 w-6" />
-                </div>
-                <h3 className="mt-4 text-xl font-semibold text-slate-900">
-                  {title}
-                </h3>
-                <p className="mt-3 text-sm text-slate-600">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Stats />
       <section className="mx-auto max-w-5xl px-6 py-16 text-center md:px-12 lg:px-16 xl:px-20 2xl:px-0">
         <p className="text-xs font-semibold uppercase tracking-[0.4em] text-slate-500">
           Ready to meet?
