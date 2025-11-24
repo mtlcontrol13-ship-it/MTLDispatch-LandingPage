@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import LandingPageLayout from "./layout/LandingPageLayout";
-import About from "./pages/About";
+import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 import DetailPage from "./pages/DetailPage";
 import Home from "./pages/Home";
@@ -15,7 +15,7 @@ function App() {
 
         {/* Register Routes */}
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicePage />} />
         <Route path="/pricing" element={<PricingPage />} />
 

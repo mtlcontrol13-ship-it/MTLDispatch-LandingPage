@@ -25,7 +25,7 @@ const focusAreas = [
   },
 ];
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div className="bg-white text-slate-900">
       <PageHero
@@ -90,4 +90,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;
