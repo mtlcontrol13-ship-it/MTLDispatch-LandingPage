@@ -11,16 +11,16 @@ const TrustedBy = () => {
           para="We are trusted by millions, some of them are listed below"
         />
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+        <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3 items-center">
           {cryptoCoins.map((coin, index) => (
             <div
               key={index}
-              className="h-16 w-32 rounded-lg bg-white shadow-sm flex items-center justify-center opacity-80 hover:opacity-100 transition"
+              className="flex justify-center"
             >
               <img
                 src={coin.icon}
                 alt={coin.name ?? "logo"}
-                className="max-h-10 w-auto object-contain"
+                className="h-20 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300 cursor-pointer"
               />
             </div>
           ))}
