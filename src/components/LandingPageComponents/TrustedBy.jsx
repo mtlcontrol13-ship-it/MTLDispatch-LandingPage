@@ -17,11 +17,13 @@ const TrustedBy = () => {
               key={index}
               className="flex justify-center"
             >
-              <img
-                src={coin.icon}
-                alt={coin.name ?? "logo"}
-                className="h-20 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300 cursor-pointer"
-              />
+              <a href={coin.url} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={coin.icon}
+                  alt={coin.name ?? "logo"}
+                  className="h-20 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition duration-300 cursor-pointer"
+                />
+              </a>
             </div>
           ))}
         </div>

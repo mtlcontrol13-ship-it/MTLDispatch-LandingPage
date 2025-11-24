@@ -34,9 +34,9 @@ export const tabs = [
 ];
 
 export const cryptoCoins = [
-  { name: "Mega Transfers", icon: IMAGES.MegaTransfers },
-  { name: "Your IT Experts", icon: IMAGES.YourITExperts },
-  { name: "Heathrow Airport Chauffered", icon: IMAGES.HAC },
+  { name: "Mega Transfers", icon: IMAGES.MegaTransfers, url: "https://www.megatransfers.com" },
+  { name: "Your IT Experts", icon: IMAGES.YourITExperts, url: "https://youritexpert.com" },
+  { name: "Heathrow Airport Chauffered", icon: IMAGES.HAC, url: "https://heathrowairportchauffeur.com" },
 ];
 
 export const footerNav = [
