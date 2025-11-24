@@ -50,9 +50,6 @@ const Reviews = () => {
   return (
     <section className="pt-10 pb-16 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
       <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-          Customer Love
-        </p>
         <h1 className="mt-3 text-3xl md:text-4xl font-bold text-gray-900">
           Teams stay on time with MTL Dispatch
         </h1>
@@ -71,9 +68,6 @@ const Reviews = () => {
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500 via-sky-500 to-cyan-400" />
             <div className="flex items-center justify-between">
               <StarRow rating={review.rating} />
-              <span className="text-xs font-semibold uppercase tracking-wide text-indigo-500">
-                Verified
-              </span>
             </div>
             <p className="mt-4 text-gray-800 leading-relaxed">{review.comment}</p>
             <div className="mt-6 flex items-center gap-3">
