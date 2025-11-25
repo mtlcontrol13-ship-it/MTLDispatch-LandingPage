@@ -141,7 +141,7 @@ const Features = () => {
 
         {/* Desktop radial layout */}
         <div className="relative hidden min-h-[620px] items-center justify-center pt-68 lg:flex">
-          <div className="relative flex h-[320px] w-[320px] items-center justify-center xl:h-[360px] xl:w-[360px] 2xl:h-[400px] 2xl:w-[400px]">
+          <div className="relative flex h-80 w-[320px] items-center justify-center xl:h-[360px] xl:w-[360px] 2xl:h-[400px] 2xl:w-[400px]">
             <img
               src={IMAGES.featuresmercedes}
               alt="Luxury dispatch vehicle"

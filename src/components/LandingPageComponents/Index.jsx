@@ -6,8 +6,18 @@ const Index = () => {
   const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white pt-20">
       <div className="2xl:max-w-7xl max-w-7xl xl:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Section Title and Description */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            How It Works
+          </h2>
+          <p className="mt-2 text-gray-600">
+            Discover how our platform simplifies your workflow and helps you achieve more with less effort.
+          </p>
+        </div>
+
         {/* Tabs Navigation */}
         <div className="flex flex-wrap gap-8 mb-16 border px-3 py-8 items-center justify-evenly border-gray-300 shadow-xl rounded-md">
           {tabs.map((tab) => (
@@ -64,7 +74,7 @@ const Index = () => {
 
           {/* Right Image */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-pink-100 to-rose-100 rounded-3xl transform rotate-3" />
+            <div className="absolute inset-0 bg-linear-to-br from-pink-100 to-rose-100 rounded-3xl transform rotate-3" />
             <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100">
               <div className="flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-100">
                 <div className="flex gap-1.5">
