@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ICONS } from "../assets/icons";
 import { getDetailContent } from "../helpers/detailContent";
+import Container from "../components/common/Container";
 
 const DetailPage = ({ category }) => {
   const { slug } = useParams();
@@ -15,7 +16,7 @@ const DetailPage = ({ category }) => {
 
   if (!details) {
     return (
-      <section className="w-full py-20 pr-6 md:pr-10 lg:pr-14 xl:pr-16 pl-6 md:pl-12 lg:pl-20 xl:pl-28 2xl:pl-36">
+      <Container className="py-20">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4A85]">Not Found</p>
           <h1 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">We could not find that page.</h1>
@@ -29,7 +30,7 @@ const DetailPage = ({ category }) => {
             Back to overview
           </Link>
         </div>
-      </section>
+      </Container>
     );
   }
 
@@ -37,7 +38,7 @@ const DetailPage = ({ category }) => {
     details;
 
   return (
-    <section className="w-full py-20 pr-6 md:pr-10 lg:pr-14 xl:pr-16 pl-6 md:pl-12 lg:pl-20 xl:pl-28 2xl:pl-36">
+    <Container className="py-20">
       <div className="max-w-5xl space-y-4">
         <span className="inline-flex items-center rounded-full border border-[#0A4A85]/20 bg-[#0A4A85]/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#0A4A85]">
           {badgeLabel}
@@ -141,7 +142,7 @@ const DetailPage = ({ category }) => {
           </Link>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 
