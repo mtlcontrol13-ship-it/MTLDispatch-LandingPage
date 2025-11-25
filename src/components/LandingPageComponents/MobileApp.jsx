@@ -6,7 +6,7 @@ import Container from "../common/Container";
 
 const MobileApp = () => {
   return (
-    <div className="bg-linear-to-br pt-44 from-gray-50 to-gray-100 py-16">
+    <div className="min-h-[700px] bg-linear-to-br pt-44 from-gray-50 to-gray-100 py-16">
       <Container>
         <div className="relative">
           <div className="bg-(--primary-red-color) rounded-3xl shadow-2xl px-4 py-6 lg:p-16 grid lg:grid-cols-2 gap-12 items-center relative overflow-visible">
@@ -82,7 +82,7 @@ const MobileApp = () => {
                   <div className="h-16 w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
 
                   {/* Screen Content */}
-                  <div className="rounded-4xl overflow-hidden bg-white relative z-10">
+                  <div className="rounded-[26px] overflow-hidden bg-white relative z-10">
                     <img
                       src={IMAGES.DashboardBooking}
                       className="w-[300px] h-auto object-cover"
