@@ -3,7 +3,7 @@ import { IMAGES } from "../../assets/Images";
 
 const Hero = () => {
   return (
-    <div className="px-4 md:py-24 py-12 ">
+    <div className="px-4 md:pb-24 pb-12 pt-6">
       {/* parent  */}
       <div className="2xl:max-w-7xl xl:max-w-5xl flex md:flex-row flex-col items-center justify-evenly w-full mx-auto gap-12">
         {/* Images Section */}
