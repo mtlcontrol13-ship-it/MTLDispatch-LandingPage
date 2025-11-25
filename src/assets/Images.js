@@ -1,6 +1,6 @@
 export const IMAGES = {
   // Mobile App 
-  DashboardBooking: "./dashboardbooking.webp",
+  DashboardBooking: "./dashboardbooking.png",
   GoogleIcon: "./googleIcon.webp",
   AppleIcon: "./appleIcon.webp",
   YourITExperts: "./YIE.webp",

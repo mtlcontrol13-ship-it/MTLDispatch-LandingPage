@@ -69,15 +69,30 @@ const MobileApp = () => {
             </div>
 
             {/* RIGHT PHONE MOCKUP */}
-            <div className="relative hidden lg:absolute lg:right-16 lg:top-32 xl:top-1/3 lg:-translate-y-1/2 md:flex justify-center lg:justify-end">
-              <div className="relative">
-                <div className="bg-gray-900 rounded-[3rem] p-2 relative z-20">
-                  <img
-                    src={IMAGES.DashboardBooking}
-                    className="rounded-[3rem]"
-                    alt="dashboard mockup"
-                  />
+            <div className="relative hidden lg:absolute lg:right-8 lg:top-[40%] lg:-translate-y-1/2 lg:flex justify-end">
+              <div className="relative z-10 scale-90 xl:scale-100">
+                {/* Phone Frame */}
+                <div className="relative mx-auto border-gray-900 bg-gray-900 border-14 rounded-[2.5rem] shadow-2xl">
+                  {/* Notch */}
+                  <div className="w-[148px] h-[18px] bg-gray-900 top-0 rounded-b-2xl left-1/2 -translate-x-1/2 absolute z-20"></div>
+
+                  {/* Side Buttons */}
+                  <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                  <div className="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                  <div className="h-16 w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+
+                  {/* Screen Content */}
+                  <div className="rounded-4xl overflow-hidden bg-white relative z-10">
+                    <img
+                      src={IMAGES.DashboardBooking}
+                      className="w-[300px] h-auto object-cover"
+                      alt="dashboard mockup"
+                    />
+                  </div>
                 </div>
+
+                {/* Glow Effect */}
+                <div className="absolute -inset-4 bg-blue-500/20 blur-2xl -z-10 rounded-full" />
               </div>
             </div>
           </div>
