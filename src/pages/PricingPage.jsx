@@ -47,14 +47,10 @@ const PricingPage = () => {
         <section className="-mt-16">
           <Container className="py-10">
             <div className="mb-10 text-center">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#07315E]/10 px-4 py-1.5 text-xs font-medium text-[#07315E] mb-4">
-                <SparklesIcon className="h-3.5 w-3.5" />
-                Transparent Pricing
-              </div>
-              <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
+              <h1 className="text-3xl font-semibold leading-tight text-slate-900 md:text-3xl">
                 Flexible plans for every fleet size
-              </h2>
-              <p className="mt-3 text-base text-slate-600 md:text-lg max-w-2xl mx-auto">
+              </h1>
+              <p className="mt-3 text-sm text-slate-600 md:text-base">
                 Start with the essentials and upgrade as you add vehicles,
                 markets, and automation. Every plan includes premium support.
               </p>
@@ -151,11 +147,11 @@ const PricingPage = () => {
                     className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                   >
                     <div
-                      className={`absolute top-0 right-0 h-32 w-32 bg-gradient-to-br ${item.color} opacity-5 blur-3xl transition-opacity duration-300 group-hover:opacity-10`}
+                      className={`absolute top-0 right-0 h-32 w-32 bg-linear-to-br ${item.color} opacity-5 blur-3xl transition-opacity duration-300 group-hover:opacity-10`}
                     ></div>
                     <div className="relative">
                       <div
-                        className={`inline-flex rounded-lg bg-gradient-to-br ${item.color} p-2.5 shadow-sm`}
+                        className={`inline-flex rounded-lg bg-linear-to-br ${item.color} p-2.5 shadow-sm`}
                       >
                         <ItemIcon className="h-5 w-5 text-white" />
                       </div>
@@ -200,7 +196,7 @@ const PricingPage = () => {
                         {faq.q}
                       </span>
                       <ChevronRightIcon
-                        className="h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-300"
+                        className="h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300"
                         style={{
                           transform:
                             openFaq === i ? "rotate(90deg)" : "rotate(0deg)",
@@ -226,9 +222,9 @@ const PricingPage = () => {
         </section>
 
         {/* Bottom CTA */}
-        <section className="border-t border-slate-200 bg-gradient-to-br from-white to-slate-50">
+        <section className="border-t border-slate-200 bg-linear-to-br from-white to-slate-50">
           <Container className="py-12">
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#07315E] via-[#07315E] to-[#05223F] p-8 shadow-xl md:p-12">
+            <div className="relative overflow-hidden rounded-2xl bg-linear-to-br from-[#07315E] via-[#07315E] to-[#05223F] p-8 shadow-xl md:p-12">
               <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
 
               <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
