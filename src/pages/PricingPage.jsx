@@ -27,6 +27,17 @@ const PricingPage = () => {
     },
   ];
 
+  // Safe icon getter with fallback
+  const getIcon = (iconName) => {
+    return ICONS[iconName] || (() => null);
+  };
+
+  const SparklesIcon = getIcon("Sparkles");
+  const CheckIcon = getIcon("Check");
+  const ChevronRightIcon = getIcon("ChevronRight");
+  const MessageCircleIcon = getIcon("MessageCircle");
+  const ArrowRightIcon = getIcon("ArrowRight");
+
   return (
     <div className="bg-[#F4F7FB] text-slate-900">
       <PageHero title="Pricing" highlights={["Core", "Plus", "Black"]} />
@@ -37,7 +48,7 @@ const PricingPage = () => {
           <Container className="py-10">
             <div className="mb-10 text-center">
               <div className="inline-flex items-center gap-2 rounded-full bg-[#07315E]/10 px-4 py-1.5 text-xs font-medium text-[#07315E] mb-4">
-                <ICONS.Sparkles className="h-3.5 w-3.5" />
+                <SparklesIcon className="h-3.5 w-3.5" />
                 Transparent Pricing
               </div>
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">
@@ -79,17 +90,17 @@ const PricingPage = () => {
                 </button>
               </div>
 
-              <p className="mt-3 text-xs text-slate-500 flex items-center justify-center gap-4">
+              <p className="mt-3 text-xs text-slate-500 flex items-center justify-center gap-4 flex-wrap">
                 <span className="flex items-center gap-1">
-                  <ICONS.Check className="h-3 w-3 text-green-600" />
+                  <CheckIcon className="h-3 w-3 text-green-600" />
                   No setup fees
                 </span>
                 <span className="flex items-center gap-1">
-                  <ICONS.Check className="h-3 w-3 text-green-600" />
+                  <CheckIcon className="h-3 w-3 text-green-600" />
                   Cancel anytime
                 </span>
                 <span className="flex items-center gap-1">
-                  <ICONS.Check className="h-3 w-3 text-green-600" />
+                  <CheckIcon className="h-3 w-3 text-green-600" />
                   All prices in USD
                 </span>
               </p>
@@ -117,44 +128,47 @@ const PricingPage = () => {
                 {
                   title: "Core",
                   desc: "Best for boutique fleets launching digital dispatch for the first time.",
-                  icon: ICONS.PlugZap,
+                  iconName: "PlugZap",
                   color: "from-blue-500 to-blue-600",
                 },
                 {
                   title: "Plus",
                   desc: "Automation and analytics for growing fleets across markets.",
-                  icon: ICONS.TrendingUp,
+                  iconName: "TrendingUp",
                   color: "from-[#C73547] to-[#B32A3D]",
                 },
                 {
                   title: "Black",
                   desc: "Custom workflows, SLAs, and integrations for enterprise operations.",
-                  icon: ICONS.ShieldCheck,
+                  iconName: "ShieldCheck",
                   color: "from-[#07315E] to-[#05223F]",
                 },
-              ].map((item, i) => (
-                <div
-                  key={i}
-                  className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                >
+              ].map((item, i) => {
+                const ItemIcon = getIcon(item.iconName);
+                return (
                   <div
-                    className={`absolute top-0 right-0 h-32 w-32 bg-gradient-to-br ${item.color} opacity-5 blur-3xl transition-opacity duration-300 group-hover:opacity-10`}
-                  ></div>
-                  <div className="relative">
+                    key={i}
+                    className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                  >
                     <div
-                      className={`inline-flex rounded-lg bg-gradient-to-br ${item.color} p-2.5 shadow-sm`}
-                    >
-                      <item.icon className="h-5 w-5 text-white" />
+                      className={`absolute top-0 right-0 h-32 w-32 bg-gradient-to-br ${item.color} opacity-5 blur-3xl transition-opacity duration-300 group-hover:opacity-10`}
+                    ></div>
+                    <div className="relative">
+                      <div
+                        className={`inline-flex rounded-lg bg-gradient-to-br ${item.color} p-2.5 shadow-sm`}
+                      >
+                        <ItemIcon className="h-5 w-5 text-white" />
+                      </div>
+                      <h3 className="mt-4 text-lg font-bold text-slate-900">
+                        {item.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                        {item.desc}
+                      </p>
                     </div>
-                    <h3 className="mt-4 text-lg font-bold text-slate-900">
-                      {item.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                      {item.desc}
-                    </p>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </Container>
         </section>
@@ -185,7 +199,7 @@ const PricingPage = () => {
                       <span className="font-semibold text-slate-900">
                         {faq.q}
                       </span>
-                      <ICONS.ChevronRight
+                      <ChevronRightIcon
                         className="h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-300"
                         style={{
                           transform:
@@ -220,7 +234,7 @@ const PricingPage = () => {
               <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
                 <div>
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                    <ICONS.MessageCircle className="h-3.5 w-3.5" />
+                    <MessageCircleIcon className="h-3.5 w-3.5" />
                     Expert Consultation
                   </div>
                   <h2 className="text-2xl font-bold text-white md:text-3xl">
@@ -236,7 +250,7 @@ const PricingPage = () => {
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#07315E] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#07315E]"
                 >
                   Talk to sales
-                  <ICONS.ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
