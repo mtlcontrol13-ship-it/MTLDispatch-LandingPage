@@ -13,8 +13,8 @@ const Stats = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section ref={ref} className="w-full py-16 bg-gray-50">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl px-8 py-12 shadow-md">
+    <section ref={ref} className="w-full bg-gray-50">
+      <div className="max-w-6xl mx-auto px-8 py-12 ">
         <div className="text-center space-y-3 max-w-3xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
             Our Stats

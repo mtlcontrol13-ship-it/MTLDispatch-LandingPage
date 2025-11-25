@@ -16,7 +16,7 @@ const AboutPage = () => {
         ]}
       />
 
-      <section className="pt-2 pb-10 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
+      <section className="pt-2 px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 mx-auto max-w-7xl">
         <div className="overflow-hidden">
           <Hero />
         </div>
