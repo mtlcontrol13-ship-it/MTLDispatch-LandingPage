@@ -30,7 +30,7 @@ const HowItWorks = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white ">
       <Container className="py-16">
         {/* Section Title and Description */}
         <div className="text-center mb-12">

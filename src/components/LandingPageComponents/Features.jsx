@@ -113,9 +113,9 @@ const Features = () => {
   return (
     <section
       id="features"
-      className="bg-white px-4 py-16 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0"
+      className="bg-gray-50"
     >
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 pt-16 pb-32 lg:pb-40">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl md:text-3xl font-bold">Key Features</h2>
           <p className="mt-2 text-gray-600">
