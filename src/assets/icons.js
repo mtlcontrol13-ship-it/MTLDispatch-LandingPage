@@ -28,10 +28,12 @@ import {
   Phone,
   MapPin,
   Send,
+  Sparkles,
   Facebook,
   Twitter,
   Instagram,
-  Youtube
+  Youtube,
+  Check
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
@@ -42,14 +44,12 @@ export const ICONS = {
   Route,
   Smartphone,
   CalendarCheck,
-  Smartphone,
   Car,
   Receipt,
   BarChart3,
   Layers,
   PlugZap,
   Share2,
-  Navigation,
   ShieldCheck,
   CheckCircle2,
   ArrowRight,
@@ -57,6 +57,7 @@ export const ICONS = {
   Headset,
   Rocket,
   CloudCog,
+  Navigation,
   CircleCheck,
   Heart,
   Star,
@@ -64,8 +65,10 @@ export const ICONS = {
   Phone,
   MapPin,
   Send,
+  Sparkles,
   Facebook,
   Twitter,
   Instagram,
-  Youtube
+  Youtube,
+  Check
 };
