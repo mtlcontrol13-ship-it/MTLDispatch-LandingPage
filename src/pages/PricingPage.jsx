@@ -32,11 +32,11 @@ const PricingPage = () => {
     return ICONS[iconName] || (() => null);
   };
 
-  const SparklesIcon = getIcon("Sparkles");
   const CheckIcon = getIcon("Check");
   const ChevronRightIcon = getIcon("ChevronRight");
   const MessageCircleIcon = getIcon("MessageCircle");
   const ArrowRightIcon = getIcon("ArrowRight");
+  const TrendingUp = getIcon("TrendingUp");
 
   return (
     <div className="bg-[#F4F7FB] text-slate-900">
