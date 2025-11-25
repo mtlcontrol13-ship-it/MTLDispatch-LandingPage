@@ -6,7 +6,7 @@ import Container from "../common/Container";
 
 const MobileApp = () => {
   return (
-    <div className="min-h-screen bg-linear-to-br pt-44 from-gray-50 to-gray-100 py-16">
+    <div className="bg-linear-to-br pt-44 from-gray-50 to-gray-100 py-16">
       <Container>
         <div className="relative">
           <div className="bg-(--primary-red-color) rounded-3xl shadow-2xl px-4 py-6 lg:p-16 grid lg:grid-cols-2 gap-12 items-center relative overflow-visible">
@@ -80,10 +80,8 @@ const MobileApp = () => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </Container>
     </div>
   );
