@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { IMAGES } from "../../assets/Images";
 import { tabs } from "../../helpers/data";
 
-const Index = () => {
+const HowItWorks = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id ?? 1);
   const [isContentVisible, setIsContentVisible] = useState(true);
 
@@ -143,4 +143,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HowItWorks;
