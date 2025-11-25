@@ -1,6 +1,7 @@
 import React from "react";
 import { ICONS } from "../../assets/icons";
 import { IMAGES } from "../../assets/Images";
+import Container from "../common/Container";
 
 const features = [
   {
@@ -111,217 +112,220 @@ const Features = () => {
   const mobileFeatures = [centerFeature, ...features];
 
   return (
-    <section
-      id="features"
-      className="bg-gray-50"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-0 pt-16 pb-32 lg:pb-40">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl md:text-3xl font-bold">Key Features</h2>
-          <p className="mt-2 text-gray-600">
-            Highlight the dispatch workflows that keep your fleet efficient—from
-            live driver visibility to automated billing.
-          </p>
-        </div>
+    <section id="features" className="bg-gray-50">
+      {/* ⭐ Only horizontal spacing handled by Container */}
+      <Container>
+        {/* ⭐ Vertical spacing controlled here */}
+        <div className="pt-16 pb-40">
+          {/* Header */}
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-2xl md:text-3xl font-bold">Key Features</h2>
+            <p className="mt-2 text-gray-600">
+              Highlight the dispatch workflows that keep your fleet
+              efficient—from live driver visibility to automated billing.
+            </p>
+          </div>
 
-        {/* Mobile & tablet stacked cards */}
-        <div className="mt-10 space-y-6 lg:hidden">
-          {mobileFeatures.map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-2xl border border-gray-100 bg-white/90 p-5 shadow-sm transition hover:shadow-md"
-            >
-              <FeatureCard
-                feature={feature}
-                stat={metricsByTitle[feature.title]}
+          {/* Mobile stacked list */}
+          <div className="mt-10 space-y-6 lg:hidden">
+            {mobileFeatures.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-2xl border border-gray-100 bg-white/90 p-5 shadow-sm transition hover:shadow-md"
+              >
+                <FeatureCard
+                  feature={feature}
+                  stat={metricsByTitle[feature.title]}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop radial layout */}
+          <div className="relative hidden min-h-[620px] items-center justify-center pt-68 lg:flex">
+            <div className="relative flex h-80 w-[320px] items-center justify-center xl:h-[360px] xl:w-[360px] 2xl:h-[400px] 2xl:w-[400px]">
+              <img
+                src={IMAGES.featuresmercedes}
+                alt="Luxury dispatch vehicle"
+                className="relative z-10 h-[85%] w-[85%] object-contain"
               />
-            </div>
-          ))}
-        </div>
 
-        {/* Desktop radial layout */}
-        <div className="relative hidden min-h-[620px] items-center justify-center pt-68 lg:flex">
-          <div className="relative flex h-80 w-[320px] items-center justify-center xl:h-[360px] xl:w-[360px] 2xl:h-[400px] 2xl:w-[400px]">
-            <img
-              src={IMAGES.featuresmercedes}
-              alt="Luxury dispatch vehicle"
-              className="relative z-10 h-[85%] w-[85%] object-contain"
-            />
+              {/* Connector Arrows */}
+              <StraightArrow
+                className="absolute z-20"
+                style={{
+                  top: "-30px",
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                }}
+              />
+              <CurvedArrow
+                className="absolute z-20"
+                flipX
+                style={{
+                  top: "16%",
+                  left: "-12%",
+                  transform: "rotate(-28deg)",
+                  transformOrigin: "95% 60%",
+                }}
+              />
+              <CurvedArrow
+                className="absolute z-20"
+                style={{
+                  top: "16%",
+                  right: "-12%",
+                  transform: "rotate(28deg)",
+                  transformOrigin: "5% 60%",
+                }}
+              />
+              <CurvedArrow
+                className="absolute z-20"
+                flipX
+                flipY
+                style={{
+                  bottom: "10%",
+                  left: "-12%",
+                  transform: "translate(-25%, 12%) rotate(28deg)",
+                  transformOrigin: "95% 55%",
+                }}
+              />
+              <CurvedArrow
+                className="absolute z-20"
+                flipY
+                style={{
+                  bottom: "10%",
+                  right: "-9%",
+                  transform: "translate(25%, 12%) rotate(-28deg)",
+                  transformOrigin: "5% 55%",
+                }}
+              />
 
-            {/* Connector Arrows */}
-            <StraightArrow
-              className="absolute z-20"
-              style={{
-                top: "-30px",
-                left: "50%",
-                transform: "translateX(-50%)",
-              }}
-            />
-            <CurvedArrow
-              className="absolute z-20"
-              flipX
-              style={{
-                top: "16%",
-                left: "-12%",
-                transform: "rotate(-28deg)",
-                transformOrigin: "95% 60%",
-              }}
-            />
-            <CurvedArrow
-              className="absolute z-20"
-              style={{
-                top: "16%",
-                right: "-12%",
-                transform: "rotate(28deg)",
-                transformOrigin: "5% 60%",
-              }}
-            />
-            <CurvedArrow
-              className="absolute z-20"
-              flipX
-              flipY
-              style={{
-                bottom: "10%",
-                left: "-12%",
-                transform: "translate(-25%, 12%) rotate(28deg)",
-                transformOrigin: "95% 55%",
-              }}
-            />
-            <CurvedArrow
-              className="absolute z-20"
-              flipY
-              style={{
-                bottom: "10%",
-                right: "-9%",
-                transform: "translate(25%, 12%) rotate(-28deg)",
-                transformOrigin: "5% 55%",
-              }}
-            />
-
-            <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">
-              <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-                    <ICONS.Navigation className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex items-start gap-2">
-                      <h3 className="flex-1 text-lg font-bold text-gray-900">
-                        Real-time Fleet Management
-                      </h3>
-                      <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                        +40%
-                      </span>
+              <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">
+                <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                      <ICONS.Navigation className="h-6 w-6 text-white" />
                     </div>
-                    <p className="text-sm leading-snug text-gray-600">
-                      Track drivers, manage bookings, and optimize routes in
-                      real-time.
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2 flex items-start gap-2">
+                        <h3 className="flex-1 text-lg font-bold text-gray-900">
+                          Real-time Fleet Management
+                        </h3>
+                        <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                          +40%
+                        </span>
+                      </div>
+                      <p className="text-sm leading-snug text-gray-600">
+                        Track drivers, manage bookings, and optimize routes in
+                        real-time.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Top Left - Complete Solutions */}
-            <div className="absolute -left-96 -top-20 w-80 group">
-              <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
-                    <ICONS.Layers className="h-6 w-6 text-gray-900" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex items-start gap-2">
-                      <h3 className="flex-1 text-lg font-bold text-gray-900">
-                        Complete Solutions
-                      </h3>
-                      <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                        -30%
-                      </span>
+              {/* Top Left - Complete Solutions */}
+              <div className="absolute -left-96 -top-20 w-80 group">
+                <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
+                      <ICONS.Layers className="h-6 w-6 text-gray-900" />
                     </div>
-                    <p className="text-sm leading-snug text-gray-600">
-                      All-in-one suite covering dispatch, apps, billing, and
-                      reporting.
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2 flex items-start gap-2">
+                        <h3 className="flex-1 text-lg font-bold text-gray-900">
+                          Complete Solutions
+                        </h3>
+                        <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                          -30%
+                        </span>
+                      </div>
+                      <p className="text-sm leading-snug text-gray-600">
+                        All-in-one suite covering dispatch, apps, billing, and
+                        reporting.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Top Right - QuickBooks Integration */}
-            <div className="absolute -right-96 -top-20 w-80 group">
-              <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-                    <ICONS.PlugZap className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex items-start gap-2">
-                      <h3 className="flex-1 text-lg font-bold text-gray-900">
-                        QuickBooks Integration
-                      </h3>
-                      <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                        -60%
-                      </span>
+              {/* Top Right - QuickBooks Integration */}
+              <div className="absolute -right-96 -top-20 w-80 group">
+                <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                      <ICONS.PlugZap className="h-6 w-6 text-white" />
                     </div>
-                    <p className="text-sm leading-snug text-gray-600">
-                      Sync invoices, payments, and accounts automatically.
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2 flex items-start gap-2">
+                        <h3 className="flex-1 text-lg font-bold text-gray-900">
+                          QuickBooks Integration
+                        </h3>
+                        <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                          -60%
+                        </span>
+                      </div>
+                      <p className="text-sm leading-snug text-gray-600">
+                        Sync invoices, payments, and accounts automatically.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom Left - Share Platform */}
-            <div className="absolute -left-96 -bottom-20 w-80 group">
-              <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
-                    <ICONS.Share2 className="h-6 w-6 text-gray-900" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex items-start gap-2">
-                      <h3 className="flex-1 text-lg font-bold text-gray-900">
-                        Share Platform
-                      </h3>
-                      <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                        +20%
-                      </span>
+              {/* Bottom Left - Share Platform */}
+              <div className="absolute -left-96 -bottom-20 w-80 group">
+                <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#FFC800]">
+                      <ICONS.Share2 className="h-6 w-6 text-gray-900" />
                     </div>
-                    <p className="text-sm leading-snug text-gray-600">
-                      Connect partner fleets to share jobs and expand coverage.
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2 flex items-start gap-2">
+                        <h3 className="flex-1 text-lg font-bold text-gray-900">
+                          Share Platform
+                        </h3>
+                        <span className="inline-flex items-center rounded-md bg-[#C73547]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                          +20%
+                        </span>
+                      </div>
+                      <p className="text-sm leading-snug text-gray-600">
+                        Connect partner fleets to share jobs and expand
+                        coverage.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Bottom Right - Enterprise-grade Reliability */}
-            <div className="absolute -right-96 -bottom-20 w-80 group">
-              <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
-                    <ICONS.ShieldCheck className="h-6 w-6 text-white" />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="mb-2 flex items-start gap-2">
-                      <h3 className="flex-1 text-lg font-bold text-gray-900">
-                        Enterprise-grade Reliability
-                      </h3>
-                      <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
-                        99.9%
-                      </span>
+              {/* Bottom Right - Enterprise-grade Reliability */}
+              <div className="absolute -right-96 -bottom-20 w-80 group">
+                <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[#C73547]">
+                      <ICONS.ShieldCheck className="h-6 w-6 text-white" />
                     </div>
-                    <p className="text-sm leading-snug text-gray-600">
-                      Secure, reliable cloud hosting with high uptime and
-                      protection.
-                    </p>
+                    <div className="flex-1 min-w-0">
+                      <div className="mb-2 flex items-start gap-2">
+                        <h3 className="flex-1 text-lg font-bold text-gray-900">
+                          Enterprise-grade Reliability
+                        </h3>
+                        <span className="inline-flex items-center rounded-md bg-[#FFC800]/20 px-2 py-1 text-xs font-semibold text-gray-900 whitespace-nowrap">
+                          99.9%
+                        </span>
+                      </div>
+                      <p className="text-sm leading-snug text-gray-600">
+                        Secure, reliable cloud hosting with high uptime and
+                        protection.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
