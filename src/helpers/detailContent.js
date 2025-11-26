@@ -28,6 +28,11 @@ export const detailContent = {
           description:
             "Trigger SMS, push, or in-app chat without leaving the job card so riders, drivers, and dispatch stay in sync.",
         },
+        {
+          title: "Exception management",
+          description:
+            "Automated alerts flag late pickups, unassigned jobs, or driver no-shows so your team can act fast.",
+        }
       ],
       deepDive: {
         title: "Built for control-room teams",
@@ -74,6 +79,11 @@ export const detailContent = {
           description:
             "Set deposits, vouchers, distance tiers, and customer-specific pricing without waiting on engineering.",
         },
+        {
+          title: "Instant ETAs & quotes",
+          description:
+            "Dynamic maps calculate accurate ETAs based on real-time traffic and historical data to set proper expectations upfront.",
+        }
       ],
       deepDive: {
         title: "Designed for revenue teams",
@@ -120,6 +130,11 @@ export const detailContent = {
           description:
             "Support cards, wallets, and corporate billing with instant receipts synced to the operations dashboard.",
         },
+        {
+          title: "In-app support",
+          description:
+            "Live chat and help center articles resolve common questions without driving up call volume.",
+        }
       ],
       deepDive: {
         title: "Retention-focused toolkit",
@@ -166,6 +181,11 @@ export const detailContent = {
           description:
             "Surface license renewals, vehicle inspections, and shift requirements before drivers go offline.",
         },
+        {
+          title: "Earnings transparency",
+          description:
+            "Drivers get clear insights into their earnings, including fares, tips, and adjustments, promoting trust and motivation.",
+        }
       ],
       deepDive: {
         title: "Give drivers confidence",
@@ -212,6 +232,11 @@ export const detailContent = {
           description:
             "Configure taxes, surcharges, promotions, and discounts by route, market, or account tier.",
         },
+        {
+          title: "In-app support",
+          description:
+            "Live chat and help center articles resolve common questions without driving up call volume.",
+        }
       ],
       deepDive: {
         title: "Finance-friendly exports",
@@ -258,6 +283,11 @@ export const detailContent = {
           description:
             "Schedule PDF or CSV exports to execs, clients, or BI tools so everyone works from the same numbers.",
         },
+        {
+          title: "Data warehouse connector",
+          description:
+            "Connect your data warehouse to Snowflake, BigQuery, or Redshift for seamless analytics integration.",
+        }
       ],
       deepDive: {
         title: "From retrospective to predictive",
@@ -306,6 +336,11 @@ export const detailContent = {
           description:
             "Cutover plans, sandbox rehearsals, and go-live war rooms keep everyone aligned during the big day.",
         },
+        {
+          title: "Post-launch support",
+          description:
+            "Ongoing assistance ensures your team adapts smoothly and any issues are promptly addressed.",
+        }
       ],
       deepDive: {
         title: "What the engagement includes",
@@ -352,6 +387,11 @@ export const detailContent = {
           description:
             "Tap into pre-approved payment, telematics, and messaging partners to shorten procurement cycles.",
         },
+        {
+          title: "Custom connectors",
+          description:
+            "Need a bespoke integration? Our engineers build, test, and document connectors tailored to your stack.",
+        }
       ],
       deepDive: {
         title: "Deliverables you can expect",
@@ -398,6 +438,11 @@ export const detailContent = {
           description:
             "In-app tips, chat, and phone support connect your teams with experts whenever questions pop up.",
         },
+        {
+          title: "Knowledge transfer",
+          description:
+            "We provide comprehensive training and documentation to ensure your team is fully equipped to manage and optimize the system.",
+        }
       ],
       deepDive: {
         title: "How success is measured",
@@ -444,6 +489,11 @@ export const detailContent = {
           description:
             "Playbooks help you roll out improvements with messaging, training, and adoption tracking.",
         },
+        {
+          title: "Optimization experts",
+          description:
+            "Catch leading indicators before they become churn. Align ops, product, and finance on a single roadmap. Prove ROI on fleet investments and service upgrades.",
+        }
       ],
       deepDive: {
         title: "From findings to follow-through",
@@ -490,6 +540,11 @@ export const detailContent = {
           description:
             "Monthly health reports summarize incidents, improvements, and upcoming maintenance windows.",
         },
+        {
+          title: "Security-first approach",
+          description:
+            "Encryption everywhere, hardened networks, and continuous compliance checks keep regulators satisfied.",
+        }
       ],
       deepDive: {
         title: "Security-first approach",
@@ -536,6 +591,11 @@ export const detailContent = {
           description:
             "Templates and best practices help you align with GDPR, PCI, and regional transport regulations.",
         },
+        {
+          title: "Optimization experts",
+          description:
+            "Catch leading indicators before they become churn. Align ops, product, and finance on a single roadmap. Prove ROI on fleet investments and service upgrades.",
+        }
       ],
       deepDive: {
         title: "Collaborate with our experts",
