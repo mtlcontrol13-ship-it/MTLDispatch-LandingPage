@@ -14,10 +14,15 @@ const DetailPage = ({ category }) => {
     return (
       <Container className="py-20">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4A85]">Not Found</p>
-          <h1 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">We could not find that page.</h1>
+          <p className="text-sm font-semibold uppercase tracking-wide text-[#0A4A85]">
+            Not Found
+          </p>
+          <h1 className="mt-2 text-3xl font-bold text-gray-900 md:text-4xl">
+            We could not find that page.
+          </h1>
           <p className="mt-4 text-gray-600">
-            The detail you are looking for may have moved. Head back to the overview and choose another option.
+            The detail you are looking for may have moved. Head back to the
+            overview and choose another option.
           </p>
           <Link
             to={anchorHref}
@@ -30,8 +35,17 @@ const DetailPage = ({ category }) => {
     );
   }
 
-  const { title, tagline, summary, primaryCta, secondaryCta, stats, highlights, deepDive, checklistTitle, checklist } =
-    details;
+  const {
+    title,
+    summary,
+    primaryCta,
+    secondaryCta,
+    stats,
+    highlights,
+    deepDive,
+    checklistTitle,
+    checklist,
+  } = details;
 
   return (
     <>
@@ -48,9 +62,17 @@ const DetailPage = ({ category }) => {
             <div className="space-y-6">
               {/* Breadcrumb */}
               <nav className="flex items-center gap-2 text-sm text-white/70">
-                <Link to="/" className="hover:text-white transition-colors duration-200">Home</Link>
+                <Link
+                  to="/"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Home
+                </Link>
                 <ICONS.ChevronRight className="h-4 w-4" />
-                <Link to={anchorHref} className="hover:text-white transition-colors duration-200">
+                <Link
+                  to={anchorHref}
+                  className="hover:text-white transition-colors duration-200"
+                >
                   {category === "products" ? "Products" : "Services"}
                 </Link>
                 <ICONS.ChevronRight className="h-4 w-4" />
@@ -62,7 +84,7 @@ const DetailPage = ({ category }) => {
                 <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                   {title}
                 </h1>
-                
+
                 <p className="text-base md:text-lg leading-relaxed text-white/90">
                   {summary}
                 </p>
@@ -74,9 +96,13 @@ const DetailPage = ({ category }) => {
                   <a
                     href={primaryCta.href}
                     className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07315E] shadow-xl transition-all duration-300 hover:shadow-2xl active:scale-95"
-                    style={{ willChange: 'auto' }}
-                    onMouseEnter={(e) => e.currentTarget.style.willChange = 'transform'}
-                    onMouseLeave={(e) => e.currentTarget.style.willChange = 'auto'}
+                    style={{ willChange: "auto" }}
+                    onMouseEnter={(e) =>
+                      (e.currentTarget.style.willChange = "transform")
+                    }
+                    onMouseLeave={(e) =>
+                      (e.currentTarget.style.willChange = "auto")
+                    }
                   >
                     {primaryCta.label}
                     <ICONS.ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -104,16 +130,19 @@ const DetailPage = ({ category }) => {
               {/* Floating card effect */}
               <div className="relative">
                 {/* Main dashboard mockup - optimized with GPU acceleration */}
-                <div 
+                <div
                   className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm bg-white/5 transition-transform duration-300 ease-out"
-                  style={{ willChange: 'auto' }}
+                  style={{ willChange: "auto" }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.willChange = 'transform';
-                    e.currentTarget.style.transform = 'scale(1.03)';
+                    e.currentTarget.style.willChange = "transform";
+                    e.currentTarget.style.transform = "scale(1.03)";
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'scale(1)';
-                    setTimeout(() => e.currentTarget.style.willChange = 'auto', 300);
+                    e.currentTarget.style.transform = "scale(1)";
+                    setTimeout(
+                      () => (e.currentTarget.style.willChange = "auto"),
+                      300
+                    );
                   }}
                 >
                   {/* Browser chrome */}
@@ -129,7 +158,7 @@ const DetailPage = ({ category }) => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Dashboard image - optimized loading */}
                   <div className="bg-slate-50">
                     <img
@@ -152,83 +181,104 @@ const DetailPage = ({ category }) => {
       </section>
 
       {/* Main Content */}
-      <Container className="py-16">
-
-        {stats?.length > 0 && (
-          <div className="mt-10 grid gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:grid-cols-3">
-            {stats.map(({ value, label }) => (
-              <div key={label} className="text-center sm:text-left">
-                <p className="text-3xl font-bold text-gray-900">{value}</p>
-                <p className="mt-1 text-sm text-gray-500">{label}</p>
-              </div>
-            ))}
-          </div>
-        )}
-
+      <Container className="py-20">
+        {/* Highlights Section - Modern Cards */}
         {highlights?.length > 0 && (
-          <div id="highlights" className="mt-14 space-y-6">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#0A4A85]">Key takeaways</p>
-              <h2 className="mt-2 text-2xl font-semibold text-gray-900">What customers love</h2>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2">
+          <div id="highlights">
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
               {highlights.map(({ title: itemTitle, description }) => (
-                <div key={itemTitle} className="rounded-2xl border border-gray-100 bg-white p-5 shadow-sm">
-                  <h3 className="text-lg font-semibold text-gray-900">{itemTitle}</h3>
-                  <p className="mt-2 text-sm leading-6 text-gray-600">{description}</p>
+                <div
+                  key={itemTitle}
+                  className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#0A4A85]/20 transition-all duration-300 hover:shadow-lg"
+                >
+                  <div className="absolute top-0 left-0 w-1 h-full bg-linear-to-b from-[#07315E] to-[#0A4A85] rounded-l-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {itemTitle}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">{description}</p>
                 </div>
               ))}
             </div>
           </div>
         )}
 
+        {/* Stats Section - Minimal & Clean */}
+        {stats?.length > 0 && (
+          <div className="mt-24 grid gap-8 sm:grid-cols-3 max-w-4xl mx-auto">
+            {stats.map(({ value, label }) => (
+              <div key={label} className="text-center space-y-2">
+                <p className="text-5xl font-bold text-[#07315E]">{value}</p>
+                <p className="text-sm text-gray-600 font-medium">{label}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Deep Dive Section - Elevated Design */}
         {deepDive && (
-          <div id="deep-dive" className="mt-14 rounded-3xl bg-[#F5F8FC] p-8">
-            <p className="text-xs font-semibold uppercase tracking-wide text-[#0A4A85]">Deep dive</p>
-            <h2 className="mt-2 text-2xl font-semibold text-gray-900">{deepDive.title}</h2>
-            <p className="mt-3 text-base leading-relaxed text-gray-700">{deepDive.description}</p>
-            {deepDive.bullets?.length > 0 && (
-              <ul className="mt-5 space-y-3 text-sm text-gray-700">
-                {deepDive.bullets.map((point) => (
-                  <li key={point} className="flex items-start gap-3">
-                    <ICONS.CircleCheck className="mt-0.5 h-5 w-5 text-[#0A4A85]" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
+          <div id="deep-dive" className="mt-24 max-w-4xl mx-auto">
+            <div className="bg-linear-to-br from-gray-50 to-white rounded-3xl p-10 md:p-12 border border-gray-100 shadow-sm">
+              <div className="mb-8">
+                <h2 className="text-3xl font-bold text-gray-900">
+                  {deepDive.title}
+                </h2>
+                <p className="mt-4 text-lg text-gray-600 leading-relaxed">
+                  {deepDive.description}
+                </p>
+              </div>
+              {deepDive.bullets?.length > 0 && (
+                <div className="grid gap-4">
+                  {deepDive.bullets.map((point) => (
+                    <div
+                      key={point}
+                      className="flex items-start gap-4 bg-white rounded-xl p-5 border border-gray-100"
+                    >
+                      <ICONS.CheckCircle2 className="h-6 w-6 text-[#0A4A85] shrink-0 mt-0.5" />
+                      <span className="text-gray-700">{point}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         )}
 
+        {/* Checklist Section - Compact */}
         {checklist?.length > 0 && (
-          <div className="mt-14">
+          <div className="mt-24 max-w-3xl mx-auto">
             {checklistTitle && (
-              <h3 className="text-xl font-semibold text-gray-900">{checklistTitle}</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+                {checklistTitle}
+              </h3>
             )}
-            <ul className="mt-4 space-y-3 text-sm leading-6 text-gray-700">
+            <div className="grid gap-3">
               {checklist.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <ICONS.CircleCheck className="mt-0.5 h-5 w-5 text-[#0A4A85]" />
-                  <span>{item}</span>
-                </li>
+                <div
+                  key={item}
+                  className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100"
+                >
+                  <ICONS.CircleCheck className="h-5 w-5 text-[#0A4A85] shrink-0 mt-0.5" />
+                  <span className="text-gray-700">{item}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         )}
 
-        <div className="mt-16 flex flex-wrap items-center gap-4">
+        {/* Navigation Footer - Clean */}
+        <div className="mt-20 pt-12 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <a
             href={anchorHref}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#07315E] hover:underline"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-[#07315E] hover:gap-3 transition-all"
           >
             <ICONS.ArrowRight className="h-4 w-4 rotate-180" />
-            Back to overview
+            Back to {category === "products" ? "Products" : "Services"}
           </a>
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-gray-500 hover:text-[#07315E]"
+            className="text-sm font-medium text-gray-500 hover:text-[#07315E] transition-colors"
           >
-            Return home
+            Return to Home
           </Link>
         </div>
       </Container>
