@@ -6,6 +6,8 @@ export const IMAGES = {
   YourITExperts: "/YIE.webp",
   MegaTransfers: "/MT.webp",
   HAC: "/HAC.webp",
+  LIMO: "/limoanywhere.png",
+  LOGISTFILE: "/logistfile.png",
   Apple: "/apple.webp",
   aboutmercedes: "/mercedesabout.webp",
   featuresmercedes: "/features.png",

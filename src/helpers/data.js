@@ -37,6 +37,8 @@ export const cryptoCoins = [
   { name: "Mega Transfers", icon: IMAGES.MegaTransfers, url: "https://www.megatransfers.com" },
   { name: "Your IT Experts", icon: IMAGES.YourITExperts, url: "https://youritexpert.com" },
   { name: "Heathrow Airport Chauffered", icon: IMAGES.HAC, url: "https://heathrowairportchauffeur.com" },
+  { name: "Limo Anywhere", icon: IMAGES.LIMO, url: "https://www.limoanywhere.com" },
+  { name: "Logistfile", icon: IMAGES.LOGISTFILE, url: "https://logistifie.com" },
 ];
 
 export const footerNav = [
