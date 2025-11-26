@@ -1,9 +1,9 @@
-// Centralized icon exports for consistent usage
-// Add new icons here as needed
 import {
   Menu,
   X,
   ChevronDown,
+  ChevronRight,
+  MessageCircle,
   Route,
   CalendarCheck,
   Smartphone,
@@ -42,6 +42,8 @@ export const ICONS = {
   Menu,
   X,
   ChevronDown,
+  ChevronRight,
+  MessageCircle,
   Route,
   Smartphone,
   CalendarCheck,

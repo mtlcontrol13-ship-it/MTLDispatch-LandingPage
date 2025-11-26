@@ -27,17 +27,6 @@ const PricingPage = () => {
     },
   ];
 
-  // Safe icon getter with fallback
-  const getIcon = (iconName) => {
-    return ICONS[iconName] || (() => null);
-  };
-
-  const CheckIcon = getIcon("Check");
-  const ChevronRightIcon = getIcon("ChevronRight");
-  const MessageCircleIcon = getIcon("MessageCircle");
-  const ArrowRightIcon = getIcon("ArrowRight");
-  const TrendingUp = getIcon("TrendingUp");
-
   return (
     <div className="bg-[#F4F7FB] text-slate-900">
       <PageHero title="Pricing" highlights={["Core", "Plus", "Black"]} />
@@ -88,15 +77,15 @@ const PricingPage = () => {
 
               <p className="mt-3 text-xs text-slate-500 flex items-center justify-center gap-4 flex-wrap">
                 <span className="flex items-center gap-1">
-                  <CheckIcon className="h-3 w-3 text-green-600" />
+                  <ICONS.Check className="h-3 w-3 text-green-600" />
                   No setup fees
                 </span>
                 <span className="flex items-center gap-1">
-                  <CheckIcon className="h-3 w-3 text-green-600" />
+                  <ICONS.Check className="h-3 w-3 text-green-600" />
                   Cancel anytime
                 </span>
                 <span className="flex items-center gap-1">
-                  <CheckIcon className="h-3 w-3 text-green-600" />
+                  <ICONS.Check className="h-3 w-3 text-green-600" />
                   All prices in USD
                 </span>
               </p>
@@ -140,7 +129,7 @@ const PricingPage = () => {
                   color: "from-[#07315E] to-[#05223F]",
                 },
               ].map((item, i) => {
-                const ItemIcon = getIcon(item.iconName);
+                const ItemIcon = ICONS[item.iconName];
                 return (
                   <div
                     key={i}
@@ -195,7 +184,7 @@ const PricingPage = () => {
                       <span className="font-semibold text-slate-900">
                         {faq.q}
                       </span>
-                      <ChevronRightIcon
+                      <ICONS.ChevronRight
                         className="h-5 w-5 shrink-0 text-slate-400 transition-transform duration-300"
                         style={{
                           transform:
@@ -230,7 +219,7 @@ const PricingPage = () => {
               <div className="relative flex flex-col items-center justify-between gap-6 text-center md:flex-row md:text-left">
                 <div>
                   <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                    <MessageCircleIcon className="h-3.5 w-3.5" />
+                    <ICONS.MessageCircle className="h-3.5 w-3.5" />
                     Expert Consultation
                   </div>
                   <h2 className="text-2xl font-bold text-white md:text-3xl">
@@ -246,7 +235,7 @@ const PricingPage = () => {
                   className="group inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#07315E] shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#07315E]"
                 >
                   Talk to sales
-                  <ArrowRightIcon className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ICONS.ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
               </div>
             </div>
