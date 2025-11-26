@@ -3,7 +3,6 @@ export const detailContent = {
     "dispatch-software": {
       categoryLabel: "Product",
       title: "Dispatch Software",
-      tagline: "Balance supply and demand with a live control tower.",
       summary:
         "Reduce response times and keep every booking on track with our dispatcher console. Automations balance supply and demand across zones, while live tracking and two-way messaging give your team full control of every job.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -50,7 +49,6 @@ export const detailContent = {
     "booking-software": {
       categoryLabel: "Product",
       title: "Booking Software",
-      tagline: "Unify every request channel in one workflow.",
       summary:
         "Accept jobs from web, phone, corporate accounts, and partner networks in one streamlined flow. Customers get self-serve tools, while your team sees accurate ETAs, pricing, and job statuses without jumping between systems.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -97,7 +95,6 @@ export const detailContent = {
     "passenger-app": {
       categoryLabel: "Product",
       title: "Passenger App",
-      tagline: "Deliver a modern rider experience end to end.",
       summary:
         "Provide a branded mobile experience with frictionless booking, live driver tracking, and secure payments so riders stay informed from confirmation to drop-off.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -144,7 +141,6 @@ export const detailContent = {
     "driver-app": {
       categoryLabel: "Product",
       title: "Driver App",
-      tagline: "Keep drivers productive with a guided workflow.",
       summary:
         "Provide job offers, navigation, chat, and earnings insights in one place so drivers can focus on safe, on-time service.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -191,7 +187,6 @@ export const detailContent = {
     "billing-and-invoicing": {
       categoryLabel: "Product",
       title: "Billing & Invoicing",
-      tagline: "Automate complex billing flows without spreadsheets.",
       summary:
         "Automate account billing, card payments, and reconciliations. Generate branded invoices, statements, and reminders with a single click and export everything to your accounting stack.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -238,7 +233,6 @@ export const detailContent = {
     "reporting-and-analytics": {
       categoryLabel: "Product",
       title: "Reporting & Analytics",
-      tagline: "Trustworthy insights for every stakeholder.",
       summary:
         "Track performance across rides, drivers, accounts, and markets with dashboards and exports so you can spot trends quickly and share interactive reports.",
       primaryCta: { label: "Talk to our team", href: "/contact" },
@@ -287,7 +281,6 @@ export const detailContent = {
     "implementation-onboarding": {
       categoryLabel: "Service",
       title: "Implementation & Onboarding",
-      tagline: "Launch with a proven playbook.",
       summary:
         "We guide your team through discovery, data migration, and workflow tailoring so you can launch with confidence. Expect a structured plan, hands-on sessions, and measurable milestones from day one.",
       primaryCta: { label: "Book onboarding session", href: "/contact" },
@@ -334,7 +327,6 @@ export const detailContent = {
     integrations: {
       categoryLabel: "Service",
       title: "Integrations",
-      tagline: "Keep every system in sync.",
       summary:
         "Connect payments, accounting, GPS, SMS, and partner systems through our secure APIs. We handle the heavy lifting so your data stays in sync across every tool your fleet depends on.",
       primaryCta: { label: "Plan an integration", href: "/contact" },
@@ -381,7 +373,6 @@ export const detailContent = {
     "training-support": {
       categoryLabel: "Service",
       title: "Training & Support",
-      tagline: "Confident teams deliver better service.",
       summary:
         "Give every dispatcher, driver, and admin the know-how to succeed. We run tailored training sessions, provide resources, and stand by with responsive multi-channel support when questions arise.",
       primaryCta: { label: "Schedule enablement", href: "/contact" },
@@ -428,7 +419,6 @@ export const detailContent = {
     "performance-optimization": {
       categoryLabel: "Service",
       title: "Performance Optimization",
-      tagline: "Turn data into action.",
       summary:
         "We review key metrics like acceptance rate, ETAs, and utilization, then share actionable recommendations to keep riders happy and assets busy. Expect recurring check-ins and clear roadmaps for improvement.",
       primaryCta: { label: "Book an ops review", href: "/contact" },
@@ -475,7 +465,6 @@ export const detailContent = {
     "cloud-hosting": {
       categoryLabel: "Service",
       title: "Cloud Hosting",
-      tagline: "Reliable infrastructure without the overhead.",
       summary:
         "Operate on secure, scalable infrastructure with proactive monitoring, automated backups, and redundant environments that keep your dispatch platform available around the clock.",
       primaryCta: { label: "Review hosting options", href: "/contact" },
@@ -522,7 +511,6 @@ export const detailContent = {
     "compliance-security": {
       categoryLabel: "Service",
       title: "Compliance & Security",
-      tagline: "Protect riders, drivers, and data.",
       summary:
         "Protect customer, driver, and financial data with role-based controls, audit trails, and best practices aligned to industry standards. We help you stay compliant without slowing operations.",
       primaryCta: { label: "Meet with security team", href: "/contact" },

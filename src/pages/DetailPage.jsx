@@ -10,11 +10,6 @@ const DetailPage = ({ category }) => {
   const details = getDetailContent(category, slug);
   const anchorHref = category === "products" ? "/#products" : "/#services";
 
-  const badgeLabel = useMemo(() => {
-    if (details?.categoryLabel) return details.categoryLabel;
-    return category === "products" ? "Product" : "Service";
-  }, [category, details]);
-
   if (!details) {
     return (
       <Container className="py-20">
@@ -62,22 +57,12 @@ const DetailPage = ({ category }) => {
                 <span className="text-white font-medium">{title}</span>
               </nav>
 
-              {/* Badge */}
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-white">
-                <ICONS.Sparkles className="h-4 w-4" />
-                {badgeLabel}
-              </span>
-
               {/* Title & Tagline */}
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
                   {title}
                 </h1>
-                {tagline && (
-                  <p className="text-xl text-blue-100 font-medium">
-                    {tagline}
-                  </p>
-                )}
+                
                 <p className="text-base md:text-lg leading-relaxed text-white/90">
                   {summary}
                 </p>
