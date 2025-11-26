@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import { ICONS } from "../assets/icons";
+import { IMAGES } from "../assets/Images";
 import { getDetailContent } from "../helpers/detailContent";
 import Container from "../components/common/Container";
 
@@ -38,32 +39,119 @@ const DetailPage = ({ category }) => {
     details;
 
   return (
-    <Container className="py-20">
-      <div className="max-w-5xl space-y-4">
-        <span className="inline-flex items-center rounded-full border border-[#0A4A85]/20 bg-[#0A4A85]/5 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-[#0A4A85]">
-          {badgeLabel}
-        </span>
-        <h1 className="text-3xl font-bold text-gray-900 md:text-4xl">{title}</h1>
-        {tagline && <p className="text-lg font-medium text-[#0A4A85]">{tagline}</p>}
-        <p className="max-w-3xl text-base leading-relaxed text-gray-600">{summary}</p>
-        <div className="flex flex-wrap gap-3">
-          {primaryCta && (
-            <a
-              href={primaryCta.href}
-              className="inline-flex items-center justify-center rounded-lg bg-[#07315E] px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-[#052447]"
-            >
-              {primaryCta.label}
-            </a>
-          )}
-          {secondaryCta && (
-            <a
-              href={secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-900 shadow-sm transition hover:border-[#07315E]/30 hover:text-[#07315E]"
-            >
-              {secondaryCta.label}
-            </a>
-          )}
-        </div>
+    <>
+      {/* Hero Section with Visual Mockup */}
+      <section className="relative overflow-hidden bg-linear-to-br from-[#07315E] via-[#0A4A85] to-[#07315E] py-20">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C73547]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+
+        <Container className="relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left: Content */}
+            <div className="space-y-6">
+              {/* Breadcrumb */}
+              <nav className="flex items-center gap-2 text-sm text-white/70">
+                <Link to="/" className="hover:text-white transition">Home</Link>
+                <ICONS.ChevronRight className="h-4 w-4" />
+                <Link to={anchorHref} className="hover:text-white transition">
+                  {category === "products" ? "Products" : "Services"}
+                </Link>
+                <ICONS.ChevronRight className="h-4 w-4" />
+                <span className="text-white font-medium">{title}</span>
+              </nav>
+
+              {/* Badge */}
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-2 text-sm font-semibold text-white">
+                <ICONS.Sparkles className="h-4 w-4" />
+                {badgeLabel}
+              </span>
+
+              {/* Title & Tagline */}
+              <div className="space-y-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                  {title}
+                </h1>
+                {tagline && (
+                  <p className="text-xl text-blue-100 font-medium">
+                    {tagline}
+                  </p>
+                )}
+                <p className="text-base md:text-lg leading-relaxed text-white/90">
+                  {summary}
+                </p>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                {primaryCta && (
+                  <a
+                    href={primaryCta.href}
+                    className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07315E] shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
+                  >
+                    {primaryCta.label}
+                    <ICONS.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                )}
+                {secondaryCta && (
+                  <a
+                    href={secondaryCta.href}
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-bold text-white transition-all hover:bg-white/20"
+                  >
+                    {secondaryCta.label}
+                  </a>
+                )}
+              </div>
+
+              {/* Trust Badge */}
+              <div className="flex items-center gap-2 pt-4 text-sm text-white/80">
+                <ICONS.Shield className="h-5 w-5 text-green-400" />
+                <span>Trusted by 975+ fleets worldwide</span>
+              </div>
+            </div>
+
+            {/* Right: Visual Mockup */}
+            <div className="relative lg:block hidden">
+              {/* Floating card effect */}
+              <div className="relative">
+                {/* Main dashboard mockup */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm bg-white/5 transform hover:scale-105 transition-transform duration-500">
+                  {/* Browser chrome */}
+                  <div className="bg-slate-800 px-4 py-3 flex items-center gap-2">
+                    <div className="flex gap-1.5">
+                      <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                      <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                    </div>
+                    <div className="flex-1 text-center">
+                      <div className="inline-block bg-slate-700 rounded px-3 py-1 text-xs text-white/70">
+                        mtldispatch.com
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Dashboard image */}
+                  <div className="bg-slate-50">
+                    <img
+                      src={IMAGES.Dashboard}
+                      alt={`${title} Dashboard`}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+
+                {/* Decorative floating elements */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C73547] rounded-2xl opacity-20 blur-2xl"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-500 rounded-2xl opacity-20 blur-2xl"></div>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Main Content */}
+      <Container className="py-16">
 
         {stats?.length > 0 && (
           <div className="mt-10 grid gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:grid-cols-3">
@@ -132,6 +220,7 @@ const DetailPage = ({ category }) => {
             href={anchorHref}
             className="inline-flex items-center gap-2 text-sm font-semibold text-[#07315E] hover:underline"
           >
+            <ICONS.ArrowRight className="h-4 w-4 rotate-180" />
             Back to overview
           </a>
           <Link
@@ -141,8 +230,8 @@ const DetailPage = ({ category }) => {
             Return home
           </Link>
         </div>
-      </div>
-    </Container>
+      </Container>
+    </>
   );
 };
 
