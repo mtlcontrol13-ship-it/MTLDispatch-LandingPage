@@ -264,23 +264,6 @@ const DetailPage = ({ category }) => {
             </div>
           </div>
         )}
-
-        {/* Navigation Footer - Clean */}
-        <div className="mt-20 pt-12 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <a
-            href={anchorHref}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-[#07315E] hover:gap-3 transition-all"
-          >
-            <ICONS.ArrowRight className="h-4 w-4 rotate-180" />
-            Back to {category === "products" ? "Products" : "Services"}
-          </a>
-          <Link
-            to="/"
-            className="text-sm font-medium text-gray-500 hover:text-[#07315E] transition-colors"
-          >
-            Return to Home
-          </Link>
-        </div>
       </Container>
     </>
   );
