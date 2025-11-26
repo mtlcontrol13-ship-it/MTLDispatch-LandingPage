@@ -1,5 +1,9 @@
 export const navbarItems = [
   {
+    name: "About Us",
+    link: "/about",
+  },
+  {
     name: "Products",
     link: "/products/dispatch-software",
     subItems: [
@@ -62,10 +66,6 @@ export const navbarItems = [
   {
     name: "Pricing",
     link: "/pricing",
-  },
-  {
-    name: "About Us",
-    link: "/about",
   },
   {
     name: "Services",
