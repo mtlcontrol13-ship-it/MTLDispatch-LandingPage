@@ -42,10 +42,10 @@ const DetailPage = ({ category }) => {
     <>
       {/* Hero Section with Visual Mockup */}
       <section className="relative overflow-hidden bg-linear-to-br from-[#07315E] via-[#0A4A85] to-[#07315E] py-20">
-        {/* Decorative background elements */}
+        {/* Decorative background elements - optimized with will-change */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjAzIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-40"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C73547]/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#C73547]/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
         <Container className="relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -53,9 +53,9 @@ const DetailPage = ({ category }) => {
             <div className="space-y-6">
               {/* Breadcrumb */}
               <nav className="flex items-center gap-2 text-sm text-white/70">
-                <Link to="/" className="hover:text-white transition">Home</Link>
+                <Link to="/" className="hover:text-white transition-colors duration-200">Home</Link>
                 <ICONS.ChevronRight className="h-4 w-4" />
-                <Link to={anchorHref} className="hover:text-white transition">
+                <Link to={anchorHref} className="hover:text-white transition-colors duration-200">
                   {category === "products" ? "Products" : "Services"}
                 </Link>
                 <ICONS.ChevronRight className="h-4 w-4" />
@@ -83,21 +83,24 @@ const DetailPage = ({ category }) => {
                 </p>
               </div>
 
-              {/* CTAs */}
+              {/* CTAs - optimized with will-change on hover only */}
               <div className="flex flex-wrap gap-4 pt-4">
                 {primaryCta && (
                   <a
                     href={primaryCta.href}
-                    className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07315E] shadow-xl transition-all hover:scale-105 hover:shadow-2xl"
+                    className="group inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-[#07315E] shadow-xl transition-all duration-300 hover:shadow-2xl active:scale-95"
+                    style={{ willChange: 'auto' }}
+                    onMouseEnter={(e) => e.currentTarget.style.willChange = 'transform'}
+                    onMouseLeave={(e) => e.currentTarget.style.willChange = 'auto'}
                   >
                     {primaryCta.label}
-                    <ICONS.ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    <ICONS.ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </a>
                 )}
                 {secondaryCta && (
                   <a
                     href={secondaryCta.href}
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-bold text-white transition-all hover:bg-white/20"
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm font-bold text-white transition-colors duration-300 hover:bg-white/20 active:scale-95"
                   >
                     {secondaryCta.label}
                   </a>
@@ -111,12 +114,23 @@ const DetailPage = ({ category }) => {
               </div>
             </div>
 
-            {/* Right: Visual Mockup */}
+            {/* Right: Visual Mockup - optimized transform */}
             <div className="relative lg:block hidden">
               {/* Floating card effect */}
               <div className="relative">
-                {/* Main dashboard mockup */}
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm bg-white/5 transform hover:scale-105 transition-transform duration-500">
+                {/* Main dashboard mockup - optimized with GPU acceleration */}
+                <div 
+                  className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 backdrop-blur-sm bg-white/5 transition-transform duration-300 ease-out"
+                  style={{ willChange: 'auto' }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.willChange = 'transform';
+                    e.currentTarget.style.transform = 'scale(1.03)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'scale(1)';
+                    setTimeout(() => e.currentTarget.style.willChange = 'auto', 300);
+                  }}
+                >
                   {/* Browser chrome */}
                   <div className="bg-slate-800 px-4 py-3 flex items-center gap-2">
                     <div className="flex gap-1.5">
@@ -131,19 +145,21 @@ const DetailPage = ({ category }) => {
                     </div>
                   </div>
                   
-                  {/* Dashboard image */}
+                  {/* Dashboard image - optimized loading */}
                   <div className="bg-slate-50">
                     <img
                       src={IMAGES.Dashboard}
                       alt={`${title} Dashboard`}
                       className="w-full h-auto"
+                      loading="eager"
+                      decoding="async"
                     />
                   </div>
                 </div>
 
-                {/* Decorative floating elements */}
-                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C73547] rounded-2xl opacity-20 blur-2xl"></div>
-                <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-500 rounded-2xl opacity-20 blur-2xl"></div>
+                {/* Decorative floating elements - static, no animation */}
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C73547] rounded-2xl opacity-20 blur-2xl pointer-events-none"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-500 rounded-2xl opacity-20 blur-2xl pointer-events-none"></div>
               </div>
             </div>
           </div>
