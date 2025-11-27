@@ -191,4 +191,27 @@ export const plans = [
     cta: "Contact Sales",
     href: "/pricing/enterprise",
   },
+  {
+    name: "Custom",
+    shortDescription:
+      "Build a plan that fits your unique business needs and goals.",
+    description:
+      "Work with our team to create a tailored plan that aligns perfectly with your operational requirements and growth objectives. Whether you need specific features, integrations, or support levels, we’ll collaborate to design a solution that works for you.",
+    priceMonthly: "Let’s talk",
+    periodMonthly: "",
+    priceYearly: "Let’s talk",
+    periodYearly: "",
+    features: [
+      "Tailored features",
+      "Flexible pricing",
+      "Dedicated support",
+      "Scalable solutions",
+    ],
+    detailFeatures: [
+      "Customized feature set to match your business processes",
+      "Flexible pricing models based on your usage and needs",
+    ],
+    cta: "Contact Sales",
+    href: "/pricing/custom",
+  }
 ];

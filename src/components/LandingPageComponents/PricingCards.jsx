@@ -6,7 +6,7 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const visiblePlans = plans.slice(0, limit);
-  const containerClasses = "flex flex-col gap-6 md:flex-row md:flex-wrap";
+  const containerClasses = "grid gap-6 md:grid-cols-2 lg:grid-cols-4";
 
   return (
     <div className={containerClasses}>
@@ -47,14 +47,15 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
                   ? "-translate-y-0.5 shadow"
                   : "hover:-translate-y-0.5 hover:shadow"
               }
-              md:flex-1 md:min-w-[280px]`}
+              w-full max-w-[360px]
+            `}
             style={{
               transform: isHovered ? "translateY(-4px)" : undefined,
             }}
           >
             {/* TOP BADGE */}
             {plan.badge && (
-              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-[#C73547] px-3 py-1 text-xs font-semibold text-white shadow-md">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 flex items-center gap-1 rounded-full bg-[#C73547] px-3 py-1 text-xs font-semibold text-white shadow-md">
                 <ICONS.Sparkles className="h-3 w-3" />
                 {plan.badge}
               </div>
