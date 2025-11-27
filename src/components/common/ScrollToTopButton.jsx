@@ -5,26 +5,52 @@ const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Show button when page is scrolled down
-  const toggleVisibility = useCallback(() => {
-    setIsVisible(window.pageYOffset > 300);
-  }, []);
-
-  // Scroll to top when button is clicked
-  const scrollToTop = useCallback(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }, []);
-
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility, { passive: true });
+    const handleScroll = () => {
+      const offset =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop ||
+        0;
+
+      setIsVisible(offset > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // set initial state
 
     return () => {
-      window.removeEventListener("scroll", toggleVisibility);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [toggleVisibility]);
+  }, []);
+
+  const scrollToTop = useCallback(() => {
+    const start =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    const duration = 500; // ms
+    const startTime = performance.now();
+
+    const animate = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+
+      // easeOutCubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const nextScroll = start * (1 - eased);
+
+      window.scrollTo(0, nextScroll);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, []);
 
   return (
     <button
