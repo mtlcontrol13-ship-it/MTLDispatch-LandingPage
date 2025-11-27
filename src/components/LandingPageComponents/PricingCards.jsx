@@ -11,7 +11,6 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
   return (
     <div className={containerClasses}>
       {visiblePlans.map((plan, index) => {
-        const isHighlighted = !!plan.highlighted;
         const isHovered = hoveredCard === index;
 
         const price =
@@ -41,12 +40,8 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
             key={plan.name}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`relative flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 ease-out
-              ${
-                isHighlighted
-                  ? "border-[#07315E] bg-linear-to-br from-[#07315E]/5 to-[#07315E]/10"
-                  : "border-gray-200 bg-white"
-              }
+            className={`relative flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm
+              transition-all duration-300 ease-out
               ${
                 isHovered
                   ? "-translate-y-2 shadow-xl"
@@ -57,17 +52,9 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
               transform: isHovered ? "translateY(-8px) scale(1.02)" : undefined,
             }}
           >
-            {/* Highlight glow effect */}
-            {isHighlighted && (
-              <div
-                className="absolute -inset-px rounded-2xl bg-linear-to-br from-[#07315E] to-[#C73547] opacity-20 blur-sm transition-opacity duration-300"
-                style={{ opacity: isHovered ? 0.3 : 0.2 }}
-              />
-            )}
-
             {/* Badge */}
-            {plan.highlighted && plan.badge && (
-              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-linear-to-r from-[#C73547] to-[#C73547]/90 px-3 py-1 text-xs font-semibold text-white shadow-md">
+            {plan.badge && (
+              <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-[#C73547] px-3 py-1 text-xs font-semibold text-white shadow-md">
                 <ICONS.Sparkles className="h-3 w-3" />
                 {plan.badge}
               </div>
@@ -78,7 +65,8 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
               <h3 className="text-xl font-semibold text-gray-900">
                 {plan.name}
               </h3>
-              {!plan.highlighted && plan.badge && (
+
+              {plan.badge && (
                 <span className="rounded-full bg-[#C73547]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[#C73547]">
                   {plan.badge}
                 </span>
@@ -100,12 +88,12 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
                         ? price
                         : `$${price}`}
                     </span>
+
                     {period && (
                       <span className="text-sm text-gray-500">{period}</span>
                     )}
                   </div>
 
-                  {/* Savings indicator for yearly billing */}
                   {billing === "yearly" && savings > 0 && (
                     <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700">
                       <ICONS.Check className="h-3 w-3" />
@@ -134,21 +122,16 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
               </ul>
             </div>
 
-            {/* CTA Button with enhanced hover effect */}
+            {/* CTA Button */}
             <a
               href={plan.href}
-              className={`group relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-lg px-4 py-2 text-sm font-semibold shadow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2
-                ${
-                  isHighlighted
-                    ? "bg-[#07315E] text-white focus:ring-[#07315E] hover:bg-[#07315E]/90"
-                    : "bg-[#C73547] text-white focus:ring-[#C73547] hover:bg-[#C73547]/90"
-                }
-                md:w-auto md:self-start`}
+              className={`group relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-[#C73547] px-4 py-2 text-sm font-semibold text-white shadow transition-all duration-300 hover:bg-[#C73547]/90 focus:outline-none focus:ring-2 focus:ring-[#C73547] focus:ring-offset-2
+              md:w-auto md:self-start`}
             >
               <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">
                 {plan.cta}
               </span>
-              {/* Button shimmer effect on hover */}
+
               <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
             </a>
           </article>
