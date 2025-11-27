@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { ICONS } from "../../assets/icons";
 import { plans } from "../../helpers/data";
+import { useLocation } from "react-router-dom";
 
 const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
+  const location = useLocation();
+  const isPricingPage = location.pathname === "/pricing";
 
   const visiblePlans = plans.slice(0, limit);
   const containerClasses = "grid gap-6 md:grid-cols-2 lg:grid-cols-4";
@@ -13,6 +16,15 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
       {visiblePlans.map((plan, index) => {
         const isHovered = hoveredCard === index;
         const isPopular = plan.badge?.toLowerCase().includes("popular");
+
+        const isPrimaryCta = isPricingPage || isPopular;
+
+        const ctaBaseClasses =
+          "group relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-lg px-4 py-2 text-sm font-semibold shadow transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 md:w-auto md:self-start";
+
+        const ctaVariantClasses = isPrimaryCta
+          ? "bg-[#C73547] text-white hover:bg-[#C73547]/90 focus:ring-[#C73547]"
+          : "border border-[#C73547] text-[#C73547] bg-white hover:bg-[#C73547]/5 focus:ring-[#C73547]/40 shadow-none";
 
         const price =
           billing === "yearly"
@@ -115,8 +127,7 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
             {/* CTA Button */}
             <a
               href={plan.href}
-              className={`group relative mt-8 inline-flex w-full items-center justify-center overflow-hidden rounded-lg bg-[#C73547] px-4 py-2 text-sm font-semibold text-white shadow transition-all duration-300 hover:bg-[#C73547]/90 focus:outline-none focus:ring-2 focus:ring-[#C73547] focus:ring-offset-2
-              md:w-auto md:self-start`}
+              className={`${ctaBaseClasses} ${ctaVariantClasses}`}
             >
               <span className="relative z-10 transition-transform duration-300 group-hover:scale-105">
                 {plan.cta}

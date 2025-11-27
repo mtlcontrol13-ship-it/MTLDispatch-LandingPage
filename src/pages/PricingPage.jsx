@@ -3,6 +3,7 @@ import PageHero from "../components/common/PageHero";
 import PricingCards from "../components/LandingPageComponents/PricingCards";
 import Container from "../components/common/Container";
 import { ICONS } from "../assets/icons";
+import ComparePlansTable from "../components/common/ComparePlansTable";
 
 const PricingPage = () => {
   const [billing, setBilling] = useState("monthly");
@@ -108,53 +109,8 @@ const PricingPage = () => {
               </p>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-3">
-              {[
-                {
-                  title: "Core",
-                  desc: "Best for boutique fleets launching digital dispatch for the first time.",
-                  iconName: "PlugZap",
-                  color: "from-blue-500 to-blue-600",
-                },
-                {
-                  title: "Plus",
-                  desc: "Automation and analytics for growing fleets across markets.",
-                  iconName: "TrendingUp",
-                  color: "from-[#C73547] to-[#B32A3D]",
-                },
-                {
-                  title: "Black",
-                  desc: "Custom workflows, SLAs, and integrations for enterprise operations.",
-                  iconName: "ShieldCheck",
-                  color: "from-[#07315E] to-[#05223F]",
-                },
-              ].map((item, i) => {
-                const ItemIcon = ICONS[item.iconName];
-                return (
-                  <div
-                    key={i}
-                    className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-sm border border-slate-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-                  >
-                    <div
-                      className={`absolute top-0 right-0 h-32 w-32 bg-linear-to-br ${item.color} opacity-5 blur-3xl transition-opacity duration-300 group-hover:opacity-10`}
-                    ></div>
-                    <div className="relative">
-                      <div
-                        className={`inline-flex rounded-lg bg-linear-to-br ${item.color} p-2.5 shadow-sm`}
-                      >
-                        <ItemIcon className="h-5 w-5 text-white" />
-                      </div>
-                      <h3 className="mt-4 text-lg font-bold text-slate-900">
-                        {item.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                        {item.desc}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            {/* Comparison table */}
+            <ComparePlansTable />
           </Container>
         </section>
 
