@@ -35,7 +35,8 @@ import {
   Twitter,
   Instagram,
   Youtube,
-  Check
+  Check,
+  ArrowUp
 } from "lucide-react";
 
 // Re-export individual icons for direct imports
@@ -76,5 +77,6 @@ export const ICONS = {
   Twitter,
   Instagram,
   Youtube,
-  Check
+  Check,
+  ArrowUp
 };
