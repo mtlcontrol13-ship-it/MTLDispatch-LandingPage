@@ -41,9 +41,7 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
         const yearlyCost = plan.priceYearly;
         const savings =
           typeof monthlyCost === "number" && typeof yearlyCost === "number"
-            ? Math.round(
-                ((monthlyCost * 12 - yearlyCost) / (monthlyCost * 12)) * 100
-              )
+            ? Math.round(((monthlyCost - yearlyCost) / monthlyCost) * 100)
             : 0;
 
         const features = plan.features || plan.detailFeatures || [];
@@ -101,13 +99,6 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
                       <span className="text-sm text-gray-500">{period}</span>
                     )}
                   </div>
-
-                  {billing === "yearly" && savings > 0 && (
-                    <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-500">
-                      <ICONS.Check className="h-3 w-3" />
-                      Save {savings}% yearly
-                    </div>
-                  )}
                 </div>
               </div>
 
