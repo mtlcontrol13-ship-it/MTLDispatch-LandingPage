@@ -44,15 +44,15 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
               transition-all duration-300 ease-out
               ${
                 isHovered
-                  ? "-translate-y-2 shadow-xl"
-                  : "hover:-translate-y-1 hover:shadow-lg"
+                  ? "-translate-y-0.5 shadow"
+                  : "hover:-translate-y-0.5 hover:shadow"
               }
               md:flex-1 md:min-w-[280px]`}
             style={{
-              transform: isHovered ? "translateY(-8px) scale(1.02)" : undefined,
+              transform: isHovered ? "translateY(-4px)" : undefined,
             }}
           >
-            {/* Badge */}
+            {/* TOP BADGE */}
             {plan.badge && (
               <div className="absolute -top-3 right-4 flex items-center gap-1 rounded-full bg-[#C73547] px-3 py-1 text-xs font-semibold text-white shadow-md">
                 <ICONS.Sparkles className="h-3 w-3" />
@@ -65,12 +65,6 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
               <h3 className="text-xl font-semibold text-gray-900">
                 {plan.name}
               </h3>
-
-              {plan.badge && (
-                <span className="rounded-full bg-[#C73547]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-wide text-[#C73547]">
-                  {plan.badge}
-                </span>
-              )}
             </header>
 
             {/* Content */}
@@ -108,14 +102,8 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
                   <li
                     key={idx}
                     className="flex items-start gap-2 transition-transform duration-200"
-                    style={{
-                      transform: isHovered ? "translateX(4px)" : undefined,
-                    }}
                   >
-                    <ICONS.CheckCircle2
-                      className="mt-0.5 h-4 w-4 shrink-0 text-[#07315E] transition-colors duration-200"
-                      style={{ color: isHovered ? "#C73547" : undefined }}
-                    />
+                    <ICONS.CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#07315E] transition-colors duration-200" />
                     <span>{feature}</span>
                   </li>
                 ))}
