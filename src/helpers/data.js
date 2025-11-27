@@ -161,10 +161,10 @@ export const plans = [
       "Enterprise-grade program with bespoke workflows, uptime SLAs, and 24/7 white-glove support. Includes custom development hours, dedicated success architect, and governance tooling to connect multiple brands or geographies under one reporting structure. Perfect for global or franchise fleets.",
 
     // Same label for both (enterprise talk-to-sales)
-    priceMonthly: "Let’s talk",
-    periodMonthly: "",
-    priceYearly: "Let’s talk",
-    periodYearly: "",
+    priceMonthly: "800",
+    periodMonthly: "/mo",
+    priceYearly: "650",
+    periodYearly: "/mo • billed yearly",
 
     // legacy fallback
     price: "Let’s talk",

@@ -12,6 +12,7 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
     <div className={containerClasses}>
       {visiblePlans.map((plan, index) => {
         const isHovered = hoveredCard === index;
+        const isPopular = plan.badge?.toLowerCase().includes("popular");
 
         const price =
           billing === "yearly"
@@ -40,18 +41,18 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
             key={plan.name}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`relative flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-6 shadow-sm
-              transition-all duration-300 ease-out
+            className={`relative flex h-full flex-col rounded-2xl border p-6 shadow-sm transition-all duration-300 ease-out
+              ${
+                isPopular
+                  ? "border-[#C73547] bg-[#FFF6F6] scale-[1.05] shadow-md z-2"
+                  : "border-gray-200 bg-white"
+              }
               ${
                 isHovered
                   ? "-translate-y-0.5 shadow"
                   : "hover:-translate-y-0.5 hover:shadow"
               }
-              w-full max-w-[360px]
             `}
-            style={{
-              transform: isHovered ? "translateY(-4px)" : undefined,
-            }}
           >
             {/* TOP BADGE */}
             {plan.badge && (
@@ -90,7 +91,7 @@ const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
                   </div>
 
                   {billing === "yearly" && savings > 0 && (
-                    <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700">
+                    <div className="mt-2 inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-500">
                       <ICONS.Check className="h-3 w-3" />
                       Save {savings}% yearly
                     </div>
