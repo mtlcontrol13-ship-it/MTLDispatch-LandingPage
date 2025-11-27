@@ -46,34 +46,40 @@ const PricingPage = () => {
               </p>
 
               {/* Billing Toggle */}
-              <div className="mt-6 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white p-1.5 text-sm shadow-sm">
-                <button
-                  type="button"
-                  onClick={() => setBilling("monthly")}
-                  aria-pressed={billing === "monthly"}
-                  className={`relative rounded-full px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#07315E]/60 focus-visible:ring-offset-2 ${
-                    billing === "monthly"
-                      ? "bg-[#07315E] text-white shadow-md"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
-                >
-                  Monthly billing
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setBilling("yearly")}
-                  aria-pressed={billing === "yearly"}
-                  className={`relative flex items-center gap-2 rounded-full px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#07315E]/60 focus-visible:ring-offset-2 ${
-                    billing === "yearly"
-                      ? "bg-[#07315E] text-white shadow-md"
-                      : "text-slate-600 hover:text-slate-900"
-                  }`}
-                >
-                  <span>Yearly billing</span>
+              <div className="relative mt-6 inline-block ">
+                {/* SAVE BADGE */}
+                <span className="absolute -top-3 right-0 z-50 pointer-events-none">
                   <span className="rounded-full bg-green-500/20 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-green-700">
-                    Save 15%
+                    SAVE 15%
                   </span>
-                </button>
+                </span>
+
+                {/* The toggle */}
+                <div className="relative z-10 inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white p-2.5 text-sm shadow-sm">
+                  <button
+                    type="button"
+                    onClick={() => setBilling("monthly")}
+                    className={`rounded-full px-4 py-1.5 font-medium transition-all cursor-pointer ${
+                      billing === "monthly"
+                        ? "bg-[#07315E] text-white shadow-md"
+                        : "text-slate-600 hover:text-slate-900"
+                    }`}
+                  >
+                    Monthly billing
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setBilling("yearly")}
+                    className={`rounded-full px-4 py-1.5 font-medium transition-all cursor-pointer ${
+                      billing === "yearly"
+                        ? "bg-[#07315E] text-white shadow-md"
+                        : "text-slate-600 hover:text-slate-900"
+                    }`}
+                  >
+                    Yearly billing
+                  </button>
+                </div>
               </div>
 
               <p className="mt-3 text-xs text-slate-500 flex items-center justify-center gap-4 flex-wrap">
