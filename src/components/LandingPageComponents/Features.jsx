@@ -200,6 +200,7 @@ const Features = () => {
                 }}
               />
 
+              {/* Center - Real-time Fleet Management */}
               <div className="absolute -top-56 left-1/2 w-80 -translate-x-1/2 group">
                 <div className="relative z-30 rounded-xl border border-gray-200 bg-white/90 p-6 backdrop-blur-sm shadow-lg transition-all duration-300 hover:shadow-xl">
                   <div className="flex items-start gap-4">
