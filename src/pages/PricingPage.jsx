@@ -91,7 +91,7 @@ const PricingPage = () => {
               </p>
             </div>
 
-            <PricingCards layout="horizontal" billing={billing} />
+            <PricingCards billing={billing} />
           </Container>
         </section>
 

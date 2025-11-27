@@ -2,18 +2,11 @@ import React, { useState } from "react";
 import { ICONS } from "../../assets/icons";
 import { plans } from "../../helpers/data";
 
-const PricingCards = ({
-  limit = plans.length,
-  layout = "vertical",
-  billing = "monthly",
-}) => {
+const PricingCards = ({ limit = plans.length, billing = "monthly" }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const visiblePlans = plans.slice(0, limit);
-  const isHorizontal = layout === "horizontal";
-  const containerClasses = isHorizontal
-    ? "flex flex-col gap-6"
-    : "flex flex-col gap-6 md:flex-row md:flex-wrap";
+  const containerClasses = "flex flex-col gap-6 md:flex-row md:flex-wrap";
 
   return (
     <div className={containerClasses}>
@@ -41,6 +34,8 @@ const PricingCards = ({
               )
             : 0;
 
+        const features = plan.features || plan.detailFeatures || [];
+
         return (
           <article
             key={plan.name}
@@ -57,7 +52,7 @@ const PricingCards = ({
                   ? "-translate-y-2 shadow-xl"
                   : "hover:-translate-y-1 hover:shadow-lg"
               }
-              ${isHorizontal ? "gap-6" : "md:flex-1 md:min-w-[280px]"}`}
+              md:flex-1 md:min-w-[280px]`}
             style={{
               transform: isHovered ? "translateY(-8px) scale(1.02)" : undefined,
             }}
@@ -94,9 +89,7 @@ const PricingCards = ({
             <div className="relative mt-3 flex flex-1 flex-col gap-6">
               <div>
                 <p className="text-sm leading-relaxed text-gray-600">
-                  {isHorizontal
-                    ? plan.description
-                    : plan.shortDescription || plan.description}
+                  {plan.shortDescription || plan.description}
                 </p>
 
                 <div className="mt-5">
@@ -123,10 +116,7 @@ const PricingCards = ({
               </div>
 
               <ul className="flex flex-1 flex-col gap-2 text-sm text-gray-700">
-                {(isHorizontal
-                  ? plan.detailFeatures || plan.features
-                  : plan.features
-                ).map((feature, idx) => (
+                {features.map((feature, idx) => (
                   <li
                     key={idx}
                     className="flex items-start gap-2 transition-transform duration-200"
