@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ICONS } from "../assets/icons";
 import PageHero from "../components/common/PageHero";
+import { sendContactForm } from "../api/contactApi";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -12,26 +13,58 @@ const ContactPage = () => {
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: "", message: "" });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please fill in all required fields",
+      });
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
+      setSubmitStatus({
+        type: "error",
+        message: "Please enter a valid email address",
+      });
       return;
     }
 
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      phone: "",
-      subject: "",
-      message: "",
-    });
+    // Submit to API
+    setIsSubmitting(true);
+    setSubmitStatus({ type: "", message: "" });
+
+    try {
+      const response = await sendContactForm(formData);
+
+      setSubmitStatus({
+        type: "success",
+        message: response.message || "Form submitted successfully!",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      setSubmitStatus({
+        type: "error",
+        message:
+          error.error || "Failed to submit the form. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -140,6 +173,17 @@ const ContactPage = () => {
                 Send us a message
               </h2>
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+                {submitStatus.message && (
+                  <div
+                    className={`p-4 rounded-lg ${
+                      submitStatus.type === "success"
+                        ? "bg-green-50 text-green-800 border-green-200"
+                        : "bg-red-50 text-red-800 border-red-200"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-700">
@@ -223,10 +267,15 @@ const ContactPage = () => {
 
                 <button
                   type="submit"
-                  className="rounded-full bg-blue-600 py-2 px-8 text-md font-bold text-white transition-colors hover:bg-blue-700 cursor-pointer"
+                  disabled={isSubmitting}
+                  className={`rounded-full py-2 px-8 text-md font-bold text-white transition-colors ${
+                    isSubmitting
+                      ? "bg-blue-400 cursor-not-allowed"
+                      : "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+                  }`}
                 >
                   <ICONS.Send className="h-4 w-4 mr-2 inline-block" />
-                  Send
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </form>
             </div>
