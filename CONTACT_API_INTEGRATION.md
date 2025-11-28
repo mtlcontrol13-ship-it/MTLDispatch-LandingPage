@@ -138,7 +138,96 @@ The dummy API is already created at `src/api/contactApi.js`:
 - **Logs**: The payload to console for testing
 - **Testing**: Change `shouldSucceed` to `false` to test error handling
 
-No additional setup needed - the API file is ready to use!
+### Adding JSON Storage
+
+To persist contact form data, update `src/api/contactApi.js`:
+
+```javascript
+export function sendContactForm(payload) {
+    return new Promise((resolve, reject) => {
+        console.log('📧 Dummy API received data:', payload)
+
+        // Simulate API delay
+        setTimeout(() => {
+            const shouldSucceed = true
+
+            if (shouldSucceed) {
+                // Store data in localStorage (browser storage)
+                const existingData = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+                const newSubmission = {
+                    ...payload,
+                    id: Date.now(),
+                    timestamp: new Date().toISOString()
+                };
+                existingData.push(newSubmission);
+                localStorage.setItem('contactSubmissions', JSON.stringify(existingData));
+                
+                console.log('✅ Data stored successfully. Total submissions:', existingData.length);
+                
+                resolve({ message: 'Contact form submitted successfully!' })
+            } else {
+                reject({ error: 'Failed to submit contact form.' })
+            }
+        }, 1000)
+    })
+}
+
+// Helper function to retrieve all submissions
+export function getContactSubmissions() {
+    return JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+}
+
+// Helper function to clear all submissions
+export function clearContactSubmissions() {
+    localStorage.removeItem('contactSubmissions');
+    console.log('🗑️ All submissions cleared');
+}
+```
+
+### Viewing Stored Data
+
+To view all stored submissions, open browser DevTools console and run:
+
+```javascript
+JSON.parse(localStorage.getItem('contactSubmissions'))
+```
+
+Or create a viewer component to display submissions in a table format.
+
+### Storage Notes
+
+- **localStorage**: Data persists across browser sessions (limited to ~5-10MB)
+- **Format**: Array of submission objects with id and timestamp
+- **Production**: For real applications, send data to a backend server with database/file storage
+
+### Server-Side JSON Storage (Optional)
+
+For actual server-side JSON file storage, you need a backend server.
+
+Example Node.js backend endpoint:
+
+```javascript
+// backend/api/contact.js
+const fs = require('fs');
+const path = require('path');
+
+app.post('/api/contact', (req, res) => {
+    const filePath = path.join(__dirname, '../data/contacts.json');
+    const existingData = JSON.parse(fs.readFileSync(filePath, 'utf8') || '[]');
+    
+    const newSubmission = {
+        ...req.body,
+        id: Date.now(),
+        timestamp: new Date().toISOString()
+    };
+    
+    existingData.push(newSubmission);
+    fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
+    
+    res.json({ message: 'Contact form submitted successfully!' });
+});
+```
+
 };
 
 ```
