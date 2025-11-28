@@ -1,11 +1,12 @@
-const express = require('express');
+import express from 'express';
+import cors from 'cors';
+import connectDB from './config/db.js';
+import contactRoutes from './routes/contact.route.js';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const app = express()
-const cors = require('cors');
-const connectDB = require('./config/db');
-const contactRoutes = require('./routes/contact.route');
-
-require('dotenv').config();
-
 const PORT = process.env.PORT;
 
 // Middleware to parse JSON requests

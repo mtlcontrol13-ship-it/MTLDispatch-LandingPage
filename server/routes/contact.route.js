@@ -1,8 +1,8 @@
 // Contact Us Routes
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const contactController = require('../controllers/contact.controller');
+import contactController from '../controllers/contact.controller.js';
 
 router.use('/api', contactController);
 
-module.exports = router;
+export default router;

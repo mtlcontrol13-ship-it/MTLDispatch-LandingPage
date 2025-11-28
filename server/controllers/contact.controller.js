@@ -1,7 +1,7 @@
 // Contact Us Controller
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Contact = require('../models/contact.model');
+import Contact from '../models/contact.model.js';
 
 // POST /api/contact - Submit a contact form
 router.post('/contact', async (req, res) => {
@@ -15,4 +15,4 @@ router.post('/contact', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
