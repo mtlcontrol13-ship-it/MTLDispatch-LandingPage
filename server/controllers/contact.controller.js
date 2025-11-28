@@ -1,7 +1,8 @@
 // Contact Us Controller
 import express from 'express';
-const router = express.Router();
 import Contact from '../models/contact.model.js';
+
+const router = express.Router();
 
 // POST /api/contact - Submit a contact form
 router.post('/contact', async (req, res) => {

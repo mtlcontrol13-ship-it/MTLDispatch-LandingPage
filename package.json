@@ -1,0 +1,24 @@
+{
+  "name": "mtldispatch",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently -n \"server,client\" -c \"green,blue\" \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "start": "concurrently -n \"server,client\" -c \"green,blue\" \"cd server && npm run start\" \"cd client && npm run dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtlcontrol13-ship-it/MTLDispatch-LandingPage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtlcontrol13-ship-it/MTLDispatch-LandingPage/issues"
+  },
+  "homepage": "https://github.com/mtlcontrol13-ship-it/MTLDispatch-LandingPage#readme",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
