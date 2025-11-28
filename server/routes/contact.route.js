@@ -1,9 +1,9 @@
 // Contact Us Routes
 import express from 'express';
-import contactController from '../controllers/contact.controller.js';
+import { submitContactForm } from '../controllers/contact.controller.js';
 
 const router = express.Router();
 
-router.use('/api', contactController);
+router.post('/submit-form', submitContactForm);
 
 export default router;

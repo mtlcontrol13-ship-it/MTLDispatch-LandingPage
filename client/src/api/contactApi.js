@@ -2,7 +2,7 @@ const API_URL = 'http://localhost:3000/api';
 
 export async function sendContactForm(payload) {
     try {
-        const response = await fetch(`${API_URL}/contact`, {
+        const response = await fetch(`${API_URL}/contact/submit-form`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
