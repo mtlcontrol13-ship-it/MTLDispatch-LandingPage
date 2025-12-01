@@ -6,8 +6,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app = express()
-const PORT = process.env.PORT;
+const app = express();
 
 // Middleware to parse JSON requests
 app.use(express.json());
@@ -17,10 +16,19 @@ app.use(cors());
 connectDB();
 
 // Routes
-app.use('/api/contact', contactRoutes);
+app.use('/api', contactRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+// Root route for testing
+app.get('/', (req, res) => {
+    res.json({ message: 'MTLDispatch API is running' });
 });
+
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
 
 export default app;
