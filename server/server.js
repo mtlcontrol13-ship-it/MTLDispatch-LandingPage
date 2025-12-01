@@ -12,8 +12,15 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// connect to database
-connectDB();
+// Lazy database connection for serverless
+let isConnected = false;
+app.use(async (req, res, next) => {
+    if (!isConnected) {
+        await connectDB();
+        isConnected = true;
+    }
+    next();
+});
 
 // Routes
 app.use('/api', contactRoutes);
